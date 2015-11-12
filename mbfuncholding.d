@@ -1,0 +1,12 @@
+mbfuncholding.o: modbus\functions\mbfuncholding.c
+mbfuncholding.o: C:\Keil\ARM\RV31\Inc\stdlib.h
+mbfuncholding.o: C:\Keil\ARM\RV31\Inc\string.h
+mbfuncholding.o: .\modbus\port\port.h
+mbfuncholding.o: C:\Keil\ARM\RV31\Inc\assert.h
+mbfuncholding.o: C:\Keil\ARM\RV31\Inc\inttypes.h
+mbfuncholding.o: C:\Keil\ARM\RV31\Inc\stdint.h
+mbfuncholding.o: .\modbus\include\mb.h
+mbfuncholding.o: .\modbus\include\mbport.h
+mbfuncholding.o: .\modbus\include\mbproto.h
+mbfuncholding.o: .\modbus\include\mbframe.h
+mbfuncholding.o: .\modbus\include\mbconfig.h

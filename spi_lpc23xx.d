@@ -1,0 +1,16 @@
+spi_lpc23xx.o: SPI_LPC23xx.c
+spi_lpc23xx.o: includes.h
+spi_lpc23xx.o: C:\Keil\ARM\Inc\Philips\lpc23xx.h
+spi_lpc23xx.o: led.h
+spi_lpc23xx.o: includes.h
+spi_lpc23xx.o: led7.h
+spi_lpc23xx.o: SSP.h
+spi_lpc23xx.o: i2c.h
+spi_lpc23xx.o: timer.h
+spi_lpc23xx.o: softTimer.h
+spi_lpc23xx.o: irc.h
+spi_lpc23xx.o: data.h
+spi_lpc23xx.o: default.h
+spi_lpc23xx.o: C:\Keil\ARM\RV31\Inc\RTL.h
+spi_lpc23xx.o: C:\Keil\ARM\RV31\Inc\stdio.h
+spi_lpc23xx.o: C:\Keil\ARM\RV31\Inc\math.h

@@ -1,0 +1,13 @@
+mbrtu.o: modbus\rtu\mbrtu.c
+mbrtu.o: C:\Keil\ARM\RV31\Inc\stdlib.h
+mbrtu.o: C:\Keil\ARM\RV31\Inc\string.h
+mbrtu.o: .\modbus\port\port.h
+mbrtu.o: C:\Keil\ARM\RV31\Inc\assert.h
+mbrtu.o: C:\Keil\ARM\RV31\Inc\inttypes.h
+mbrtu.o: C:\Keil\ARM\RV31\Inc\stdint.h
+mbrtu.o: .\modbus\include\mb.h
+mbrtu.o: .\modbus\include\mbport.h
+mbrtu.o: .\modbus\include\mbproto.h
+mbrtu.o: modbus\rtu\mbrtu.h
+mbrtu.o: .\modbus\include\mbframe.h
+mbrtu.o: modbus\rtu\mbcrc.h

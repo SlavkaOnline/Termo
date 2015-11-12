@@ -1,0 +1,12 @@
+mbfuncdisc.o: modbus\functions\mbfuncdisc.c
+mbfuncdisc.o: C:\Keil\ARM\RV31\Inc\stdlib.h
+mbfuncdisc.o: C:\Keil\ARM\RV31\Inc\string.h
+mbfuncdisc.o: .\modbus\port\port.h
+mbfuncdisc.o: C:\Keil\ARM\RV31\Inc\assert.h
+mbfuncdisc.o: C:\Keil\ARM\RV31\Inc\inttypes.h
+mbfuncdisc.o: C:\Keil\ARM\RV31\Inc\stdint.h
+mbfuncdisc.o: .\modbus\include\mb.h
+mbfuncdisc.o: .\modbus\include\mbport.h
+mbfuncdisc.o: .\modbus\include\mbproto.h
+mbfuncdisc.o: .\modbus\include\mbframe.h
+mbfuncdisc.o: .\modbus\include\mbconfig.h

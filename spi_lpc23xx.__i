@@ -1,0 +1,1 @@
+-c --cpu ARM7TDMI -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\Inc -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips -o "spi_lpc23xx.o" --omf_browse "spi_lpc23xx.crf" --depend "spi_lpc23xx.d" "SPI_LPC23xx.c"

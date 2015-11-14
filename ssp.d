@@ -17,3 +17,10 @@ ssp.o: C:\Keil\ARM\RV31\Inc\stdio.h
 ssp.o: C:\Keil\ARM\RV31\Inc\File_Config.h
 ssp.o: C:\Keil\ARM\RV31\Inc\RTL.h
 ssp.o: C:\Keil\ARM\RV31\Inc\math.h
+ssp.o: .\modbus\include\mb.h
+ssp.o: .\modbus\port\port.h
+ssp.o: C:\Keil\ARM\RV31\Inc\assert.h
+ssp.o: C:\Keil\ARM\RV31\Inc\inttypes.h
+ssp.o: C:\Keil\ARM\RV31\Inc\stdint.h
+ssp.o: .\modbus\include\mbport.h
+ssp.o: .\modbus\include\mbproto.h

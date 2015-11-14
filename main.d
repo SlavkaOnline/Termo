@@ -16,4 +16,11 @@ main.o: C:\Keil\ARM\RV31\Inc\stdio.h
 main.o: C:\Keil\ARM\RV31\Inc\File_Config.h
 main.o: C:\Keil\ARM\RV31\Inc\RTL.h
 main.o: C:\Keil\ARM\RV31\Inc\math.h
+main.o: .\modbus\include\mb.h
+main.o: .\modbus\port\port.h
+main.o: C:\Keil\ARM\RV31\Inc\assert.h
+main.o: C:\Keil\ARM\RV31\Inc\inttypes.h
+main.o: C:\Keil\ARM\RV31\Inc\stdint.h
+main.o: .\modbus\include\mbport.h
+main.o: .\modbus\include\mbproto.h
 main.o: C:\Keil\ARM\RV31\Inc\ctype.h

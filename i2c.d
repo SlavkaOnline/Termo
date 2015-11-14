@@ -17,3 +17,10 @@ i2c.o: C:\Keil\ARM\RV31\Inc\stdio.h
 i2c.o: C:\Keil\ARM\RV31\Inc\File_Config.h
 i2c.o: C:\Keil\ARM\RV31\Inc\RTL.h
 i2c.o: C:\Keil\ARM\RV31\Inc\math.h
+i2c.o: .\modbus\include\mb.h
+i2c.o: .\modbus\port\port.h
+i2c.o: C:\Keil\ARM\RV31\Inc\assert.h
+i2c.o: C:\Keil\ARM\RV31\Inc\inttypes.h
+i2c.o: C:\Keil\ARM\RV31\Inc\stdint.h
+i2c.o: .\modbus\include\mbport.h
+i2c.o: .\modbus\include\mbproto.h

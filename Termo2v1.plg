@@ -4,13 +4,13 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 D:\Programs for MC\Termo\Termo2v1.uvproj
-Project File Date:  11/10/2015
+Project File Date:  11/15/2015
 
 <h2>Output:</h2>
 Rebuild target 'Target 1'
 assembling LPC2300.s...
 compiling main.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -38,30 +38,30 @@ softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give 
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
-main.c(82): warning:  #175-D: subscript out of range
-main.c(98): warning:  #111-D: statement is unreachable
-main.c(20): warning:  #177-D: variable "i" was declared but never referenced
-main.c(20): warning:  #177-D: variable "j" was declared but never referenced
-main.c(21): warning:  #550-D: variable "eStatus" was set but never used
+includes.h(24): warning:  #1-D: last line of file ends without a newline
+main.c(68): error:  #20: identifier "eStatus" is undefined
+main.c(84): warning:  #175-D: subscript out of range
+main.c(100): warning:  #111-D: statement is unreachable
+main.c(22): warning:  #177-D: variable "i" was declared but never referenced
+main.c(22): warning:  #177-D: variable "j" was declared but never referenced
 compiling led.c...
 led.h(67): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led7.h(41): warning:  #1295-D: Deprecated declaration initLed7 - give arg types
 led7.h(46): warning:  #1295-D: Deprecated declaration resetLed7 - give arg types
 led7.h(56): warning:  #1-D: last line of file ends without a newline
@@ -86,28 +86,28 @@ softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give 
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
 led.c(85): warning:  #1-D: last line of file ends without a newline
 compiling led7.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -133,28 +133,28 @@ softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give 
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led7.h(41): warning:  #1295-D: Deprecated declaration initLed7 - give arg types
 led7.h(46): warning:  #1295-D: Deprecated declaration resetLed7 - give arg types
 led7.h(56): warning:  #1-D: last line of file ends without a newline
 led7.c(127): warning:  #1-D: last line of file ends without a newline
 compiling SSP.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -176,22 +176,22 @@ softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give 
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 SSP.h(41): warning:  #1295-D: Deprecated declaration initSSP0 - give arg types
 SSP.h(50): warning:  #1295-D: Deprecated declaration initSSP1 - give arg types
 SSP.h(57): warning:  #1295-D: Deprecated declaration recSSP1 - give arg types
@@ -200,13 +200,13 @@ SSP.h(86): warning:  #1295-D: Deprecated declaration recSPI - give arg types
 SSP.h(88): warning:  #1295-D: Deprecated declaration configureMAX31865 - give arg types
 SSP.h(92): warning:  #1-D: last line of file ends without a newline
 SSP.c(11): warning:  #177-D: variable "i" was declared but never referenced
-SSP.c(126): warning:  #550-D: variable "tmp" was set but never used
-SSP.c(128): warning:  #550-D: variable "regFault" was set but never used
-SSP.c(170): warning:  #177-D: variable "div" was declared but never referenced
-SSP.c(251): warning:  #1-D: last line of file ends without a newline
-SSP.c(237): warning:  #550-D: variable "trash" was set but never used
+SSP.c(131): warning:  #550-D: variable "tmp" was set but never used
+SSP.c(133): warning:  #550-D: variable "regFault" was set but never used
+SSP.c(175): warning:  #177-D: variable "div" was declared but never referenced
+SSP.c(256): warning:  #1-D: last line of file ends without a newline
+SSP.c(242): warning:  #550-D: variable "trash" was set but never used
 compiling timer.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -231,28 +231,28 @@ softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give 
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 timer.h(8): warning:  #1295-D: Deprecated declaration initTimer0 - give arg types
 timer.h(11): warning:  #1295-D: Deprecated declaration initWDTimer - give arg types
 timer.h(12): warning:  #1295-D: Deprecated declaration startWDTimer - give arg types
 timer.h(27): warning:  #1-D: last line of file ends without a newline
 compiling irc.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -279,26 +279,26 @@ softTimer.h(62): warning:  #1295-D: Deprecated declaration recSSP1OnTimer - give
 softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give arg types
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
 compiling softTimer.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -323,29 +323,29 @@ timer.h(27): warning:  #1-D: last line of file ends without a newline
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 softTimer.h(10): warning:  #1295-D: Deprecated declaration initSoftTimers - give arg types
 softTimer.h(62): warning:  #1295-D: Deprecated declaration recSSP1OnTimer - give arg types
 softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give arg types
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 softTimer.c(211): warning:  #1-D: last line of file ends without a newline
 compiling data.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -373,27 +373,27 @@ softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give 
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 data.c(180): warning:  #9-D: nested comment is not allowed
 data.c(136): warning:  #177-D: variable "blink7" was declared but never referenced
 compiling i2c.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -418,34 +418,77 @@ softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give 
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 i2c.h(17): warning:  #1295-D: Deprecated declaration initI2C - give arg types
 i2c.h(18): warning:  #1295-D: Deprecated declaration startI2C - give arg types
 i2c.h(19): warning:  #1295-D: Deprecated declaration readI2C - give arg types
 i2c.h(23): warning:  #1-D: last line of file ends without a newline
-compiling mb.c...
-compiling mbcrc.c...
-compiling mbrtu.c...
-modbus\rtu\mbrtu.c(153): warning:  #550-D: variable "xFrameReceived" was set but never used
-compiling port.c...
-compiling portevent.c...
-compiling portserial.c...
-compiling porttimer.c...
+compiling flashWork.c...
+includes.h(24): warning:  #1-D: last line of file ends without a newline
+led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
+led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
+led.h(67): warning:  #1-D: last line of file ends without a newline
+led7.h(41): warning:  #1295-D: Deprecated declaration initLed7 - give arg types
+led7.h(46): warning:  #1295-D: Deprecated declaration resetLed7 - give arg types
+led7.h(56): warning:  #1-D: last line of file ends without a newline
+SSP.h(41): warning:  #1295-D: Deprecated declaration initSSP0 - give arg types
+SSP.h(50): warning:  #1295-D: Deprecated declaration initSSP1 - give arg types
+SSP.h(57): warning:  #1295-D: Deprecated declaration recSSP1 - give arg types
+SSP.h(70): warning:  #1295-D: Deprecated declaration initSPI - give arg types
+SSP.h(86): warning:  #1295-D: Deprecated declaration recSPI - give arg types
+SSP.h(88): warning:  #1295-D: Deprecated declaration configureMAX31865 - give arg types
+SSP.h(92): warning:  #1-D: last line of file ends without a newline
+i2c.h(17): warning:  #1295-D: Deprecated declaration initI2C - give arg types
+i2c.h(18): warning:  #1295-D: Deprecated declaration startI2C - give arg types
+i2c.h(19): warning:  #1295-D: Deprecated declaration readI2C - give arg types
+i2c.h(23): warning:  #1-D: last line of file ends without a newline
+timer.h(8): warning:  #1295-D: Deprecated declaration initTimer0 - give arg types
+timer.h(11): warning:  #1295-D: Deprecated declaration initWDTimer - give arg types
+timer.h(12): warning:  #1295-D: Deprecated declaration startWDTimer - give arg types
+timer.h(27): warning:  #1-D: last line of file ends without a newline
+softTimer.h(10): warning:  #1295-D: Deprecated declaration initSoftTimers - give arg types
+softTimer.h(62): warning:  #1295-D: Deprecated declaration recSSP1OnTimer - give arg types
+softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give arg types
+softTimer.h(71): warning:  #1-D: last line of file ends without a newline
+irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
+irc.h(8): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
+flashWork.h(21): warning:  #1-D: last line of file ends without a newline
+default.h(11): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
+flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
+flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
+flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
+flashWork.h(21): warning:  #1-D: last line of file ends without a newline
+flashWork.c(124): warning:  #1-D: last line of file ends without a newline
+compiling File_Config.c...
+compiling FS_SPI_FlashPrg.c...
+compiling Retarget.c...
+compiling SPI_LPC23xx.c...
 compiling mbfunccoils.c...
 compiling mbfuncdiag.c...
 compiling mbfuncdisc.c...
@@ -453,65 +496,19 @@ compiling mbfuncholding.c...
 compiling mbfuncinput.c...
 compiling mbfuncother.c...
 compiling mbutils.c...
-compiling flashWork.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
-led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
-led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
-led.h(67): warning:  #1-D: last line of file ends without a newline
-led7.h(41): warning:  #1295-D: Deprecated declaration initLed7 - give arg types
-led7.h(46): warning:  #1295-D: Deprecated declaration resetLed7 - give arg types
-led7.h(56): warning:  #1-D: last line of file ends without a newline
-SSP.h(41): warning:  #1295-D: Deprecated declaration initSSP0 - give arg types
-SSP.h(50): warning:  #1295-D: Deprecated declaration initSSP1 - give arg types
-SSP.h(57): warning:  #1295-D: Deprecated declaration recSSP1 - give arg types
-SSP.h(70): warning:  #1295-D: Deprecated declaration initSPI - give arg types
-SSP.h(86): warning:  #1295-D: Deprecated declaration recSPI - give arg types
-SSP.h(88): warning:  #1295-D: Deprecated declaration configureMAX31865 - give arg types
-SSP.h(92): warning:  #1-D: last line of file ends without a newline
-i2c.h(17): warning:  #1295-D: Deprecated declaration initI2C - give arg types
-i2c.h(18): warning:  #1295-D: Deprecated declaration startI2C - give arg types
-i2c.h(19): warning:  #1295-D: Deprecated declaration readI2C - give arg types
-i2c.h(23): warning:  #1-D: last line of file ends without a newline
-timer.h(8): warning:  #1295-D: Deprecated declaration initTimer0 - give arg types
-timer.h(11): warning:  #1295-D: Deprecated declaration initWDTimer - give arg types
-timer.h(12): warning:  #1295-D: Deprecated declaration startWDTimer - give arg types
-timer.h(27): warning:  #1-D: last line of file ends without a newline
-softTimer.h(10): warning:  #1295-D: Deprecated declaration initSoftTimers - give arg types
-softTimer.h(62): warning:  #1295-D: Deprecated declaration recSSP1OnTimer - give arg types
-softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give arg types
-softTimer.h(71): warning:  #1-D: last line of file ends without a newline
-irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
-irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
-flashWork.h(21): warning:  #1-D: last line of file ends without a newline
-default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
-flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
-flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
-flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
-flashWork.h(21): warning:  #1-D: last line of file ends without a newline
-flashWork.c(124): warning:  #1-D: last line of file ends without a newline
-compiling File_Config.c...
-C:\Keil\ARM\RV31\Inc\File_lib.c(115): error:  #5: cannot open source input file "FS_SPI_FlashDev.h": No such file or directory
-compiling FS_SPI_FlashPrg.c...
-compiling Retarget.c...
-compiling SD_File.c...
-flash\SD_File.c(15): error:  #5: cannot open source input file "pwm.h": No such file or directory
-compiling SPI_LPC23xx.c...
+compiling port.c...
+compiling portevent.c...
+compiling portserial.c...
+compiling porttimer.c...
+compiling mbcrc.c...
+compiling mbrtu.c...
+modbus\rtu\mbrtu.c(153): warning:  #550-D: variable "xFrameReceived" was set but never used
+compiling mb.c...
 Target not created
 Rebuild target 'Target 1'
 assembling LPC2300.s...
 compiling main.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -539,30 +536,30 @@ softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give 
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
-main.c(82): warning:  #175-D: subscript out of range
-main.c(98): warning:  #111-D: statement is unreachable
-main.c(20): warning:  #177-D: variable "i" was declared but never referenced
-main.c(20): warning:  #177-D: variable "j" was declared but never referenced
-main.c(21): warning:  #550-D: variable "eStatus" was set but never used
+includes.h(24): warning:  #1-D: last line of file ends without a newline
+main.c(84): warning:  #175-D: subscript out of range
+main.c(100): warning:  #111-D: statement is unreachable
+main.c(22): warning:  #177-D: variable "i" was declared but never referenced
+main.c(22): warning:  #177-D: variable "j" was declared but never referenced
+main.c(23): warning:  #550-D: variable "eStatus" was set but never used
 compiling led.c...
 led.h(67): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led7.h(41): warning:  #1295-D: Deprecated declaration initLed7 - give arg types
 led7.h(46): warning:  #1295-D: Deprecated declaration resetLed7 - give arg types
 led7.h(56): warning:  #1-D: last line of file ends without a newline
@@ -587,28 +584,28 @@ softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give 
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
 led.c(85): warning:  #1-D: last line of file ends without a newline
 compiling led7.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -634,28 +631,28 @@ softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give 
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led7.h(41): warning:  #1295-D: Deprecated declaration initLed7 - give arg types
 led7.h(46): warning:  #1295-D: Deprecated declaration resetLed7 - give arg types
 led7.h(56): warning:  #1-D: last line of file ends without a newline
 led7.c(127): warning:  #1-D: last line of file ends without a newline
 compiling SSP.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -677,22 +674,22 @@ softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give 
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 SSP.h(41): warning:  #1295-D: Deprecated declaration initSSP0 - give arg types
 SSP.h(50): warning:  #1295-D: Deprecated declaration initSSP1 - give arg types
 SSP.h(57): warning:  #1295-D: Deprecated declaration recSSP1 - give arg types
@@ -701,13 +698,13 @@ SSP.h(86): warning:  #1295-D: Deprecated declaration recSPI - give arg types
 SSP.h(88): warning:  #1295-D: Deprecated declaration configureMAX31865 - give arg types
 SSP.h(92): warning:  #1-D: last line of file ends without a newline
 SSP.c(11): warning:  #177-D: variable "i" was declared but never referenced
-SSP.c(126): warning:  #550-D: variable "tmp" was set but never used
-SSP.c(128): warning:  #550-D: variable "regFault" was set but never used
-SSP.c(170): warning:  #177-D: variable "div" was declared but never referenced
-SSP.c(251): warning:  #1-D: last line of file ends without a newline
-SSP.c(237): warning:  #550-D: variable "trash" was set but never used
+SSP.c(131): warning:  #550-D: variable "tmp" was set but never used
+SSP.c(133): warning:  #550-D: variable "regFault" was set but never used
+SSP.c(175): warning:  #177-D: variable "div" was declared but never referenced
+SSP.c(256): warning:  #1-D: last line of file ends without a newline
+SSP.c(242): warning:  #550-D: variable "trash" was set but never used
 compiling timer.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -732,28 +729,28 @@ softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give 
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 timer.h(8): warning:  #1295-D: Deprecated declaration initTimer0 - give arg types
 timer.h(11): warning:  #1295-D: Deprecated declaration initWDTimer - give arg types
 timer.h(12): warning:  #1295-D: Deprecated declaration startWDTimer - give arg types
 timer.h(27): warning:  #1-D: last line of file ends without a newline
 compiling irc.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -780,26 +777,26 @@ softTimer.h(62): warning:  #1295-D: Deprecated declaration recSSP1OnTimer - give
 softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give arg types
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
 compiling softTimer.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -824,29 +821,29 @@ timer.h(27): warning:  #1-D: last line of file ends without a newline
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 softTimer.h(10): warning:  #1295-D: Deprecated declaration initSoftTimers - give arg types
 softTimer.h(62): warning:  #1295-D: Deprecated declaration recSSP1OnTimer - give arg types
 softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give arg types
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 softTimer.c(211): warning:  #1-D: last line of file ends without a newline
 compiling data.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -874,27 +871,27 @@ softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give 
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 data.c(180): warning:  #9-D: nested comment is not allowed
 data.c(136): warning:  #177-D: variable "blink7" was declared but never referenced
 compiling i2c.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -919,43 +916,28 @@ softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give 
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 i2c.h(17): warning:  #1295-D: Deprecated declaration initI2C - give arg types
 i2c.h(18): warning:  #1295-D: Deprecated declaration startI2C - give arg types
 i2c.h(19): warning:  #1295-D: Deprecated declaration readI2C - give arg types
 i2c.h(23): warning:  #1-D: last line of file ends without a newline
-compiling mb.c...
-compiling mbcrc.c...
-compiling mbrtu.c...
-modbus\rtu\mbrtu.c(153): warning:  #550-D: variable "xFrameReceived" was set but never used
-compiling port.c...
-compiling portevent.c...
-compiling portserial.c...
-compiling porttimer.c...
-compiling mbfunccoils.c...
-compiling mbfuncdiag.c...
-compiling mbfuncdisc.c...
-compiling mbfuncholding.c...
-compiling mbfuncinput.c...
-compiling mbfuncother.c...
-compiling mbutils.c...
 compiling flashWork.c...
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 led.h(46): warning:  #1295-D: Deprecated declaration initLed - give arg types
 led.h(51): warning:  #1295-D: Deprecated declaration resetLed - give arg types
 led.h(67): warning:  #1-D: last line of file ends without a newline
@@ -983,19 +965,19 @@ softTimer.h(63): warning:  #1295-D: Deprecated declaration recSPIOnTimer - give 
 softTimer.h(71): warning:  #1-D: last line of file ends without a newline
 irc.h(6): warning:  #1295-D: Deprecated declaration initVIC - give arg types
 irc.h(8): warning:  #1-D: last line of file ends without a newline
-data.h(41): warning:  #1295-D: Deprecated declaration defaultData - give arg types
-data.h(59): warning:  #1295-D: Deprecated declaration initMode - give arg types
-data.h(74): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
-data.h(82): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
-data.h(102): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
-data.h(119): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
-data.h(134): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
-data.h(136): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
-data.h(138): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
-data.h(143): warning:  #1-D: last line of file ends without a newline
+data.h(42): warning:  #1295-D: Deprecated declaration defaultData - give arg types
+data.h(60): warning:  #1295-D: Deprecated declaration initMode - give arg types
+data.h(75): warning:  #1295-D: Deprecated declaration getAssayTemperature - give arg types
+data.h(83): warning:  #1295-D: Deprecated declaration getAssayChanel - give arg types
+data.h(103): warning:  #1295-D: Deprecated declaration initGPIO - give arg types
+data.h(120): warning:  #1295-D: Deprecated declaration upThreshold - give arg types
+data.h(137): warning:  #1295-D: Deprecated declaration setConfigureDS1631 - give arg types
+data.h(139): warning:  #1295-D: Deprecated declaration getConfigureDS1631 - give arg types
+data.h(141): warning:  #1295-D: Deprecated declaration testLM75 - give arg types
+data.h(146): warning:  #1-D: last line of file ends without a newline
 flashWork.h(21): warning:  #1-D: last line of file ends without a newline
 default.h(11): warning:  #1-D: last line of file ends without a newline
-includes.h(23): warning:  #1-D: last line of file ends without a newline
+includes.h(24): warning:  #1-D: last line of file ends without a newline
 flashWork.h(6): warning:  #1295-D: Deprecated declaration saveParams - give arg types
 flashWork.h(7): warning:  #1295-D: Deprecated declaration readParams - give arg types
 flashWork.h(8): warning:  #1295-D: Deprecated declaration MemoryReadStatus - give arg types
@@ -1005,8 +987,23 @@ compiling File_Config.c...
 compiling FS_SPI_FlashPrg.c...
 compiling Retarget.c...
 compiling SPI_LPC23xx.c...
+compiling mbfunccoils.c...
+compiling mbfuncdiag.c...
+compiling mbfuncdisc.c...
+compiling mbfuncholding.c...
+compiling mbfuncinput.c...
+compiling mbfuncother.c...
+compiling mbutils.c...
+compiling port.c...
+compiling portevent.c...
+compiling portserial.c...
+compiling porttimer.c...
+compiling mbcrc.c...
+compiling mbrtu.c...
+modbus\rtu\mbrtu.c(153): warning:  #550-D: variable "xFrameReceived" was set but never used
+compiling mb.c...
 linking...
 Termo2v1.axf: Warning: L6914W: option ropi ignored when using --scatter.
 Termo2v1.axf: Warning: L6914W: option rwpi ignored when using --scatter.
-Program Size: Code=28364 RO-data=1304 RW-data=404 ZI-data=2620  
+Program Size: Code=28396 RO-data=1304 RW-data=408 ZI-data=2624  
 "Termo2v1.axf" - 0 Error(s), 469 Warning(s).

@@ -131,6 +131,8 @@ int getDecTMZ(int buf);
 
 int testTMZChanel(int buf);
 
+int testBreakTMZ(int temperature);
+
 void setConfigureDS1631();
 
 void getConfigureDS1631();

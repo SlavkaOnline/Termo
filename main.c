@@ -58,7 +58,7 @@ int main(){
 	//led7.setNumLed7(data.temperature[0]);	//1
 	//led7.setNumLed7(); 		//2
   //led7.setNumLed7(data.temperature[2]);					//3
-	//led7.setNumLed7(data.temperature[3]);        			 //4
+	led7.setNumLed7(data.temperature[3]);        			 //4
   
 		
 	}

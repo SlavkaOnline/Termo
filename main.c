@@ -2,6 +2,8 @@
 
 #include "includes.h"
 
+
+
 #include <ctype.h>
 #include <math.h>
 
@@ -18,7 +20,7 @@ static USHORT   usRegInputBuf[REG_INPUT_NREGS];
 int main(){
 	
 	int i,j;
-		eMBErrorCode    eStatus;
+	eMBErrorCode    eStatus;
 
 	
 	/* Инициализация */
@@ -55,7 +57,7 @@ int main(){
 // 	//led7.setNumLed7(data.temperature[0]);	//1
 // 	//led7.setNumLed7(); 		//2
 //   //led7.setNumLed7(data.temperature[2]);					//3
-// 	//led7.setNumLed7(data.temperature[3]);        			 //4
+// 	led7.setNumLed7(data.temperature[3]);        			 //4
 //   
 // 		
 // 	}
@@ -95,8 +97,8 @@ usRegInputBuf[12] = (USHORT)pr_data->codeError;
     }
 	
 
-	return 0;
-}
+ 	return 0;
+ }
 	
 
 eMBErrorCode

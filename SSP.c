@@ -95,15 +95,20 @@ static void setSS1(int s, int n){
 
 static void initSPI(){
 	
+	PCONP |= (1 << 8);
+	
 	//конфигурация пинов  15 - SCK 16 - GPIO 17 - MISO 18 - MOSI
   PINSEL0 &= ~(0xD0000000);
 	PINSEL0 |=  (0xD0000000);
+	PINMODE0 &=  ~(0xD0000000);
+	
 	PINSEL1 &= ~(0x3F);
+	PINMODE1 &= ~(0x3F);
 	PINSEL1 |=  (0x3C);
 	FIO0DIR |= (1<<16);
 	
 
-	   S0SPCCR = 4;
+	   S0SPCCR = 8;
 	   S0SPCR = (0x0828);
 	   
   	SSP.setSPI(SSP_OFF);
@@ -127,7 +132,7 @@ static int recSPI(){
 	int RTD;
 	int regFault; 
   
-	
+	S0SPDR;
 	S0SPDR = 0x01;
   while ( !(S0SPSR & 0x80));
 		tmp = S0SPDR;

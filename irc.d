@@ -14,6 +14,8 @@ irc.o: data.h
 irc.o: flashWork.h
 irc.o: default.h
 irc.o: C:\Keil\ARM\RV31\Inc\stdio.h
+irc.o: C:\Keil\ARM\RV31\Inc\File_Config.h
+irc.o: C:\Keil\ARM\RV31\Inc\RTL.h
 irc.o: C:\Keil\ARM\RV31\Inc\math.h
 irc.o: .\modbus\include\mb.h
 irc.o: .\modbus\port\port.h

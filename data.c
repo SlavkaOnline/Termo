@@ -252,7 +252,7 @@ void initGPIO(){
 	led7.initLed7();
 	led7.resetLed7();
 	SSP.initSSP1();
-  SSP.initSSP0();	
+  //SSP.initSSP0();	
 	SSP.initSPI();
 	initI2C();
 	
@@ -381,6 +381,11 @@ int testTMZChanel(int buf){
 		return 1;
 	}
 	
+	if(testBreakTMZ( getDecTMZ( buf ) ) ){
+		  data.chanelError[3] = 1;
+			return 1;
+	}
+	
  	if(data.chanelError[3] != 0){
  		data.chanelError[3] = 0;
  		configureMAX31865(0xD3);
@@ -406,6 +411,17 @@ int testSC(int chanel, int temperature){
 		
 	}
 }
+	return 0;
+	
+}
+
+
+int testBreakTMZ(int temperature){
+	
+		
+	if (temperature >= MAXtmzTemperature)
+			return 1;
+
 	return 0;
 	
 }

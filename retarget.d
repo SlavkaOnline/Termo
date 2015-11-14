@@ -1,4 +1,4 @@
-retarget.o: Retarget.c
+retarget.o: flash\Retarget.c
 retarget.o: C:\Keil\ARM\RV31\Inc\stdio.h
 retarget.o: C:\Keil\ARM\RV31\Inc\string.h
 retarget.o: C:\Keil\ARM\RV31\Inc\rt_sys.h

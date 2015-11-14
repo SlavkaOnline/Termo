@@ -16,13 +16,13 @@
 #define __PCLK    48000000
 
 /* SPI Driver Interface functions */
-static BOOL Init (void);
-static BOOL UnInit (void);
+static fBOOL Init (void);
+static fBOOL UnInit (void);
 static U8   Send (U8 outb);
-static BOOL SendBuf (U8 *buf, U32 sz);
-static BOOL RecBuf (U8 *buf, U32 sz);
-static BOOL BusSpeed (U32 kbaud);
-static BOOL SetSS (U32 ss);
+static fBOOL SendBuf (U8 *buf, U32 sz);
+static fBOOL RecBuf (U8 *buf, U32 sz);
+static fBOOL BusSpeed (U32 kbaud);
+static fBOOL SetSS (U32 ss);
 static U32  CheckMedia (void);        /* Optional function for SD card check */
 
 /* SPI Device Driver Control Block */
@@ -47,7 +47,7 @@ SPI_DRV __DRV_ID = {
 
 /*--------------------------- Init ------------------------------------------*/
 
-static BOOL Init (void) 
+static fBOOL Init (void) 
 {
 // 	FIO0DIR |=1<<16;
 // 	FIO0SET	|=1<<16;
@@ -84,7 +84,7 @@ static BOOL Init (void)
 
 /*--------------------------- UnInit ----------------------------------------*/
 
-static BOOL UnInit (void) 
+static fBOOL UnInit (void) 
 {
 	FIO0DIR &=~(1<<21);
 
@@ -108,7 +108,7 @@ static U8 Send (U8 outb)
 
 /*--------------------------- SendBuf ---------------------------------------*/
 
-static BOOL SendBuf (U8 *buf, U32 sz) 
+static fBOOL SendBuf (U8 *buf, U32 sz) 
 {
   U32 i;
 
@@ -129,7 +129,7 @@ static BOOL SendBuf (U8 *buf, U32 sz)
 
 /*--------------------------- RecBuf ----------------------------------------*/
 
-static BOOL RecBuf (U8 *buf, U32 sz) 
+static fBOOL RecBuf (U8 *buf, U32 sz) 
 {
   U32 i;
 
@@ -145,7 +145,7 @@ static BOOL RecBuf (U8 *buf, U32 sz)
 
 /*--------------------------- BusSpeed --------------------------------------*/
 
-static BOOL BusSpeed (U32 kbaud) 
+static fBOOL BusSpeed (U32 kbaud) 
 {
   U32 div;
 	
@@ -159,7 +159,7 @@ static BOOL BusSpeed (U32 kbaud)
 
 /*--------------------------- SetSS -----------------------------------------*/
 
-static BOOL SetSS (U32 ss) 
+static fBOOL SetSS (U32 ss) 
 {
 	if (ss)
 	{

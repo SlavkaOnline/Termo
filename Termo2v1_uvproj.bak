@@ -348,7 +348,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\modbus\include;.\modbus\functions;.\modbus\port;.\modbus\rtu;.\flash</IncludePath>
+              <IncludePath>.\flash</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -452,81 +452,6 @@
               <FileName>includes.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\includes.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>ModBus RTU</GroupName>
-          <Files>
-            <File>
-              <FileName>mb.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\modbus\mb.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbcrc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\modbus\rtu\mbcrc.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbrtu.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\modbus\rtu\mbrtu.c</FilePath>
-            </File>
-            <File>
-              <FileName>port.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\modbus\port\port.c</FilePath>
-            </File>
-            <File>
-              <FileName>portevent.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\modbus\port\portevent.c</FilePath>
-            </File>
-            <File>
-              <FileName>portserial.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\modbus\port\portserial.c</FilePath>
-            </File>
-            <File>
-              <FileName>porttimer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\modbus\port\porttimer.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbfunccoils.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\modbus\functions\mbfunccoils.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbfuncdiag.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\modbus\functions\mbfuncdiag.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbfuncdisc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\modbus\functions\mbfuncdisc.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbfuncholding.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\modbus\functions\mbfuncholding.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbfuncinput.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\modbus\functions\mbfuncinput.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbfuncother.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\modbus\functions\mbfuncother.c</FilePath>
-            </File>
-            <File>
-              <FileName>mbutils.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\modbus\functions\mbutils.c</FilePath>
             </File>
           </Files>
         </Group>

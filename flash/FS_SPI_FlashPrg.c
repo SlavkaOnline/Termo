@@ -28,11 +28,11 @@
 #define __SPI     spi0_drv
 
 /* Embedded Flash Driver Interface functions */
-static BOOL Init        (U32 adr, U32 clk);
-static BOOL UnInit      (void);
-static BOOL ReadData    (U32 adr, U32 sz, U8 *buf);
-static BOOL ProgramPage (U32 adr, U32 sz, U8 *buf);
-static BOOL EraseSector (U32 adr);
+static fBOOL Init        (U32 adr, U32 clk);
+static fBOOL UnInit      (void);
+static fBOOL ReadData    (U32 adr, U32 sz, U8 *buf);
+static fBOOL ProgramPage (U32 adr, U32 sz, U8 *buf);
+static fBOOL EraseSector (U32 adr);
 
 /* Embedded Flash Device Driver Control Block */
 EFS_DRV __DRV_ID = {
@@ -68,7 +68,7 @@ static void spi_write (U8 cmn, U32 adr, U8 *buf, U32 sz);
 
 /*--------------------------- Init ------------------------------------------*/
 
-static BOOL Init (U32 adr, U32 clk)  {
+static fBOOL Init (U32 adr, U32 clk)  {
   /* Initialize flash programming functions. */
 
   if (spi->Init () == __FALSE) {
@@ -82,7 +82,7 @@ static BOOL Init (U32 adr, U32 clk)  {
 
 /*--------------------------- UnInit ----------------------------------------*/
 
-static BOOL UnInit (void)  {
+static fBOOL UnInit (void)  {
    /* Uninitialize flash programming functions. */
 
    return (spi->UnInit ());
@@ -91,7 +91,7 @@ static BOOL UnInit (void)  {
 
 /*--------------------------- ReadData --------------------------------------*/
 
-static BOOL ReadData (U32 adr, U32 sz, U8 *buf)  {
+static fBOOL ReadData (U32 adr, U32 sz, U8 *buf)  {
   /* Read a block of Data from Flash Memory. */ 
   U8  cbuf[8];
 
@@ -109,7 +109,7 @@ static BOOL ReadData (U32 adr, U32 sz, U8 *buf)  {
 
 /*--------------------------- ProgramPage -----------------------------------*/
 
-static BOOL ProgramPage (U32 adr, U32 sz, U8 *buf) {
+static fBOOL ProgramPage (U32 adr, U32 sz, U8 *buf) {
   /* Program Page in Flash Memory. */ 
   U32 cnt;
   
@@ -132,7 +132,7 @@ static BOOL ProgramPage (U32 adr, U32 sz, U8 *buf) {
 
 /*--------------------------- EraseSector -----------------------------------*/
 
-static BOOL EraseSector (U32 adr) {
+static fBOOL EraseSector (U32 adr) {
   /*  Erase Sector in Flash Memory. */
   U32 i;
 

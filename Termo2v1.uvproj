@@ -488,6 +488,11 @@
               <FileType>4</FileType>
               <FilePath>.\flash\FS_ARM_L.lib</FilePath>
             </File>
+            <File>
+              <FileName>RTL.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\flash\RTL.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

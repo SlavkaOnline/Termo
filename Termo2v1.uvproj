@@ -348,7 +348,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\modbus\include;.\modbus\functions;.\modbus\port;.\modbus\rtu</IncludePath>
+              <IncludePath>.\modbus\include;.\modbus\functions;.\modbus\port;.\modbus\rtu;.\flash</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -537,6 +537,31 @@
               <FileName>flashWork.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\flashWork.c</FilePath>
+            </File>
+            <File>
+              <FileName>File_Config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\flash\File_Config.c</FilePath>
+            </File>
+            <File>
+              <FileName>FS_SPI_FlashPrg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\flash\FS_SPI_FlashPrg.c</FilePath>
+            </File>
+            <File>
+              <FileName>Retarget.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\flash\Retarget.c</FilePath>
+            </File>
+            <File>
+              <FileName>SPI_LPC23xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\flash\SPI_LPC23xx.c</FilePath>
+            </File>
+            <File>
+              <FileName>FS_ARM_L.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>.\flash\FS_ARM_L.lib</FilePath>
             </File>
           </Files>
         </Group>

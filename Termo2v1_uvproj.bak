@@ -348,7 +348,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\modbus\include;.\modbus\functions;.\modbus\port;.\modbus\rtu</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

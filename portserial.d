@@ -4,6 +4,3 @@ portserial.o: modbus\port\port.h
 portserial.o: C:\Keil\ARM\RV31\Inc\assert.h
 portserial.o: C:\Keil\ARM\RV31\Inc\inttypes.h
 portserial.o: C:\Keil\ARM\RV31\Inc\stdint.h
-portserial.o: .\modbus\include\mb.h
-portserial.o: .\modbus\include\mbport.h
-portserial.o: .\modbus\include\mbproto.h

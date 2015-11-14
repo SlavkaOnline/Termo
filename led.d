@@ -14,11 +14,6 @@ led.o: data.h
 led.o: flashWork.h
 led.o: default.h
 led.o: C:\Keil\ARM\RV31\Inc\stdio.h
+led.o: C:\Keil\ARM\RV31\Inc\File_Config.h
+led.o: C:\Keil\ARM\RV31\Inc\RTL.h
 led.o: C:\Keil\ARM\RV31\Inc\math.h
-led.o: .\modbus\include\mb.h
-led.o: .\modbus\port\port.h
-led.o: C:\Keil\ARM\RV31\Inc\assert.h
-led.o: C:\Keil\ARM\RV31\Inc\inttypes.h
-led.o: C:\Keil\ARM\RV31\Inc\stdint.h
-led.o: .\modbus\include\mbport.h
-led.o: .\modbus\include\mbproto.h

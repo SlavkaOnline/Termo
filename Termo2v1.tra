@@ -11,20 +11,6 @@
 ### List of Objects: adding '"softtimer.o"'
 ### List of Objects: adding '"data.o"'
 ### List of Objects: adding '"i2c.o"'
-### List of Objects: adding '"mb.o"'
-### List of Objects: adding '"mbcrc.o"'
-### List of Objects: adding '"mbrtu.o"'
-### List of Objects: adding '"port.o"'
-### List of Objects: adding '"portevent.o"'
-### List of Objects: adding '"portserial.o"'
-### List of Objects: adding '"porttimer.o"'
-### List of Objects: adding '"mbfunccoils.o"'
-### List of Objects: adding '"mbfuncdiag.o"'
-### List of Objects: adding '"mbfuncdisc.o"'
-### List of Objects: adding '"mbfuncholding.o"'
-### List of Objects: adding '"mbfuncinput.o"'
-### List of Objects: adding '"mbfuncother.o"'
-### List of Objects: adding '"mbutils.o"'
 ### List of Objects: adding '"flashwork.o"'
 ### List of Objects: adding '"file_config.o"'
 ### List of Objects: adding '"fs_spi_flashprg.o"'
@@ -32,14 +18,14 @@
 ### List of Objects: adding '"spi_lpc23xx.o"'
 ### List of Objects: adding '".\flash\FS_ARM_L.lib"'
 ### ADS-LD Command completed:
---cpu ARM7TDMI "lpc2300.o" "main.o" "led.o" "led7.o" "ssp.o" "timer.o" "irc.o" "softtimer.o" "data.o" "i2c.o" "mb.o" "mbcrc.o" "mbrtu.o" "port.o" "portevent.o" "portserial.o" "porttimer.o" "mbfunccoils.o" "mbfuncdiag.o" "mbfuncdisc.o" "mbfuncholding.o" "mbfuncinput.o" "mbfuncother.o" "mbutils.o" "flashwork.o" "file_config.o" "fs_spi_flashprg.o" "retarget.o" "spi_lpc23xx.o" "D:\Programs for MC\Termo\flash\FS_ARM_L.lib" --ropi --rwpi --strict --scatter "Termo2v1.sct" 
+--cpu ARM7TDMI "lpc2300.o" "main.o" "led.o" "led7.o" "ssp.o" "timer.o" "irc.o" "softtimer.o" "data.o" "i2c.o" "flashwork.o" "file_config.o" "fs_spi_flashprg.o" "retarget.o" "spi_lpc23xx.o" "D:\Programs for MC\Termo\flash\FS_ARM_L.lib" --ropi --rwpi --strict --scatter "Termo2v1.sct" 
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
  --list ".\Termo2v1.map" -o "Termo2v1.axf"### Preparing Environment (PrepEnvAds)
 ### ADS-LD Output File: 'Termo2v1.axf'
 ### ADS-LD Command File: 'Termo2v1.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'Termo2v1.lnp', Handle=0x00000838
+### Creating CmdFile 'Termo2v1.lnp', Handle=0x00000EA0
 ### Writing '.lnp' file
 ### ADS-LD Command file 'Termo2v1.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

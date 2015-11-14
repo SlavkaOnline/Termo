@@ -1007,3 +1007,34 @@ Termo2v1.axf: Warning: L6914W: option ropi ignored when using --scatter.
 Termo2v1.axf: Warning: L6914W: option rwpi ignored when using --scatter.
 Program Size: Code=28396 RO-data=1304 RW-data=408 ZI-data=2624  
 "Termo2v1.axf" - 0 Error(s), 469 Warning(s).
+Load "D:\\Programs for MC\\Termo\\Termo2v1.AXF" 
+ProjectFile = D:\Programs for MC\Termo\JLinkArm_Target 1.ini
+Device = LPC2378
+Info: Device "LPC2378" selected (504 KB flash, 32 KB RAM).
+VTarget = 4.905V
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: TotalIRLen = 4, IRPrint = 0x01
+Info: RTCK reaction time is approx. 189ns
+Info: Auto JTAG speed: Adaptive
+DLL version V4.40c, compiled Jan 24 2012 09:30:33
+Firmware: J-Link ARM V7 compiled Feb 15 2011 11:03:33
+Hardware: V7.00
+Hardware-Breakpoints: 2
+Software-Breakpoints: 8192
+Watchpoints:          0
+Found 1 JTAG device, Total IRLen = 4:
+ Id of device #0: 0x4F1F0F0F
+ARM7 identified.
+Using adaptive clocking instead of fixed JTAG speed.
+Info: RTCK reaction time is approx. 504ns
+Info: Auto JTAG speed: Adaptive
+Info: TotalIRLen = 4, IRPrint = 0x01
+Using adaptive clocking instead of fixed JTAG speed.
+Erase Done.
+Programming Done.
+Verify OK.
+Info: RTCK reaction time is approx. 504ns
+Info: Auto JTAG speed: Adaptive
+Info: TotalIRLen = 4, IRPrint = 0x01
+Using adaptive clocking instead of fixed JTAG speed.
+Application running ...

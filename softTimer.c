@@ -192,7 +192,8 @@ void recSPIOnTimer(struct t_SPITimer* timer){
 		SSP.setSPI(SSP_OFF);
 		
 		if( !(testTMZChanel(num) ) ){
-			data.temperature[3] = getDecTMZ( num );		
+			data.temperature[3] = getDecTMZ( num );	
+      			
 		}
 		else{
 				data.sumTemperature[3] = 0;
@@ -201,9 +202,8 @@ void recSPIOnTimer(struct t_SPITimer* timer){
   }	 
 	else{
 		
-// 		 num = data.sumTemperature[3] / timer->_time;
-//      setTemperature(3, num);
-// 		 data.sumTemperature[3] = 0;	 
+ 		  //data.sumTemperature[3] /= timer->_time;
+     	 
 		 
      timer->time = timer->_time;		 
 	 }

@@ -381,8 +381,10 @@ int testTMZChanel(int buf){
 		return 1;
 	}
 	
-	if(testBreakTMZ( getDecTMZ( buf ) ) )
+	if(testBreakTMZ( getDecTMZ( buf ) ) ){
+		  data.chanelError[3] = 1;
 			return 1;
+	}
 	
  	if(data.chanelError[3] != 0){
  		data.chanelError[3] = 0;
@@ -416,12 +418,11 @@ int testSC(int chanel, int temperature){
 
 int testBreakTMZ(int temperature){
 	
-	float tmp = ( (float)temperature - data.temperature[3] )/ (float)(data.temperature[3]);
-	
-	if (tmp >= 0.2)
+		
+	if (temperature >= MAXtmzTemperature)
 			return 1;
+
 	return 0;
-	
 	
 }
 

@@ -9,6 +9,7 @@
 #define alarm_FA 3
 #define falseAlarm 1
 #define notFalseAlarm 0
+#define MAXtmzTemperature 50
 
 /**
 	\file
@@ -22,7 +23,7 @@ struct typeData {
 	int threshold;   ///< Порог измерения 
 	int temperature[4];	///< Массив измеренных температур 
 	int chanelError[4]; ///< Массив наличия ошибок на каналах
-	int sumTemperature[4]; ///< Массив суммарных температура на канале, промежуточное значение
+	int sumTemperature[5]; ///< Массив суммарных температура на канале, промежуточное значение
 	int mode[5]; ///< Массив режимов 
 	int currentMode; ///Номер тукущего режима
 	int THdelay; ///< Задержка перед подачей тревоги 

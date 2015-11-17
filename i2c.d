@@ -14,6 +14,4 @@ i2c.o: data.h
 i2c.o: flashWork.h
 i2c.o: default.h
 i2c.o: C:\Keil\ARM\RV31\Inc\stdio.h
-i2c.o: C:\Keil\ARM\RV31\Inc\File_Config.h
-i2c.o: C:\Keil\ARM\RV31\Inc\RTL.h
 i2c.o: C:\Keil\ARM\RV31\Inc\math.h

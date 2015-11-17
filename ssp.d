@@ -14,6 +14,4 @@ ssp.o: data.h
 ssp.o: flashWork.h
 ssp.o: default.h
 ssp.o: C:\Keil\ARM\RV31\Inc\stdio.h
-ssp.o: C:\Keil\ARM\RV31\Inc\File_Config.h
-ssp.o: C:\Keil\ARM\RV31\Inc\RTL.h
 ssp.o: C:\Keil\ARM\RV31\Inc\math.h

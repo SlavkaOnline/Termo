@@ -47,8 +47,8 @@ int main(){
 //   }
 
 	
- 	dataFlash.saveParams();
- 	dataFlash.readParams();
+// 	dataFlash.saveParams();
+ 	//dataFlash.readParams();
 	
 
 	

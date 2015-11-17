@@ -17,10 +17,3 @@ timer.o: C:\Keil\ARM\RV31\Inc\stdio.h
 timer.o: C:\Keil\ARM\RV31\Inc\File_Config.h
 timer.o: C:\Keil\ARM\RV31\Inc\RTL.h
 timer.o: C:\Keil\ARM\RV31\Inc\math.h
-timer.o: .\modbus\include\mb.h
-timer.o: .\modbus\port\port.h
-timer.o: C:\Keil\ARM\RV31\Inc\assert.h
-timer.o: C:\Keil\ARM\RV31\Inc\inttypes.h
-timer.o: C:\Keil\ARM\RV31\Inc\stdint.h
-timer.o: .\modbus\include\mbport.h
-timer.o: .\modbus\include\mbproto.h

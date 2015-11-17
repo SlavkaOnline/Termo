@@ -1,124 +1,62 @@
 #include "flashWork.h"
 
-unsigned char MEM_status;
 
+static const int size_params = 6;
+static const int len = 10;
 
 struct typeFlash dataFlash = {
 
 &saveParams,	
 &readParams,	
-&MemoryReadStatus
+
 };
-
-unsigned char MemoryReadStatus()
-{
-   unsigned char temp;
- 
-   SSP.setSS0(SSP_ON);
-	 temp = SSP.sendSSP0(0xD7);
-   SSP.setSS0(SSP_OFF);
-   return temp;
-}
-
-
-
-
-void saveParams(){
-
-int i;	
-unsigned char *bdata = (unsigned char*)(&data); 
-int len = sizeof(data);
-
-
-	
-// SSP0.setSS(SPI_ON);	
-// SSP0.sendSPI(0x55);
-// SSP0.sendSPI(0x09);
-// SSP0.sendSPI(0x60);
-// SSP0.sendSPI(0x00);
-// SSP0.setSS(SPI_OFF);	
-// 	
-do
-{
-   MEM_status = MemoryReadStatus();
-} while (!(MEM_status & 0x80));	
-	
-	
-SSP.setSS0(SSP_ON);
-SSP.sendSSP0(0x87);
-SSP.sendSSP0(0x00);
-SSP.sendSSP0(0x00);
-SSP.sendSSP0(0x00);
-
-//SSP0.sendSPI(0x00);
-
-
-for( i = 0; i < len; i++){
-	SSP.sendSSP0(bdata[i]);
-}
-SSP.setSS0(SSP_OFF);	
-
-
-SSP.setSS0(SSP_ON);	
-SSP.sendSSP0(0x86);
-SSP.sendSSP0(0x09);
-SSP.sendSSP0(0x60);
-SSP.sendSSP0(0x00);
-
-SSP.setSS0(SSP_OFF);	
-	
-do
-{
-   MEM_status = MemoryReadStatus();
-} while (!(MEM_status & 0x80));	
-
-	
-}
 
 
 void readParams(){
 	
-	int i;	
-  //unsigned char *bdata ;
-	int len = sizeof(data);
-  unsigned char *bdata; // = (unsigned char*)malloc(sizeof(unsigned char)*len) ;
-	struct typeData *data2;
-
-SSP.setSS0(SSP_ON);	
-SSP.sendSSP0(0x55);
-SSP.sendSSP0(0x00);
-SSP.sendSSP0(0x00);
-SSP.sendSSP0(0x00);
+	int i;
+	FILE *readFile;
+	char read_params[len];
+	int p[size_params];
+	char *tmp_str;
 	
-SSP.setSS0(SSP_OFF);	
+	readFile = fopen("params.txt", "w");
 	
-do
-{
-   MEM_status = MemoryReadStatus();
-} while (!(MEM_status & 0x80));	
+	i = 0;
+	while( !feof(readFile) ){
+		if(fgets(read_params, len, readFile));
+		 //strtok(read_params, "\n");
+		 p[i] = atoi( strtok(read_params, "\n") );
+		 i++;
+	}
 	
-SSP.setSS0(SSP_ON);
-SSP.sendSSP0(0xD2);
-SSP.sendSSP0(0x09);
-SSP.sendSSP0(0x60);
-SSP.sendSSP0(0x00);
-
-	SSP.sendSSP0(0xFF);
-	SSP.sendSSP0(0xFF);
-	SSP.sendSSP0(0xFF);
-	SSP.sendSSP0(0xFF);
-
-for( i = 0; i < len; i++){
-	bdata[i] = SSP.sendSSP0(0xFF);
-   //tmp = SSP0.sendSPI(0xFF);
-	 
+	fclose(readFile);
+	
 }
-SSP.setSS0(SSP_OFF);
 
-// for( i = 0; i < len; i++){
-// 	 bdata--;
-// }
 
-data2 = (struct typeData*)(bdata);
-led7.setNumLed7(data2->threshold);
+void saveParams(){
+
+	int params[size_params];
+	int i;
+	FILE *saveFile;
+	
+	params[0] = pr_data->mode[0];
+	params[1] = pr_data->mode[1];
+	params[2] = pr_data->mode[2];
+	params[3] = pr_data->mode[4];
+	params[4] = pr_data->THdelay;
+	params[5] = pr_data->UTH;
+	
+	
+	saveFile = fopen("params.txt", "w");
+	
+	for(i = 0; i < size_params; i++){
+		fprintf(saveFile, "%d\n", params[i]);
+	}
+	
+	fclose(saveFile);
+	
+
+
 }

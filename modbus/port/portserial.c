@@ -119,9 +119,9 @@ xMBPortSerialInit( UCHAR ucPORT, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity e
         U0DLM = reload >> 8;    /* Set Baud */
         U0LCR &= ~0x80;         /* Clear DLAB */
 
-        /* Configure UART3 Interrupt */
+        /* Configure UART0 Interrupt */
         VICVectAddr6 = ( unsigned long )sio_irq;
-        VICVectCntl6 = (0x01);
+        VICVectCntl6 = 0x20 | 6;
         VICIntEnable |= 1 << 6;  /* Enable UART0 Interrupt */
 
         dummy = U0IIR;          /* Required to Get Interrupts Started */

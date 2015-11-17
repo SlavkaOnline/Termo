@@ -1,4 +1,4 @@
---cpu ARM7TDMI "lpc2300.o" "main.o" "led.o" "led7.o" "ssp.o" "timer.o" "irc.o" "softtimer.o" "data.o" "i2c.o" "flashwork.o" "file_config.o" "fs_spi_flashprg.o" "retarget.o" "spi_lpc23xx.o" "D:\Programs for MC\Termo\flash\FS_ARM_L.lib" "mbfunccoils.o" "mbfuncdiag.o" "mbfuncdisc.o" "mbfuncholding.o" "mbfuncinput.o" "mbfuncother.o" "mbutils.o" "port.o" "portevent.o" "portserial.o" "porttimer.o" "mbcrc.o" "mbrtu.o" "mb.o" --ropi --rwpi --strict --scatter "Termo2v1.sct" 
+--cpu ARM7TDMI "lpc2300.o" "main.o" "led.o" "led7.o" "ssp.o" "timer.o" "irc.o" "softtimer.o" "data.o" "i2c.o" "flashwork.o" "file_config.o" "fs_spi_flashprg.o" "retarget.o" "spi_lpc23xx.o" "D:\Programs for MC\Termo\flash\FS_ARM_L.lib" --ropi --rwpi --strict --scatter "Termo2v1.sct" 
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
  --list ".\Termo2v1.map" -o "Termo2v1.axf"

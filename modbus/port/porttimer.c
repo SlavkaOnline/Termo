@@ -50,9 +50,9 @@ xMBPortTimersInit( USHORT usTim1Timerout50us )
     T1TCR = 0;                  // Timer Counter and Prescale Counter Disabled
 
     // Configure Timer0 Interruption
-    VICVectAddr5 = ( unsigned int )prvvTIMERExpiredISR; // Timer0 Interruption - Priority 1
-    VICVectCntl5 = (0x01);
-    VICIntEnable |= ( 1 << 5 );  // Enable Timer0 Interruption
+    VICVectAddr5 = ( unsigned int )prvvTIMERExpiredISR; // Timer1 Interruption - Priority 1
+    VICVectCntl5 = 0x20 | 5;
+    VICIntEnable |= ( 1 << 5 );  // Enable Timer1 Interruption
 
     return TRUE;
 }

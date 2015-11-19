@@ -348,7 +348,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\flash</IncludePath>
+              <IncludePath>.\flash;.\modbus\functions;.\modbus\include;.\modbus\port;.\modbus\rtu</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -531,7 +531,7 @@
                   <MiscControls></MiscControls>
                   <Define></Define>
                   <Undefine></Undefine>
-                  <IncludePath>.\modbus\functions;.\modbus\include;.\modbus\port;.\modbus\rtu</IncludePath>
+                  <IncludePath>.\modbus\functions;.\modbus\include;.\modbus\port;.\modbus\rtu;.\modbus</IncludePath>
                 </VariousControls>
               </Cads>
               <Aads>
@@ -616,6 +616,11 @@
               <FileName>mbrtu.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\modbus\rtu\mbrtu.c</FilePath>
+            </File>
+            <File>
+              <FileName>mb.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\modbus\mb.c</FilePath>
             </File>
           </Files>
         </Group>

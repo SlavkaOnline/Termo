@@ -14,8 +14,6 @@ data.o: data.h
 data.o: flashWork.h
 data.o: default.h
 data.o: C:\Keil\ARM\RV31\Inc\stdio.h
-data.o: C:\Keil\ARM\RV31\Inc\File_Config.h
-data.o: C:\Keil\ARM\RV31\Inc\RTL.h
 data.o: C:\Keil\ARM\RV31\Inc\math.h
 data.o: .\modbus\include\mb.h
 data.o: .\modbus\port\port.h

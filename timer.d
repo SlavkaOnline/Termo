@@ -14,8 +14,6 @@ timer.o: data.h
 timer.o: flashWork.h
 timer.o: default.h
 timer.o: C:\Keil\ARM\RV31\Inc\stdio.h
-timer.o: C:\Keil\ARM\RV31\Inc\File_Config.h
-timer.o: C:\Keil\ARM\RV31\Inc\RTL.h
 timer.o: C:\Keil\ARM\RV31\Inc\math.h
 timer.o: .\modbus\include\mb.h
 timer.o: .\modbus\port\port.h

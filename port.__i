@@ -1,1 +1,0 @@
--c --cpu ARM7TDMI -g -O0 --apcs=interwork -I.\modbus\functions -I.\modbus\include -I.\modbus\port -I.\modbus\rtu -I.\modbus -I.\flash -I.\modbus\functions -I.\modbus\include -I.\modbus\port -I.\modbus\rtu -I C:\Keil\ARM\RV31\Inc -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips -o "port.o" --omf_browse "port.crf" --depend "port.d" "modbus\port\port.c"

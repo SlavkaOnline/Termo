@@ -456,46 +456,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Flash</GroupName>
-          <Files>
-            <File>
-              <FileName>flashWork.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\flashWork.c</FilePath>
-            </File>
-            <File>
-              <FileName>File_Config.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\flash\File_Config.c</FilePath>
-            </File>
-            <File>
-              <FileName>FS_SPI_FlashPrg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\flash\FS_SPI_FlashPrg.c</FilePath>
-            </File>
-            <File>
-              <FileName>Retarget.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\flash\Retarget.c</FilePath>
-            </File>
-            <File>
-              <FileName>SPI_LPC23xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\flash\SPI_LPC23xx.c</FilePath>
-            </File>
-            <File>
-              <FileName>FS_ARM_L.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>.\flash\FS_ARM_L.lib</FilePath>
-            </File>
-            <File>
-              <FileName>RTL.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\flash\RTL.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>ModBus</GroupName>
           <GroupOption>
             <CommonProperty>

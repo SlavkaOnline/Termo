@@ -10,7 +10,7 @@
 
 /* ----------------------- Defines ------------------------------------------*/
 #define REG_INPUT_START 1000
-#define REG_INPUT_NREGS 13
+#define REG_INPUT_NREGS 4
 
 /* ----------------------- Static variables ---------------------------------*/
 static USHORT   usRegInputStart = REG_INPUT_START;
@@ -71,19 +71,19 @@ int main(){
     eStatus = eMBEnable(  );
 
 //======================================================//
-usRegInputBuf[0] = (USHORT)pr_data->mode[0];
-usRegInputBuf[1] = (USHORT)pr_data->mode[1];
-usRegInputBuf[2] = (USHORT)pr_data->mode[2];
-usRegInputBuf[3] = (USHORT)pr_data->mode[3];
-usRegInputBuf[4] = (USHORT)pr_data->mode[4];
-usRegInputBuf[5] = (USHORT)pr_data->THdelay;
-usRegInputBuf[6] = (USHORT)pr_data->UTH;
-usRegInputBuf[7] = (USHORT)pr_data->temperature[0];
-usRegInputBuf[8] = (USHORT)pr_data->temperature[1];
-usRegInputBuf[9] = (USHORT)pr_data->temperature[2];
-usRegInputBuf[10] = (USHORT)pr_data->temperature[4];
-usRegInputBuf[11] = (USHORT)0;
-usRegInputBuf[12] = (USHORT)pr_data->codeError;
+// usRegInputBuf[0] = (USHORT)pr_data->mode[0];
+// usRegInputBuf[1] = (USHORT)pr_data->mode[1];
+// usRegInputBuf[2] = (USHORT)pr_data->mode[2];
+// usRegInputBuf[3] = (USHORT)pr_data->mode[3];
+// usRegInputBuf[4] = (USHORT)pr_data->mode[4];
+// usRegInputBuf[5] = (USHORT)pr_data->THdelay;
+// usRegInputBuf[6] = (USHORT)pr_data->UTH;
+// usRegInputBuf[7] = (USHORT)pr_data->temperature[0];
+// usRegInputBuf[8] = (USHORT)pr_data->temperature[1];
+// usRegInputBuf[9] = (USHORT)pr_data->temperature[2];
+// usRegInputBuf[10] = (USHORT)pr_data->temperature[4];
+// usRegInputBuf[11] = (USHORT)0;
+// usRegInputBuf[12] = (USHORT)pr_data->codeError;
 
 //==================================================//
 
@@ -93,7 +93,7 @@ usRegInputBuf[12] = (USHORT)pr_data->codeError;
         ( void )eMBPoll(  );
 
         /* Here we simply count the number of poll cycles. */
-        //usRegInputBuf[0]++;
+        usRegInputBuf[0]++;
     }
 	
 

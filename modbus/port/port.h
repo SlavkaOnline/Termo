@@ -35,6 +35,8 @@
 #define CCLK	60000000L
 #define PCLK	CCLK/4
 
+#define RTS_ENABLE   TRUE
+
 void            EnterCriticalSection( void );
 void            ExitCriticalSection( void );
 

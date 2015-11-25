@@ -1,6 +1,6 @@
 Dependencies for Project 'Termo2v1', Target 'Target 1': (DO NOT MODIFY !)
 F (.\LPC2300.s)(0x5655D497)(--cpu ARM7TDMI -g --apcs=interwork -I C:\Keil\ARM\RV31\Inc -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips --list "LPC2300.lst" --xref -o "LPC2300.o" --depend "LPC2300.d")
-F (.\main.c)(0x5655DA43)(-c --cpu ARM7TDMI -g -O0 --apcs=interwork -I.\flash -I.\usb -I C:\Keil\ARM\RV31\Inc -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips -o "main.o" --omf_browse "main.crf" --depend "main.d")
+F (.\main.c)(0x5655F1AD)(-c --cpu ARM7TDMI -g -O0 --apcs=interwork -I.\flash -I.\usb -I C:\Keil\ARM\RV31\Inc -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips -o "main.o" --omf_browse "main.crf" --depend "main.d")
 I (C:\Keil\ARM\Inc\Philips\lpc23xx.h)(0x4F587DCC)
 I (includes.h)(0x5655D7E2)
 I (led.h)(0x5655D498)

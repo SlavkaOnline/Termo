@@ -19,7 +19,7 @@ U8 OutReport;
 
 void GetInReport (void) {
 
-	InReport = 0x04;
+	InReport = 0xFF;
 }
 
 
@@ -73,7 +73,7 @@ int main(){
 	//led7.setNumLed7(); 		//2
   //led7.setNumLed7(data.temperature[2]);					//3
 	led7.setNumLed7(data.temperature[3]);        			 //4
-  
+  GetInReport();
 		
 	}
 	

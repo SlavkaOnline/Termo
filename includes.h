@@ -12,13 +12,12 @@
 #include "data.h"
 #include "flashWork.h"
 #include "default.h"
+#include "type.h"
 //#include <RTL.h>                      /* RTL kernel functions & defines      */
 #include <stdio.h>                    /* standard I/O .h-file                */
 //#include "File_Config.h"
 #include <math.h>
 
-#include "mb.h"
-#include "mbport.h"
 
 
 #endif

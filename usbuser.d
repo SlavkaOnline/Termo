@@ -1,0 +1,9 @@
+usbuser.o: usb\usbuser.c
+usbuser.o: usb\type.h
+usbuser.o: usb\usb.h
+usbuser.o: usb\usbcfg.h
+usbuser.o: usb\usbhw.h
+usbuser.o: usb\usbcore.h
+usbuser.o: usb\usbuser.h
+usbuser.o: usb\hiduser.h
+usbuser.o: usb\main.h

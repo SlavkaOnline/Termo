@@ -13,12 +13,6 @@ softtimer.o: irc.h
 softtimer.o: data.h
 softtimer.o: flashWork.h
 softtimer.o: default.h
+softtimer.o: .\usb\type.h
 softtimer.o: C:\Keil\ARM\RV31\Inc\stdio.h
 softtimer.o: C:\Keil\ARM\RV31\Inc\math.h
-softtimer.o: .\modbus\include\mb.h
-softtimer.o: .\modbus\port\port.h
-softtimer.o: C:\Keil\ARM\RV31\Inc\assert.h
-softtimer.o: C:\Keil\ARM\RV31\Inc\inttypes.h
-softtimer.o: C:\Keil\ARM\RV31\Inc\stdint.h
-softtimer.o: .\modbus\include\mbport.h
-softtimer.o: .\modbus\include\mbproto.h

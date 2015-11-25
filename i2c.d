@@ -13,12 +13,6 @@ i2c.o: irc.h
 i2c.o: data.h
 i2c.o: flashWork.h
 i2c.o: default.h
+i2c.o: .\usb\type.h
 i2c.o: C:\Keil\ARM\RV31\Inc\stdio.h
 i2c.o: C:\Keil\ARM\RV31\Inc\math.h
-i2c.o: .\modbus\include\mb.h
-i2c.o: .\modbus\port\port.h
-i2c.o: C:\Keil\ARM\RV31\Inc\assert.h
-i2c.o: C:\Keil\ARM\RV31\Inc\inttypes.h
-i2c.o: C:\Keil\ARM\RV31\Inc\stdint.h
-i2c.o: .\modbus\include\mbport.h
-i2c.o: .\modbus\include\mbproto.h

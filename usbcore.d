@@ -1,0 +1,10 @@
+usbcore.o: usb\usbcore.c
+usbcore.o: usb\type.h
+usbcore.o: usb\usb.h
+usbcore.o: usb\usbcfg.h
+usbcore.o: usb\usbhw.h
+usbcore.o: usb\usbcore.h
+usbcore.o: usb\usbdesc.h
+usbcore.o: usb\usbuser.h
+usbcore.o: usb\hid.h
+usbcore.o: usb\hiduser.h

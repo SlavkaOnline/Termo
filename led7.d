@@ -13,12 +13,6 @@ led7.o: irc.h
 led7.o: data.h
 led7.o: flashWork.h
 led7.o: default.h
+led7.o: .\usb\type.h
 led7.o: C:\Keil\ARM\RV31\Inc\stdio.h
 led7.o: C:\Keil\ARM\RV31\Inc\math.h
-led7.o: .\modbus\include\mb.h
-led7.o: .\modbus\port\port.h
-led7.o: C:\Keil\ARM\RV31\Inc\assert.h
-led7.o: C:\Keil\ARM\RV31\Inc\inttypes.h
-led7.o: C:\Keil\ARM\RV31\Inc\stdint.h
-led7.o: .\modbus\include\mbport.h
-led7.o: .\modbus\include\mbproto.h

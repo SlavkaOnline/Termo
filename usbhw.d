@@ -1,0 +1,9 @@
+usbhw.o: usb\usbhw.c
+usbhw.o: C:\Keil\ARM\Inc\Philips\LPC23xx.H
+usbhw.o: usb\type.h
+usbhw.o: usb\usb.h
+usbhw.o: usb\usbcfg.h
+usbhw.o: usb\usbreg.h
+usbhw.o: usb\usbhw.h
+usbhw.o: usb\usbcore.h
+usbhw.o: usb\usbuser.h

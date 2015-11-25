@@ -3,11 +3,11 @@
 <title>Static Call Graph - [C:\Users\Slava\Desktop\Termo\Termo2v1.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image C:\Users\Slava\Desktop\Termo\Termo2v1.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 894]: Last Updated: Wed Nov 25 21:02:23 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 894]: Last Updated: Wed Nov 25 22:36:58 2015
 <BR><P>
-<H3>Maximum Stack Usage =        112 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        136 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-main &rArr; eMBInit &rArr; eMBRTUInit &rArr; xMBPortSerialInit
+main &rArr; eMBInit &rArr; eMBRTUInit &rArr; xMBPortSerialInit &rArr; vMBPortSerialEnable &rArr; prvvUARTTxReadyISR
 <P>
 <H3>
 Functions with no stack information
@@ -227,8 +227,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[2a]"></a>main</STRONG> (ARM, 180 bytes, Stack size 8 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112 + Unknown Stack Size
-<LI>Call Chain = main &rArr; eMBInit &rArr; eMBRTUInit &rArr; xMBPortSerialInit
+<BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
+<LI>Call Chain = main &rArr; eMBInit &rArr; eMBRTUInit &rArr; xMBPortSerialInit &rArr; vMBPortSerialEnable &rArr; prvvUARTTxReadyISR
 </UL>
 <BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMode
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initVIC
@@ -635,7 +635,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eMBPoll
 </UL>
 
-<P><STRONG><a name="[74]"></a>vMBPortSerialEnable</STRONG> (ARM, 128 bytes, Stack size 16 bytes, portserial.o(.text))
+<P><STRONG><a name="[74]"></a>vMBPortSerialEnable</STRONG> (ARM, 148 bytes, Stack size 16 bytes, portserial.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = vMBPortSerialEnable &rArr; prvvUARTTxReadyISR
 </UL>
 <BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;prvvUARTTxReadyISR
@@ -644,15 +644,17 @@ Global Symbols
 <LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eMBRTUSend
 <LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eMBRTUStop
 <LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eMBRTUStart
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xMBPortSerialInit
 </UL>
 
 <P><STRONG><a name="[cc]"></a>vMBPortClose</STRONG> (ARM, 4 bytes, Stack size 0 bytes, portserial.o(.text), UNUSED)
 
-<P><STRONG><a name="[77]"></a>xMBPortSerialInit</STRONG> (ARM, 376 bytes, Stack size 40 bytes, portserial.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
-<LI>Call Chain = xMBPortSerialInit
+<P><STRONG><a name="[77]"></a>xMBPortSerialInit</STRONG> (ARM, 444 bytes, Stack size 40 bytes, portserial.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64 + Unknown Stack Size
+<LI>Call Chain = xMBPortSerialInit &rArr; vMBPortSerialEnable &rArr; prvvUARTTxReadyISR
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vMBPortSerialEnable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eMBRTUInit
 </UL>
@@ -687,8 +689,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[79]"></a>eMBRTUInit</STRONG> (ARM, 136 bytes, Stack size 32 bytes, mbrtu.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
-<LI>Call Chain = eMBRTUInit &rArr; xMBPortSerialInit
+<BR><BR>[Stack]<UL><LI>Max Depth = 96 + Unknown Stack Size
+<LI>Call Chain = eMBRTUInit &rArr; xMBPortSerialInit &rArr; vMBPortSerialEnable &rArr; prvvUARTTxReadyISR
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xMBPortTimersInit
@@ -772,8 +774,8 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> mb.o(.text)
 </UL>
 <P><STRONG><a name="[49]"></a>eMBInit</STRONG> (ARM, 280 bytes, Stack size 32 bytes, mb.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104 + Unknown Stack Size
-<LI>Call Chain = eMBInit &rArr; eMBRTUInit &rArr; xMBPortSerialInit
+<BR><BR>[Stack]<UL><LI>Max Depth = 128 + Unknown Stack Size
+<LI>Call Chain = eMBInit &rArr; eMBRTUInit &rArr; xMBPortSerialInit &rArr; vMBPortSerialEnable &rArr; prvvUARTTxReadyISR
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eMBRTUInit
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xMBPortEventInit

@@ -65,7 +65,7 @@ int main(){
 	
 
 
-    eStatus = eMBInit( MB_RTU, 0x0A, 0, 19200, MB_PAR_EVEN );
+    eStatus = eMBInit( MB_RTU, 0x0A, 0, 38400, MB_PAR_EVEN );
 
     /* Enable the Modbus Protocol Stack. */
     eStatus = eMBEnable(  );

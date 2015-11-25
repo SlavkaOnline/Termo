@@ -37,6 +37,8 @@
 
 #define RTS_ENABLE   TRUE
 
+
+
 void            EnterCriticalSection( void );
 void            ExitCriticalSection( void );
 
@@ -58,5 +60,31 @@ typedef int32_t LONG;
 #ifndef FALSE
 #define FALSE           0
 #endif
+
+
+
+// #define RTS_INIT        
+//     while(1) { 
+//         PINSEL0 &= ~(0x300);
+// 				FIO0DIR |= (1<<4);
+// 				FIO0CLR  |= (1<<4);
+// 			break;
+//     } 
+
+// #define RTS_HIGH        
+//     while(1){ 
+//         FOI0SET  |= (1<<4);
+// 				break;
+//     } 
+
+// #define RTS_LOW         
+//     while(1){ 
+//         FOI0CLR  |= (1<<4);
+// 				break;
+//     } 
+
+// #endif
+
+
 
 #endif

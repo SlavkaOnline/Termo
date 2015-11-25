@@ -40,6 +40,7 @@ sio_irq( void )
     if( xRxEnable )
     {
         U0IER |= 0x01;
+			  
     }
     else
     {
@@ -47,6 +48,8 @@ sio_irq( void )
     }
     if( xTxEnable )
     {
+			  
+			  FIO0SET  |= (1<<4);
         U0IER |= 0x02;
         prvvUARTTxReadyISR(  );
     }
@@ -127,6 +130,16 @@ xMBPortSerialInit( UCHAR ucPORT, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity e
         dummy = U0IIR;          /* Required to Get Interrupts Started */
     }
 
+		vMBPortSerialEnable( TRUE, TRUE );
+		
+// 		#ifdef RTS_ENABLE
+//     RTS_INIT;
+// 		#endif
+		
+		PINSEL0 &= ~(0x300);
+    FIO0DIR |= (1<<4);
+    FIO0CLR  |= (1<<4);
+		
     return bInitialized;
 }
 

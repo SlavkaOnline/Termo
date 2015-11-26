@@ -49,7 +49,7 @@ sio_irq( void )
     if( xTxEnable )
     {
 			  
-			  FIO0SET  |= (1<<4);
+			 
         U0IER |= 0x02;
         prvvUARTTxReadyISR(  );
     }
@@ -147,7 +147,7 @@ BOOL
 xMBPortSerialPutByte( CHAR ucByte )
 {
     U0THR = ucByte;
-
+     
     /* Wait till U0THR and U0TSR are both empty */
     while( !( U0LSR & 0x20 ) )
     {
@@ -158,7 +158,7 @@ xMBPortSerialPutByte( CHAR ucByte )
 
 BOOL
 xMBPortSerialGetByte( CHAR * pucByte )
-{
+{   FIO0SET  |= (1<<4);
     while( !( U0LSR & 0x01 ) )
     {
     }

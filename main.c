@@ -19,7 +19,7 @@ U8 OutReport;
 
 void GetInReport (void) {
 
-	InReport = 0xFF;
+	InReport = 0x11;
 }
 
 

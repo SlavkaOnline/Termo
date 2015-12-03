@@ -135,7 +135,7 @@ void recSSP1OnTimer(struct t_SSP1Timer* timer){
        		case 2:
 						while(delay--);
 						delay = 3000000;
-					  data.sumTemperature[i] = 0;
+					 // data.sumTemperature[i] = 0;
 					break;
 					case 0:
 							setTemperature(i, getDec(num));
@@ -144,7 +144,7 @@ void recSSP1OnTimer(struct t_SSP1Timer* timer){
 					break;
 					
 					default: 
-						data.sumTemperature[i] = 0;
+						//data.sumTemperature[i] = 0;
 					break;				
 	 }		 
 		}
@@ -196,7 +196,7 @@ void recSPIOnTimer(struct t_SPITimer* timer){
       			
 		}
 		else{
-				data.sumTemperature[3] = 0;
+				//data.sumTemperature[3] = 0;
 			}
 	
   }	 

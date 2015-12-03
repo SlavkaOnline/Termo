@@ -3,7 +3,7 @@
 <title>Static Call Graph - [C:\Users\Slava\Desktop\Termo\Termo2v1.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image C:\Users\Slava\Desktop\Termo\Termo2v1.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 894]: Last Updated: Tue Dec 01 13:57:03 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 894]: Last Updated: Thu Dec 03 18:53:25 2015
 <BR><P>
 <H3>Maximum Stack Usage =         96 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -315,7 +315,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAssayTemperature
 </UL>
 
-<P><STRONG><a name="[22]"></a>recSSP1OnTimer</STRONG> (ARM, 268 bytes, Stack size 24 bytes, softtimer.o(.text))
+<P><STRONG><a name="[22]"></a>recSSP1OnTimer</STRONG> (ARM, 244 bytes, Stack size 24 bytes, softtimer.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = recSSP1OnTimer &rArr; testChanel &rArr; testSC &rArr; __aeabi_fdiv
 </UL>
 <BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testChanel
@@ -326,7 +326,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> softtimer.o(.data)
 </UL>
-<P><STRONG><a name="[23]"></a>recSPIOnTimer</STRONG> (ARM, 160 bytes, Stack size 16 bytes, softtimer.o(.text))
+<P><STRONG><a name="[23]"></a>recSPIOnTimer</STRONG> (ARM, 144 bytes, Stack size 16 bytes, softtimer.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = recSPIOnTimer &rArr; testTMZChanel &rArr; getDecTMZ &rArr; __aeabi_d2iz
 </UL>
 <BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testTMZChanel
@@ -358,19 +358,19 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recSSP1OnTimer
 </UL>
 
-<P><STRONG><a name="[36]"></a>setMode</STRONG> (ARM, 64 bytes, Stack size 0 bytes, data.o(.text))
+<P><STRONG><a name="[36]"></a>setMode</STRONG> (ARM, 76 bytes, Stack size 0 bytes, data.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;portCommand
 <LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[3f]"></a>sendAlarm</STRONG> (ARM, 136 bytes, Stack size 0 bytes, data.o(.text))
+<P><STRONG><a name="[3f]"></a>sendAlarm</STRONG> (ARM, 140 bytes, Stack size 0 bytes, data.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAssayTemperature
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAssayChanel
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forcedTestChanel
 <LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WDTimer_Int
 </UL>
 
-<P><STRONG><a name="[48]"></a>getAssayTemperature</STRONG> (ARM, 200 bytes, Stack size 8 bytes, data.o(.text))
+<P><STRONG><a name="[48]"></a>getAssayTemperature</STRONG> (ARM, 204 bytes, Stack size 8 bytes, data.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = getAssayTemperature
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;startTHdTimer
@@ -379,7 +379,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recSSP1OnTimer
 </UL>
 
-<P><STRONG><a name="[47]"></a>getAssayChanel</STRONG> (ARM, 356 bytes, Stack size 16 bytes, data.o(.text))
+<P><STRONG><a name="[47]"></a>getAssayChanel</STRONG> (ARM, 376 bytes, Stack size 16 bytes, data.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = getAssayChanel
 </UL>
 <BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAlarm
@@ -399,7 +399,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testChanel
 </UL>
 
-<P><STRONG><a name="[44]"></a>testChanel</STRONG> (ARM, 208 bytes, Stack size 16 bytes, data.o(.text))
+<P><STRONG><a name="[44]"></a>testChanel</STRONG> (ARM, 236 bytes, Stack size 16 bytes, data.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = testChanel &rArr; testSC &rArr; __aeabi_fdiv
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testSC
@@ -416,7 +416,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[42]"></a>disableAlarm</STRONG> (ARM, 524 bytes, Stack size 16 bytes, data.o(.text), UNUSED)
+<P><STRONG><a name="[42]"></a>disableAlarm</STRONG> (ARM, 528 bytes, Stack size 16 bytes, data.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forcedTestChanel
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;portCommand
 </UL>
@@ -425,7 +425,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;portCommand
 </UL>
 
-<P><STRONG><a name="[41]"></a>forcedTestChanel</STRONG> (ARM, 76 bytes, Stack size 16 bytes, data.o(.text), UNUSED)
+<P><STRONG><a name="[41]"></a>forcedTestChanel</STRONG> (ARM, 80 bytes, Stack size 16 bytes, data.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disableAlarm
 <LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAlarm
 </UL>
@@ -462,7 +462,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;startI2C
 </UL>
 
-<P><STRONG><a name="[5a]"></a>getConfigureDS1631</STRONG> (ARM, 452 bytes, Stack size 8 bytes, data.o(.text), UNUSED)
+<P><STRONG><a name="[5a]"></a>getConfigureDS1631</STRONG> (ARM, 548 bytes, Stack size 8 bytes, data.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;startI2C
 </UL>
 

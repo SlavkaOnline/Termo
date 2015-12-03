@@ -22,15 +22,15 @@ struct typeData {
 	
 	int threshold;   ///< Порог измерения 
 	int temperature[4];	///< Массив измеренных температур 
-	int chanelError[4]; ///< Массив наличия ошибок на каналах
-	int sumTemperature[5]; ///< Массив суммарных температура на канале, промежуточное значение
+	short  chanelError[4]; ///< Массив наличия ошибок на каналах
+	//int sumTemperature[5]; ///< Массив суммарных температура на канале, промежуточное значение
 	int mode[5]; ///< Массив режимов 
-	int currentMode; ///Номер тукущего режима
-	int THdelay; ///< Задержка перед подачей тревоги 
+	short currentMode; ///Номер тукущего режима
+	short THdelay; ///< Задержка перед подачей тревоги 
 	int UTH; ///< Дельта повышения температуры 
-	int alarm[3]; ///< Наличие тревоги 
-	int codeError; ///< Код ошибки 
-	int work;  ///< Разрешение работы 
+	short alarm[3]; ///< Наличие тревоги 
+	short codeError; ///< Код ошибки 
+	short work;  ///< Разрешение работы 
 	
 	char Thyst;
 	char Tos;

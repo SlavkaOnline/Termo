@@ -47,7 +47,8 @@ BOOL HID_GetReport (void) {
   switch (SetupPacket.wValue.WB.H) {
     case HID_REPORT_INPUT:
       GetInReport();
-      EP0Buf[0] = InReport;
+      //EP0Buf[0] = InReport;
+		memcpy(&EP0Buf, &InReport, sizeof(InReport));
       break;
     case HID_REPORT_OUTPUT:
       return (__FALSE);        /* Not Supported */

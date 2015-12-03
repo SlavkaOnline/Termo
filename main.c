@@ -11,14 +11,18 @@
 #include "usbcfg.h"
 #include "usbhw.h"
 
-U8 InReport;                                /* HID Input Report    */
+U8  InReport[63];                                /* HID Input Report    */
                                             /*   Bit0   : Buttons  */
                                             /*   Bit1..7: Reserved */
 U8 OutReport[63]; 
 
 void GetInReport (void) {
-
-	InReport = 0x01;
+	
+	
+	U8* message = (U8*)&data;
+	data.codeError = 65;
+	memcpy(&InReport, message, sizeof(data));
+	
 }
 
 

@@ -43,7 +43,7 @@
       7     ---          LED7
 */
 
-#define HID_INPUT_REPORT_BYTES       8              /* size of report in Bytes */
+#define HID_INPUT_REPORT_BYTES       64              /* size of report in Bytes */
 #define HID_OUTPUT_REPORT_BYTES      64              /* size of report in Bytes */
 #define HID_FEATURE_REPORT_BYTES     8              /* size of report in Bytes */
 

@@ -115,10 +115,10 @@ void USB_Error_Event (DWORD error) {
 #if USB_CONFIGURE_EVENT
 void USB_Configure_Event (void) {
 
-  if (USB_Configuration) {                   /* Check if USB is configured */
-    GetInReport();
-    USB_WriteEP(HID_EP_IN, &InReport, sizeof(InReport));
-  }
+//   if (USB_Configuration) {                   /* Check if USB is configured */
+//     GetInReport();
+//     USB_WriteEP(HID_EP_IN, &InReport, sizeof(InReport));
+//   }
 }
 #endif
 
@@ -176,12 +176,12 @@ void (* const USB_P_EP[16]) (U32 event) = {
 
 void USB_EndPoint1 (U32 event) {
 
-  switch (event) {
-    case USB_EVT_IN:
-      GetInReport();
-      USB_WriteEP(HID_EP_IN, &InReport, sizeof(InReport));
-      break;
-  }
+//   switch (event) {
+//     case USB_EVT_IN:
+//       GetInReport();
+//       USB_WriteEP(HID_EP_IN, &InReport, sizeof(InReport));
+//       break;
+//   }
 }
 
 

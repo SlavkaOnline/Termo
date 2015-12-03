@@ -14,8 +14,7 @@
 U8 InReport;                                /* HID Input Report    */
                                             /*   Bit0   : Buttons  */
                                             /*   Bit1..7: Reserved */
-
-U8 OutReport; 
+U8 OutReport[63]; 
 
 void GetInReport (void) {
 
@@ -28,7 +27,10 @@ void GetInReport (void) {
  *------------------------------------------------------------------------------*/
 void SetOutReport (void) {
 
-	led7.setNumLed7(OutReport);
+	
+	data = *((struct typeData *)&OutReport);
+	led7.setNumLed7(data.codeError);
+
 }
 
 
@@ -72,8 +74,8 @@ int main(){
 	//led7.setNumLed7(data.temperature[0]);	//1
 	//led7.setNumLed7(); 		//2
   //led7.setNumLed7(data.temperature[2]);					//3
-	led7.setNumLed7(data.temperature[3]);        			 //4
-  GetInReport();
+	//led7.setNumLed7(data.temperature[3]);        			 //4
+  
 		
 	}
 	

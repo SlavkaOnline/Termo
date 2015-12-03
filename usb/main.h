@@ -21,7 +21,7 @@
 
 /* HID Demo Variables */
 extern U8 InReport;
-extern U8 OutReport;
+extern U8 OutReport[63];
 
 /* HID Demo Functions */
 extern void GetInReport  (void);

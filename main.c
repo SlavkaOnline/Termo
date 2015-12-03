@@ -11,7 +11,7 @@
 #include "usbcfg.h"
 #include "usbhw.h"
 
-U8  InReport[63];                                /* HID Input Report    */
+U8  InReport[64];                                /* HID Input Report    */
                                             /*   Bit0   : Buttons  */
                                             /*   Bit1..7: Reserved */
 U8 OutReport[63]; 
@@ -19,9 +19,9 @@ U8 OutReport[63];
 void GetInReport (void) {
 	
 	
-	U8* message = (U8*)&data;
-	data.codeError = 65;
-	memcpy(&InReport, message, sizeof(data));
+  	U8* message = (U8*)&data;
+  	
+  	memcpy(&InReport, message, sizeof(data));
 	
 }
 
@@ -65,7 +65,7 @@ int main(){
 	
   
 	//data.threshold = 35;
-	
+	data.codeError = 65;
 
 	
 //  	dataFlash.saveParams();
@@ -80,7 +80,7 @@ int main(){
   //led7.setNumLed7(data.temperature[2]);					//3
 	//led7.setNumLed7(data.temperature[3]);        			 //4
   
-		
+		led7.setNumLed7(data.UTH);
 	}
 	
 	

@@ -348,7 +348,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\flash;.\usb</IncludePath>
+              <IncludePath>.\flash;.\usb;..\Termo</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

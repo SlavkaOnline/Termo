@@ -20,7 +20,7 @@
 #define LED_MSK         0x000000FF  /* P2.0..7 */
 
 /* HID Demo Variables */
-extern U8 InReport[63];
+extern U8 InReport[64];
 extern U8 OutReport[63];
 
 /* HID Demo Functions */

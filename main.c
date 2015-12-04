@@ -33,7 +33,7 @@ void SetOutReport (void) {
 
 	
 	data = *((struct typeData *)&OutReport);
-	led7.setNumLed7(data.codeError);
+	setMode(data.currentMode);
 
 }
 
@@ -64,8 +64,8 @@ int main(){
 	led.setLed(PWR, LED_ON);
 	
   
-	//data.threshold = 35;
-	data.codeError = 65;
+	data.threshold = 35;
+	//data.codeError = 65;
 
 	
 //  	dataFlash.saveParams();
@@ -80,7 +80,7 @@ int main(){
   //led7.setNumLed7(data.temperature[2]);					//3
 	//led7.setNumLed7(data.temperature[3]);        			 //4
   
-		led7.setNumLed7(data.UTH);
+		led7.setNumLed7(data.threshold);
 	}
 	
 	

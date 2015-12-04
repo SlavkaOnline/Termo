@@ -75,8 +75,11 @@ BOOL HID_SetReport (void) {
     case HID_REPORT_INPUT:
       return (__FALSE);        /* Not Supported */
     case HID_REPORT_OUTPUT:
-    memcpy(&OutReport, &EP0Buf, 63);
-      
+			switch (EP0Buf[0]){
+				case 0x01:
+							memcpy(&OutReport, &EP0Buf[1], sizeof(EP0Buf) - 8);
+        break;
+			}
 		SetOutReport();
       break;
     case HID_REPORT_FEATURE:

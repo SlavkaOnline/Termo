@@ -20,17 +20,17 @@
 /// Структура данных для хранение измеренных параметров и параметров системы
 struct typeData {
 	
-	int threshold;   ///< Порог измерения 
-	int temperature[4];	///< Массив измеренных температур 
-	short  chanelError[4]; ///< Массив наличия ошибок на каналах
+	unsigned short threshold;   ///< Порог измерения 
+	unsigned short temperature[4];	///< Массив измеренных температур 
+	char  chanelError[4]; ///< Массив наличия ошибок на каналах
 	//int sumTemperature[5]; ///< Массив суммарных температура на канале, промежуточное значение
-	int mode[5]; ///< Массив режимов 
-	short currentMode; ///Номер тукущего режима
-	short THdelay; ///< Задержка перед подачей тревоги 
-	int UTH; ///< Дельта повышения температуры 
-	short alarm[3]; ///< Наличие тревоги 
-	short codeError; ///< Код ошибки 
-	short work;  ///< Разрешение работы 
+	unsigned short mode[5]; ///< Массив режимов 
+	char currentMode; ///Номер тукущего режима
+	unsigned char THdelay; ///< Задержка перед подачей тревоги 
+	unsigned short UTH; ///< Дельта повышения температуры 
+	char alarm[3]; ///< Наличие тревоги 
+	char codeError; ///< Код ошибки 
+	char work;  ///< Разрешение работы 
 	
 	char Thyst;
 	char Tos;

@@ -31,10 +31,23 @@ void GetInReport (void) {
  *------------------------------------------------------------------------------*/
 void SetOutReport (void) {
 
+	int i;
+	struct typePCtoMCnumber datasend;
+	datasend = *((struct typePCtoMCnumber *)&OutReport);
 	
-	data = *((struct typeData *)&OutReport);
-	setMode(data.currentMode);
-
+	data.mode[0] = datasend.threshold[0];
+	data.mode[1] = datasend.threshold[1];
+	data.mode[2] = datasend.threshold[2];
+	data.mode[3] = datasend.threshold[3];
+	data.THdelay = datasend.THdelay;
+	data.UTH = datasend.UTH;
+	
+	for (i = 0; i < 3; i++){
+			if(datasend.alarm[i] == 0){
+					disableAlarm(i, 1);
+			}
+	}
+		setMode(0);
 }
 
 

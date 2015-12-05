@@ -3,7 +3,7 @@
 <title>Static Call Graph - [C:\Users\Slava\Desktop\Termo\Termo2v1.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image C:\Users\Slava\Desktop\Termo\Termo2v1.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 894]: Last Updated: Fri Dec 04 22:49:42 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 894]: Last Updated: Sat Dec 05 21:24:18 2015
 <BR><P>
 <H3>Maximum Stack Usage =         96 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -218,11 +218,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HID_GetReport
 </UL>
 
-<P><STRONG><a name="[36]"></a>SetOutReport</STRONG> (ARM, 40 bytes, Stack size 8 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SetOutReport
+<P><STRONG><a name="[36]"></a>SetOutReport</STRONG> (ARM, 148 bytes, Stack size 32 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = SetOutReport &rArr; disableAlarm
 </UL>
 <BR>[Calls]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMode
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMode
+<LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disableAlarm
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HID_SetReport
 </UL>
@@ -230,13 +231,13 @@ Global Symbols
 <P><STRONG><a name="[b]"></a>main</STRONG> (ARM, 140 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = main &rArr; USB_Init &rArr; USB_SetAddress
 </UL>
-<BR>[Calls]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMode
-<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initVIC
-<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initSoftTimers
-<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initGPIO
-<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;defaultData
-<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_Init
-<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_Connect
+<BR>[Calls]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMode
+<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initVIC
+<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initSoftTimers
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initGPIO
+<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;defaultData
+<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_Init
+<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_Connect
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
 </UL>
@@ -260,12 +261,12 @@ Global Symbols
 <P><STRONG><a name="[14]"></a>setNumLed7</STRONG> (ARM, 496 bytes, Stack size 24 bytes, led7.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = setNumLed7 &rArr; __aeabi_idivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
+<BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 <LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;resetLed7
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> led7.o(.data)
 </UL>
-<P><STRONG><a name="[3f]"></a>configureMAX31865</STRONG> (ARM, 124 bytes, Stack size 16 bytes, ssp.o(.text))
+<P><STRONG><a name="[40]"></a>configureMAX31865</STRONG> (ARM, 124 bytes, Stack size 16 bytes, ssp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = configureMAX31865
 </UL>
 <BR>[Calls]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setSPI
@@ -291,26 +292,26 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> irc.o(.text)
 </UL>
-<P><STRONG><a name="[40]"></a>WDTimer_Int</STRONG> (ARM, 52 bytes, Stack size 24 bytes, irc.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAlarm
+<P><STRONG><a name="[41]"></a>WDTimer_Int</STRONG> (ARM, 52 bytes, Stack size 24 bytes, irc.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAlarm
 </UL>
 
 <P><STRONG><a name="[c3]"></a>I2C_Int</STRONG> (ARM, 532 bytes, Stack size 16 bytes, irc.o(.text), UNUSED)
 
-<P><STRONG><a name="[3a]"></a>initVIC</STRONG> (ARM, 52 bytes, Stack size 0 bytes, irc.o(.text))
+<P><STRONG><a name="[3b]"></a>initVIC</STRONG> (ARM, 52 bytes, Stack size 0 bytes, irc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[c4]"></a>BlinkLed</STRONG> (ARM, 144 bytes, Stack size 16 bytes, softtimer.o(.text), UNUSED)
 
-<P><STRONG><a name="[42]"></a>portCommand</STRONG> (ARM, 276 bytes, Stack size 8 bytes, softtimer.o(.text), UNUSED)
+<P><STRONG><a name="[43]"></a>portCommand</STRONG> (ARM, 276 bytes, Stack size 8 bytes, softtimer.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;upThreshold
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forcedTestChanel
-<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disableAlarm
-<LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMode
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forcedTestChanel
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMode
+<LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disableAlarm
 </UL>
 
-<P><STRONG><a name="[3b]"></a>initSoftTimers</STRONG> (ARM, 244 bytes, Stack size 0 bytes, softtimer.o(.text))
+<P><STRONG><a name="[3c]"></a>initSoftTimers</STRONG> (ARM, 244 bytes, Stack size 0 bytes, softtimer.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -339,10 +340,10 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> softtimer.o(.data)
 </UL>
 <P><STRONG><a name="[4d]"></a>initMode</STRONG> (ARM, 44 bytes, Stack size 0 bytes, data.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;defaultData
+<BR><BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;defaultData
 </UL>
 
-<P><STRONG><a name="[38]"></a>defaultData</STRONG> (ARM, 168 bytes, Stack size 4 bytes, data.o(.text))
+<P><STRONG><a name="[39]"></a>defaultData</STRONG> (ARM, 168 bytes, Stack size 4 bytes, data.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = defaultData
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initMode
@@ -361,24 +362,24 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recSSP1OnTimer
 </UL>
 
-<P><STRONG><a name="[37]"></a>setMode</STRONG> (ARM, 72 bytes, Stack size 0 bytes, data.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;portCommand
+<P><STRONG><a name="[38]"></a>setMode</STRONG> (ARM, 72 bytes, Stack size 0 bytes, data.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;portCommand
 <LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetOutReport
 </UL>
 
-<P><STRONG><a name="[41]"></a>sendAlarm</STRONG> (ARM, 136 bytes, Stack size 0 bytes, data.o(.text))
+<P><STRONG><a name="[42]"></a>sendAlarm</STRONG> (ARM, 136 bytes, Stack size 0 bytes, data.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAssayTemperature
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAssayChanel
-<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forcedTestChanel
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WDTimer_Int
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forcedTestChanel
+<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WDTimer_Int
 </UL>
 
 <P><STRONG><a name="[4a]"></a>getAssayTemperature</STRONG> (ARM, 204 bytes, Stack size 8 bytes, data.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = getAssayTemperature
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;startTHdTimer
-<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAlarm
+<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAlarm
 </UL>
 <BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recSSP1OnTimer
 </UL>
@@ -386,7 +387,7 @@ Global Symbols
 <P><STRONG><a name="[49]"></a>getAssayChanel</STRONG> (ARM, 356 bytes, Stack size 16 bytes, data.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = getAssayChanel
 </UL>
-<BR>[Calls]<UL><LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAlarm
+<BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAlarm
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recSPIOnTimer
 <LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recSSP1OnTimer
@@ -413,7 +414,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recSSP1OnTimer
 </UL>
 
-<P><STRONG><a name="[39]"></a>initGPIO</STRONG> (ARM, 360 bytes, Stack size 8 bytes, data.o(.text))
+<P><STRONG><a name="[3a]"></a>initGPIO</STRONG> (ARM, 360 bytes, Stack size 8 bytes, data.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = initGPIO
 </UL>
 <BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initI2C
@@ -421,20 +422,23 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[44]"></a>disableAlarm</STRONG> (ARM, 524 bytes, Stack size 16 bytes, data.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forcedTestChanel
-<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;portCommand
+<P><STRONG><a name="[37]"></a>disableAlarm</STRONG> (ARM, 524 bytes, Stack size 16 bytes, data.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = disableAlarm
+</UL>
+<BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forcedTestChanel
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;portCommand
+<LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetOutReport
 </UL>
 
 <P><STRONG><a name="[45]"></a>upThreshold</STRONG> (ARM, 88 bytes, Stack size 0 bytes, data.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;portCommand
+<BR><BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;portCommand
 </UL>
 
-<P><STRONG><a name="[43]"></a>forcedTestChanel</STRONG> (ARM, 76 bytes, Stack size 16 bytes, data.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disableAlarm
-<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAlarm
+<P><STRONG><a name="[44]"></a>forcedTestChanel</STRONG> (ARM, 76 bytes, Stack size 16 bytes, data.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendAlarm
+<LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disableAlarm
 </UL>
-<BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;portCommand
+<BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;portCommand
 </UL>
 
 <P><STRONG><a name="[4c]"></a>getDecTMZ</STRONG> (ARM, 76 bytes, Stack size 32 bytes, data.o(.text))
@@ -458,7 +462,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testBreakTMZ
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getDecTMZ
-<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configureMAX31865
+<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configureMAX31865
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recSPIOnTimer
 </UL>
@@ -472,7 +476,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[55]"></a>initI2C</STRONG> (ARM, 92 bytes, Stack size 0 bytes, i2c.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initGPIO
+<BR><BR>[Called By]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initGPIO
 </UL>
 
 <P><STRONG><a name="[5c]"></a>startI2C</STRONG> (ARM, 20 bytes, Stack size 0 bytes, i2c.o(.text), UNUSED)
@@ -490,7 +494,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[5f]"></a>HID_SetReport</STRONG> (ARM, 132 bytes, Stack size 8 bytes, hiduser.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HID_SetReport &rArr; SetOutReport
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = HID_SetReport &rArr; SetOutReport &rArr; disableAlarm
 </UL>
 <BR>[Calls]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetOutReport
@@ -559,7 +563,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[d]"></a>USB_EndPoint0</STRONG> (ARM, 1524 bytes, Stack size 8 bytes, usbcore.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = USB_EndPoint0 &rArr; USB_ReqSetInterface &rArr; USB_ResetEP
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = USB_EndPoint0 &rArr; HID_SetReport &rArr; SetOutReport &rArr; disableAlarm
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_SetStallEP
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_SetAddress
@@ -609,7 +613,7 @@ Global Symbols
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_DisableEP
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_Configure
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_ClrStallEP
-<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_Connect
+<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_Connect
 </UL>
 
 <P><STRONG><a name="[75]"></a>WrCmdEP</STRONG> (ARM, 116 bytes, Stack size 8 bytes, usbhw.o(.text))
@@ -633,12 +637,12 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WrCmdDat
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_EndPoint0
-<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_Init
+<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_Init
 </UL>
 
 <P><STRONG><a name="[7b]"></a>USB_Reset</STRONG> (ARM, 88 bytes, Stack size 0 bytes, usbhw.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_ISR
-<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_Init
+<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_Init
 </UL>
 
 <P><STRONG><a name="[7e]"></a>USB_Resume</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbhw.o(.text), UNUSED)
@@ -658,7 +662,7 @@ Global Symbols
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WrCmd
 </UL>
 
-<P><STRONG><a name="[3c]"></a>USB_Init</STRONG> (ARM, 228 bytes, Stack size 4 bytes, usbhw.o(.text))
+<P><STRONG><a name="[3d]"></a>USB_Init</STRONG> (ARM, 228 bytes, Stack size 4 bytes, usbhw.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = USB_Init &rArr; USB_SetAddress
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_Reset
@@ -667,7 +671,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[3d]"></a>USB_Connect</STRONG> (ARM, 52 bytes, Stack size 8 bytes, usbhw.o(.text))
+<P><STRONG><a name="[3e]"></a>USB_Connect</STRONG> (ARM, 52 bytes, Stack size 8 bytes, usbhw.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = USB_Connect
 </UL>
 <BR>[Calls]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WrCmdDat
@@ -852,7 +856,7 @@ Global Symbols
 
 <P><STRONG><a name="[d6]"></a>__aeabi_idiv</STRONG> (ARM, 0 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text), UNUSED)
 
-<P><STRONG><a name="[3e]"></a>__aeabi_idivmod</STRONG> (ARM, 384 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text))
+<P><STRONG><a name="[3f]"></a>__aeabi_idivmod</STRONG> (ARM, 384 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_idivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setNumLed7
@@ -1157,14 +1161,14 @@ Local Symbols
 <BR>[Address Reference Count : 1]<UL><LI> ssp.o(.data)
 </UL>
 <P><STRONG><a name="[17]"></a>setSPI</STRONG> (ARM, 56 bytes, Stack size 0 bytes, ssp.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configureMAX31865
+<BR><BR>[Called By]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configureMAX31865
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ssp.o(.data)
 </UL>
 <P><STRONG><a name="[15]"></a>initSPI</STRONG> (ARM, 200 bytes, Stack size 8 bytes, ssp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = initSPI &rArr; configureMAX31865
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configureMAX31865
+<BR>[Calls]<UL><LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;configureMAX31865
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> ssp.o(.data)
 </UL>

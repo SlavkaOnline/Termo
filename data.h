@@ -22,19 +22,28 @@ struct typeData {
 	
 	unsigned short threshold;   ///< Порог измерения 
 	unsigned short temperature[4];	///< Массив измеренных температур 
-	char  chanelError[4]; ///< Массив наличия ошибок на каналах
+	unsigned char  chanelError[4]; ///< Массив наличия ошибок на каналах
 	//int sumTemperature[5]; ///< Массив суммарных температура на канале, промежуточное значение
 	unsigned short mode[5]; ///< Массив режимов 
 	char currentMode; ///Номер тукущего режима
 	unsigned char THdelay; ///< Задержка перед подачей тревоги 
 	unsigned short UTH; ///< Дельта повышения температуры 
-	char alarm[3]; ///< Наличие тревоги 
-	char codeError; ///< Код ошибки 
-	char work;  ///< Разрешение работы 
+	unsigned char alarm[3]; ///< Наличие тревоги 
+	unsigned char codeError; ///< Код ошибки 
+	unsigned char work;  ///< Разрешение работы 
 	
 	char Thyst;
 	char Tos;
 };
+
+struct typePCtoMCnumber{
+    unsigned short threshold[4];
+    unsigned short THdelay;
+    unsigned short UTH;
+    unsigned short alarm[3];
+    unsigned char currentMode;
+};
+
 
 /** 
 	\brief Функция для настройки параметров по умолчанию.

@@ -16,13 +16,13 @@ U8  InReport[64];                                /* HID Input Report    */
                                             /*   Bit1..7: Reserved */
 U8 OutReport[63]; 
 
+
 void GetInReport (void) {
 	
 	
   	U8* message = (U8*)&data;
-  	
   	memcpy(&InReport, message, sizeof(data));
-	  led7.setNumLed7(99);
+    led7.setNumLed7(11);
 }
 
 
@@ -48,7 +48,7 @@ void SetOutReport (void) {
 			}
 	}
 	setMode(datasend.currentMode);
-	//led7.setNumLed7(datasend.UTH);
+	led7.setNumLed7(data.threshold);
 }
 
 
@@ -94,7 +94,7 @@ int main(){
   //led7.setNumLed7(data.temperature[2]);					//3
 	//led7.setNumLed7(data.temperature[3]);        			 //4
   
-		//led7.setNumLed7(data.threshold);
+	//led7.setNumLed7(data.threshold);
 	}
 	
 	

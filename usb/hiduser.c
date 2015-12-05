@@ -48,7 +48,7 @@ BOOL HID_GetReport (void) {
     case HID_REPORT_INPUT:
       GetInReport();
       //EP0Buf[0] = InReport;
-		memcpy(&EP0Buf, &InReport, sizeof(InReport));
+		//memcpy(&EP0Buf, &InReport, sizeof(InReport));
       break;
     case HID_REPORT_OUTPUT:
       return (__FALSE);        /* Not Supported */

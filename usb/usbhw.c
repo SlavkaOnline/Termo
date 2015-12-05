@@ -21,6 +21,8 @@
 
 #include <LPC23xx.H>                        /* LPC23xx definitions */
 
+#include "led7.h"
+
 #include "type.h"
 
 #include "usb.h"
@@ -472,6 +474,7 @@ U32 USB_WriteEP (U32 EPNum, U8 *pData, U32 cnt) {
   for (n = 0; n < (cnt + 3) / 4; n++) {
     TX_DATA = *((__packed U32 *)pData);
     pData += 4;
+		
   }
 
   USB_CTRL = 0;

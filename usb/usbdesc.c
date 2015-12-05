@@ -66,6 +66,12 @@ const U8 HID_ReportDescriptor[] = {
   HID_EndCollection,
 };
 
+
+
+
+
+
+
 const U16 HID_ReportDescSize = sizeof(HID_ReportDescriptor);
 
 
@@ -130,7 +136,7 @@ const U8 USB_ConfigDescriptor[] = {
   USB_ENDPOINT_DESCRIPTOR_TYPE,      /* bDescriptorType */
   USB_ENDPOINT_IN(1),                /* bEndpointAddress */
   USB_ENDPOINT_TYPE_INTERRUPT,       /* bmAttributes */
-  WBVAL(0x0004),                     /* wMaxPacketSize */
+  WBVAL(0x0040),                     /* wMaxPacketSize */
   0x20,          /* 32ms */          /* bInterval */
 /* Terminator */
   0                                  /* bLength */

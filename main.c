@@ -20,9 +20,9 @@ U8 OutReport[63];
 void GetInReport (void) {
 	
 	
-  	U8* message = (U8*)&data;
-  	memcpy(&InReport, message, sizeof(data));
-    led7.setNumLed7(11);
+   	U8* message = (U8*)&data;
+   	memcpy(&InReport, message, sizeof(data));
+	   
 }
 
 
@@ -95,6 +95,7 @@ int main(){
 	//led7.setNumLed7(data.temperature[3]);        			 //4
   
 	//led7.setNumLed7(data.threshold);
+		data.codeError = 65;
 	}
 	
 	

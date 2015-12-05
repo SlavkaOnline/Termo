@@ -27,6 +27,8 @@
 #include "main.h"
 
 
+
+
 /*
  *  USB Power Event Callback
  *   Called automatically on USB Power Event
@@ -117,7 +119,7 @@ void USB_Configure_Event (void) {
 
   if (USB_Configuration) {                   /* Check if USB is configured */
     GetInReport();
-    USB_WriteEP(HID_EP_IN, &InReport[0], sizeof(InReport));
+    USB_WriteEP(HID_EP_IN, &InReport[0], 64);
   }
 }
 #endif
@@ -179,7 +181,7 @@ void USB_EndPoint1 (U32 event) {
   switch (event) {
     case USB_EVT_IN:
       GetInReport();
-      USB_WriteEP(HID_EP_IN, &InReport[0], sizeof(InReport));
+      USB_WriteEP(HID_EP_IN, &InReport[0], 64);
       break;
   }
 }

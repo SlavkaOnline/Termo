@@ -40,7 +40,7 @@ struct typePCtoMCnumber{
     unsigned short threshold[4];
     unsigned short THdelay;
     unsigned short UTH;
-    unsigned short alarm[3];
+    unsigned char alarm[3];
     unsigned char currentMode;
 };
 

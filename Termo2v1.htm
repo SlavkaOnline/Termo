@@ -3,7 +3,7 @@
 <title>Static Call Graph - [C:\Users\Slava\Desktop\Termo\Termo2v1.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image C:\Users\Slava\Desktop\Termo\Termo2v1.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 894]: Last Updated: Sat Dec 05 21:24:18 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 894]: Last Updated: Sat Dec 05 22:50:43 2015
 <BR><P>
 <H3>Maximum Stack Usage =         96 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -210,7 +210,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[34]"></a>GetInReport</STRONG> (ARM, 32 bytes, Stack size 8 bytes, main.o(.text))
+<P><STRONG><a name="[34]"></a>GetInReport</STRONG> (ARM, 52 bytes, Stack size 8 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GetInReport
 </UL>
 <BR>[Calls]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
@@ -218,8 +218,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HID_GetReport
 </UL>
 
-<P><STRONG><a name="[36]"></a>SetOutReport</STRONG> (ARM, 148 bytes, Stack size 32 bytes, main.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = SetOutReport &rArr; disableAlarm
+<P><STRONG><a name="[36]"></a>SetOutReport</STRONG> (ARM, 136 bytes, Stack size 24 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = SetOutReport &rArr; disableAlarm
 </UL>
 <BR>[Calls]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMode
@@ -228,7 +228,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HID_SetReport
 </UL>
 
-<P><STRONG><a name="[b]"></a>main</STRONG> (ARM, 140 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[b]"></a>main</STRONG> (ARM, 116 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = main &rArr; USB_Init &rArr; USB_SetAddress
 </UL>
 <BR>[Calls]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMode
@@ -494,7 +494,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[5f]"></a>HID_SetReport</STRONG> (ARM, 132 bytes, Stack size 8 bytes, hiduser.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = HID_SetReport &rArr; SetOutReport &rArr; disableAlarm
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = HID_SetReport &rArr; SetOutReport &rArr; disableAlarm
 </UL>
 <BR>[Calls]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 <LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetOutReport
@@ -563,7 +563,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[d]"></a>USB_EndPoint0</STRONG> (ARM, 1524 bytes, Stack size 8 bytes, usbcore.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = USB_EndPoint0 &rArr; HID_SetReport &rArr; SetOutReport &rArr; disableAlarm
+<BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = USB_EndPoint0 &rArr; USB_ReqSetInterface &rArr; USB_ResetEP
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_SetStallEP
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_SetAddress

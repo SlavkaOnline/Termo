@@ -22,7 +22,7 @@ void GetInReport (void) {
   	U8* message = (U8*)&data;
   	
   	memcpy(&InReport, message, sizeof(data));
-	
+	  led7.setNumLed7(99);
 }
 
 
@@ -47,7 +47,8 @@ void SetOutReport (void) {
 					disableAlarm(i, 1);
 			}
 	}
-		setMode(0);
+	setMode(datasend.currentMode);
+	//led7.setNumLed7(datasend.UTH);
 }
 
 
@@ -93,7 +94,7 @@ int main(){
   //led7.setNumLed7(data.temperature[2]);					//3
 	//led7.setNumLed7(data.temperature[3]);        			 //4
   
-		led7.setNumLed7(data.threshold);
+		//led7.setNumLed7(data.threshold);
 	}
 	
 	

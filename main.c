@@ -23,19 +23,19 @@ int main(){
 	eMBErrorCode    eStatus;
 
 	
-	/* Инициализация */
-	defaultData();
-	initGPIO();
-	setMode(0);
-	initVIC();
-	//testLM75();
-	initSoftTimers();
-	timer.initTimer0();
-	timer.startTimer0(1);
-	//timer.initWDTimer();
-  //timer.startWDTimer();
-	
-	led.setLed(PWR, LED_ON);
+// 	/* Инициализация */
+// 	defaultData();
+// 	initGPIO();
+// 	setMode(0);
+// 	initVIC();
+// 	//testLM75();
+// 	initSoftTimers();
+// 	timer.initTimer0();
+// 	timer.startTimer0(1);
+// 	//timer.initWDTimer();
+//   //timer.startWDTimer();
+// 	
+// 	led.setLed(PWR, LED_ON);
 	
   
 	//data.threshold = 35;
@@ -89,7 +89,7 @@ int main(){
 
     for( ;; )
     {    
-			led7.setNumLed7(data.temperature[3]);
+		
         ( void )eMBPoll(  );
 
         /* Here we simply count the number of poll cycles. */
@@ -123,7 +123,7 @@ eMBRegInputCB( UCHAR * pucRegBuffer, USHORT usAddress, USHORT usNRegs )
     {
         eStatus = MB_ENOREG;
     }
-
+		
     return eStatus;
 }
 

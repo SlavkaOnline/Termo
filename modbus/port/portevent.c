@@ -23,6 +23,8 @@
 #include "mb.h"
 #include "mbport.h"
 
+#include <lpc23xx.h>
+
 /* ----------------------- Variables ----------------------------------------*/
 static eMBEventType eQueuedEvent;
 static BOOL     xEventInQueue;
@@ -37,7 +39,8 @@ xMBPortEventInit( void )
 
 BOOL
 xMBPortEventPost( eMBEventType eEvent )
-{
+{   
+	  
     xEventInQueue = TRUE;
     eQueuedEvent = eEvent;
     return TRUE;
@@ -47,9 +50,9 @@ BOOL
 xMBPortEventGet( eMBEventType * eEvent )
 {
     BOOL            xEventHappened = FALSE;
-
+       FIO0CLR |= (1<<4);
     if( xEventInQueue )
-    {
+    {    FIO0SET |= (1<<4);
         *eEvent = eQueuedEvent;
         xEventInQueue = FALSE;
         xEventHappened = TRUE;

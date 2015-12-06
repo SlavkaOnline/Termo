@@ -130,7 +130,7 @@ xMBPortSerialInit( UCHAR ucPORT, ULONG ulBaudRate, UCHAR ucDataBits, eMBParity e
         dummy = U0IIR;          /* Required to Get Interrupts Started */
     }
 
-		vMBPortSerialEnable( TRUE, TRUE );
+		
 		
 // 		#ifdef RTS_ENABLE
 //     RTS_INIT;
@@ -158,7 +158,7 @@ xMBPortSerialPutByte( CHAR ucByte )
 
 BOOL
 xMBPortSerialGetByte( CHAR * pucByte )
-{   FIO0SET  |= (1<<4);
+{  
     while( !( U0LSR & 0x01 ) )
     {
     }
@@ -186,11 +186,13 @@ sio_irq( void )
             break;
 
         case 0x04:             /* Receive Data Available */
+
         case 0x0C:             /* Character Time-Out */
             prvvUARTRxISR(  );
             break;
 
         case 0x02:             /* THRE Interrupt */
+					 
             prvvUARTTxReadyISR(  );
             break;
 
@@ -218,6 +220,7 @@ static void
 prvvUARTTxReadyISR( void )
 {
     pxMBFrameCBTransmitterEmpty(  );
+		
 }
 
 /* 
@@ -228,6 +231,6 @@ prvvUARTTxReadyISR( void )
  */
 static void
 prvvUARTRxISR( void )
-{
+{   
     pxMBFrameCBByteReceived(  );
 }

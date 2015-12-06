@@ -301,7 +301,7 @@ xMBRTUTransmitFSM( void )
     case STATE_TX_XMIT:
         /* check if we are finished. */
         if( usSndBufferCount != 0 )
-        {
+        {		
             xMBPortSerialPutByte( ( CHAR )*pucSndBufferCur );
             pucSndBufferCur++;  /* next byte in sendbuffer. */
             usSndBufferCount--;

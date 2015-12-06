@@ -6,3 +6,4 @@ portevent.o: C:\Keil\ARM\RV31\Inc\inttypes.h
 portevent.o: C:\Keil\ARM\RV31\Inc\stdint.h
 portevent.o: .\modbus\include\mbport.h
 portevent.o: .\modbus\include\mbproto.h
+portevent.o: C:\Keil\ARM\Inc\Philips\lpc23xx.h

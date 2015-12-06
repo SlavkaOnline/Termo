@@ -1,5 +1,5 @@
 #include "flashWork.h"
-
+#include "led7.h"
 
 static const int size_params = 6;
 static const int len = 10;
@@ -18,9 +18,14 @@ void readParams(){
 	FILE *readFile;
 	char read_params[len];
 	int p[size_params];
-	char *tmp_str;
+
 	
-	readFile = fopen("params.txt", "w");
+	readFile = fopen("params.txt", "r");
+	
+	if(!readFile){
+		led7.setNumLed7(63);
+		return;
+	}
 	
 	i = 0;
 	while( !feof(readFile) ){
@@ -37,9 +42,12 @@ void readParams(){
 
 void saveParams(){
 
+
 	int params[size_params];
 	int i;
 	FILE *saveFile;
+	
+
 	
 	params[0] = pr_data->mode[0];
 	params[1] = pr_data->mode[1];
@@ -55,8 +63,7 @@ void saveParams(){
 		fprintf(saveFile, "%d\n", params[i]);
 	}
 	
-	fclose(saveFile);
-	
+	fclose(saveFile);	
 
 
 }

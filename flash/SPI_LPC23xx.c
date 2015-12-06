@@ -72,7 +72,7 @@ static BOOL Init (void)
 	FIO1SET	|= 1<<21;
 	
 	SSP0CR0 = (0x0007); // 8bits CPOL = 0; CPHA = 0 "87"
-	SSP0CPSR = (0x02);  //24mhz
+	SSP0CPSR = (0xFE);  //24mhz
 	SSP0CR1 =(0x0002);  // SSE = 1, MS = 0, SOD = 0, LBM = 0;
 	
 	

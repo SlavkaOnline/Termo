@@ -26,3 +26,4 @@ extern U8 OutReport[63];
 /* HID Demo Functions */
 extern void GetInReport  (void);
 extern void SetOutReport (void);
+extern ChangeConstParam (void);

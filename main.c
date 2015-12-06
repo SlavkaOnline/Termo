@@ -29,7 +29,7 @@ void GetInReport (void) {
 /*------------------------------------------------------------------------------
   Set HID Output Report <- OutReport
  *------------------------------------------------------------------------------*/
-void SetOutReport (void) {
+void ChangeConstParam (void) {
 
 	int i;
 	struct typePCtoMCnumber datasend;
@@ -51,6 +51,9 @@ void SetOutReport (void) {
 	led7.setNumLed7(data.threshold);
 }
 
+void SetOutReport (void) {
+
+}
 
 
 

@@ -78,6 +78,7 @@ BOOL HID_SetReport (void) {
 			switch (EP0Buf[0]){
 				case 0x01:
 							memcpy(&OutReport, &EP0Buf[1], sizeof(EP0Buf) - 8);
+							ChangeConstParam ();
         break;
 			}
 		SetOutReport();

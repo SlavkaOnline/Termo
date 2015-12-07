@@ -49,36 +49,17 @@ SPI_DRV __DRV_ID = {
 
 static BOOL Init (void) 
 {
-// 	FIO0DIR |=1<<16;
-// 	FIO0SET	|=1<<16;
-// 	
-// 	PINSEL0	&=~0xC0000000;
-// 	PINSEL1	&=~0x0000003C;
-// 	PINSEL0	|=0x80000000;
-// 	PINSEL1	|=0x00000028;
-// 	
-//   SSP0CR0  = 0x0007;
-//   SSP0CR1  = 0x0002;
-//   SSP0CPSR = 0xFE;
+	SCS	|=0x01;
 	
+	FIO1DIR |=1<<21;
+	FIO1SET	|=1<<21;
 	
+	PINSEL3	&=~0x0003C300;
+	PINSEL3	|=0x0003C300;
 	
-	PCLKSEL1 |= (1<<10);
-	
-	PINSEL3	&= ~(0x3C300);
-	PINSEL3	|=  (0x3C300);
-	
-	FIO1DIR |= 1<<21;
-	FIO1SET	|= 1<<21;
-	
-	SSP0CR0 = (0x0007); // 8bits CPOL = 0; CPHA = 0 "87"
-	SSP0CPSR = (0xFE);  //24mhz
-	SSP0CR1 =(0x0002);  // SSE = 1, MS = 0, SOD = 0, LBM = 0;
-	
-	
-
-	
-	
+  SSP0CR0  = 0x0007;
+  SSP0CR1  = 0x0002;
+  SSP0CPSR = 0xFE;
 	return (__TRUE);
 }
 
@@ -86,9 +67,9 @@ static BOOL Init (void)
 
 static BOOL UnInit (void) 
 {
-	FIO0DIR &=~(1<<21);
+	FIO1DIR &=~(1<<21);
 
-	PINSEL3	&= ~(0x3C300);
+	PINSEL3	&=~0x0003C300;
 
   SSP0CR0  = 0;
   SSP0CR1  = 0;
@@ -163,11 +144,11 @@ static BOOL SetSS (U32 ss)
 {
 	if (ss)
 	{
-		FIO0SET	|=1<<21;
+		FIO1SET	|=1<<21;
 	}
 	else
 	{
-		FIO0CLR	|=1<<21;
+		FIO1CLR	|=1<<21;
 	}
 	return (__TRUE);
 }

@@ -60,7 +60,8 @@ void saveParams(){
 	saveFile = fopen("params.txt", "w");
 	
 	for(i = 0; i < size_params; i++){
-		fprintf(saveFile, "%d\n", params[i]);
+		//fprintf(saveFile, "%d\n", params[i]);
+		fputs("1\n", saveFile);
 	}
 	
 	fclose(saveFile);	

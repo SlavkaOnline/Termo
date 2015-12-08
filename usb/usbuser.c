@@ -181,7 +181,7 @@ void USB_EndPoint1 (U32 event) {
   switch (event) {
     case USB_EVT_IN:
       GetInReport();
-      USB_WriteEP(HID_EP_IN, &InReport[0], 64);
+      USB_WriteEP(HID_EP_IN, InReport, 64);
       break;
   }
 }

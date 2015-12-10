@@ -5,13 +5,13 @@
 
 void saveParams();
 void readParams();
-
+double updateSumWorkTime();
 
 struct typeFlash{
 	
 void (*saveParams)();
 void (*readParams)();
-		
+double (*updateSumWorkTime)();		
 };
 
 extern struct typeFlash dataFlash;

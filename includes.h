@@ -16,6 +16,8 @@
 #include <stdio.h>                    /* standard I/O .h-file                */
 //#include "File_Config.h"
 #include <math.h>
+#include "RTC.h"
+#include <time.h>
 
 // #include "mb.h"
 // #include "mbport.h"

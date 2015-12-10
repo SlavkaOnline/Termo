@@ -14,4 +14,6 @@ main.o: flashWork.h
 main.o: default.h
 main.o: C:\Keil\ARM\RV31\Inc\stdio.h
 main.o: C:\Keil\ARM\RV31\Inc\math.h
+main.o: .\RTC\RTC.h
+main.o: C:\Keil\ARM\RV31\Inc\time.h
 main.o: C:\Keil\ARM\RV31\Inc\ctype.h

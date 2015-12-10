@@ -15,3 +15,5 @@ timer.o: flashWork.h
 timer.o: default.h
 timer.o: C:\Keil\ARM\RV31\Inc\stdio.h
 timer.o: C:\Keil\ARM\RV31\Inc\math.h
+timer.o: .\RTC\RTC.h
+timer.o: C:\Keil\ARM\RV31\Inc\time.h

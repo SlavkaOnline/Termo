@@ -15,3 +15,5 @@ data.o: flashWork.h
 data.o: default.h
 data.o: C:\Keil\ARM\RV31\Inc\stdio.h
 data.o: C:\Keil\ARM\RV31\Inc\math.h
+data.o: .\RTC\RTC.h
+data.o: C:\Keil\ARM\RV31\Inc\time.h

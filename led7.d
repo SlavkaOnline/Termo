@@ -15,3 +15,5 @@ led7.o: flashWork.h
 led7.o: default.h
 led7.o: C:\Keil\ARM\RV31\Inc\stdio.h
 led7.o: C:\Keil\ARM\RV31\Inc\math.h
+led7.o: .\RTC\RTC.h
+led7.o: C:\Keil\ARM\RV31\Inc\time.h

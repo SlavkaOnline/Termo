@@ -348,7 +348,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\flash</IncludePath>
+              <IncludePath>.\flash;.\RTC</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -492,6 +492,16 @@
               <FileName>RTL.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\flash\RTL.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>RTL</GroupName>
+          <Files>
+            <File>
+              <FileName>RTC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\RTC\RTC.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -15,3 +15,5 @@ flashwork.o: flashWork.h
 flashwork.o: default.h
 flashwork.o: C:\Keil\ARM\RV31\Inc\stdio.h
 flashwork.o: C:\Keil\ARM\RV31\Inc\math.h
+flashwork.o: .\RTC\RTC.h
+flashwork.o: C:\Keil\ARM\RV31\Inc\time.h

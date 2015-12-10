@@ -15,3 +15,5 @@ irc.o: flashWork.h
 irc.o: default.h
 irc.o: C:\Keil\ARM\RV31\Inc\stdio.h
 irc.o: C:\Keil\ARM\RV31\Inc\math.h
+irc.o: .\RTC\RTC.h
+irc.o: C:\Keil\ARM\RV31\Inc\time.h

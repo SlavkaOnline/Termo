@@ -348,7 +348,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\flash;.\RTC</IncludePath>
+              <IncludePath>.\flash;.\RTC;..\Termo</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

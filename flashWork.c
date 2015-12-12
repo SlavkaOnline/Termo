@@ -70,7 +70,7 @@ double updateSumWorkTime(int flag ){
 			loc_time.tm_mon		=	RTC_MONTH;
 			loc_time.tm_year	=	RTC_YEAR;
 		
-		  hour = (difftime( mktime( &loc_time )-EPOCH,  mktime( &last_time )-EPOCH ) );
+		  hour = (difftime( mktime( &loc_time ),  mktime( &last_time ) ) );
 		  return hour;
 	}
 	

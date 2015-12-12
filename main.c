@@ -48,7 +48,7 @@ void ChangeConstParam (void) {
 			}
 	}
 	setMode(datasend.currentMode);
-	led7.setNumLed7(data.threshold);
+	
 }
 
 void SetOutReport (void) {
@@ -81,8 +81,8 @@ int main(){
 	led.setLed(PWR, LED_ON);
 	
   
-	data.threshold = 35;
-	//data.codeError = 65;
+	
+	data.codeError = 65;
 
 	
 //  	dataFlash.saveParams();
@@ -92,13 +92,13 @@ int main(){
 	
 	while(1){
 	
-	//led7.setNumLed7(data.temperature[0]);	//1
+	led7.setNumLed7(data.codeError);	//1
 	//led7.setNumLed7(); 		//2
   //led7.setNumLed7(data.temperature[2]);					//3
 	//led7.setNumLed7(data.temperature[3]);        			 //4
   
 	//led7.setNumLed7(data.threshold);
-		data.codeError = 65;
+		
 	}
 	
 	

@@ -141,19 +141,20 @@ for(i = 0; i < 4; i++){
 	switch (data.chanelError[i]){
 		    
 				case 0:
+					 data.codeError = 0;
 				   led.setLed(leds[i], LED_OFF);
 				   ledsBlink[ blink[i] ] = 0;
 				 break;		 
 		    case 1:
 					 data.codeError = noConnect7[i];
-					// led7.setNumLed7( noConnect7[i] );
+					 //led7.setNumLed7( noConnect7[i] );
 				   led.setLed(leds[i], LED_ON);
 				   ledsBlink[ blink[i] ] = 0;
 				   sendAlarm(alarm_FA);
 				   if ( i != 3) sumError++;
 				 break;
 				 case 2:
-					 data.codeError = noConnect7[i];
+					 data.codeError = blink7[i];
 					 //led7.setNumLed7( blink7[i] );
 				   ledsBlink[ blink[i] ] = 1;
 				   sendAlarm(alarm_FA);
@@ -162,7 +163,7 @@ for(i = 0; i < 4; i++){
 				 
 				 case 3:
 					 data.codeError = 51;
-				  // led7.setNumLed7( 51 );
+				   //led7.setNumLed7( 51 );
 				   ledsBlink[ blink[i] ] = 0;
 				   sendAlarm(alarm_FA);
 				   if ( i != 3) sumError++;
@@ -227,10 +228,10 @@ int testChanel(int chanel, int buf){
 	}
 	
  	
- 		if( testSC( chanel,  getDec(buf) ) ){
- 		data.chanelError[chanel] = 2;
- 		return 1;
- 	}	
+//  		if( testSC( chanel,  getDec(buf) ) ){
+//  		data.chanelError[chanel] = 2;
+//  		return 1;
+//  	}	
 	
 	//нет ошибок, но раньше она была
 	if( data.chanelError[chanel] != 0 ){

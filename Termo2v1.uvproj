@@ -348,7 +348,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\flash;.\RTC;..\Termo</IncludePath>
+              <IncludePath>.\flash;.\usb;..\Termo</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -456,54 +456,42 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Flash</GroupName>
+          <GroupName>USB</GroupName>
           <Files>
             <File>
-              <FileName>flashWork.c</FileName>
+              <FileName>hiduser.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\flashWork.c</FilePath>
+              <FilePath>.\usb\hiduser.c</FilePath>
             </File>
             <File>
-              <FileName>File_Config.c</FileName>
+              <FileName>usbcore.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\flash\File_Config.c</FilePath>
+              <FilePath>.\usb\usbcore.c</FilePath>
             </File>
             <File>
-              <FileName>FS_SPI_FlashPrg.c</FileName>
+              <FileName>usbdesc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\flash\FS_SPI_FlashPrg.c</FilePath>
+              <FilePath>.\usb\usbdesc.c</FilePath>
             </File>
             <File>
-              <FileName>Retarget.c</FileName>
+              <FileName>usbhw.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\flash\Retarget.c</FilePath>
+              <FilePath>.\usb\usbhw.c</FilePath>
             </File>
             <File>
-              <FileName>SPI_LPC23xx.c</FileName>
+              <FileName>usbuser.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\flash\SPI_LPC23xx.c</FilePath>
+              <FilePath>.\usb\usbuser.c</FilePath>
             </File>
             <File>
-              <FileName>FS_ARM_L.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>.\flash\FS_ARM_L.lib</FilePath>
-            </File>
-            <File>
-              <FileName>RTL.h</FileName>
+              <FileName>usbcfg.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\flash\RTL.h</FilePath>
+              <FilePath>.\usb\usbcfg.h</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>RTL</GroupName>
-          <Files>
-            <File>
-              <FileName>RTC.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\RTC\RTC.c</FilePath>
-            </File>
-          </Files>
+          <GroupName>New Group</GroupName>
         </Group>
       </Groups>
     </Target>

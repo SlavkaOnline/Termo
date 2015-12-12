@@ -1,3 +1,4 @@
+
 ;/*****************************************************************************/
 ;/* LPC2300.S: Startup file for Philips LPC2300 device series                 */
 ;/*****************************************************************************/
@@ -432,7 +433,7 @@ EMC_PINSEL9_Val     EQU 0x50090000;     ; !OE, !WE (BLS0 because of errata), !CS
 
 ;//     External Memory Controller Setup (EMC) ---------------------------------
 ;// <e> External Memory Controller Setup (EMC)
-EMC_SETUP           EQU 1
+EMC_SETUP           EQU 0
 
 ;//   <h> EMC Control Register (EMCControl)
 ;//     <i> Controls operation of the memory controller

@@ -1,1 +1,1 @@
--c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I.\flash -I.\RTC -I..\Termo -I C:\Keil\ARM\RV31\Inc -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips -o "rtc.o" --omf_browse "rtc.crf" --depend "rtc.d" "RTC\RTC.c"
+-c --cpu ARM7TDMI -g -O0 --apcs=interwork -I.\usb -I..\Termo -I.\RTC -I.\usb -I.\flash -I C:\Keil\ARM\RV31\Inc -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips -o "rtc.o" --omf_browse "rtc.crf" --depend "rtc.d" "RTC\RTC.c"

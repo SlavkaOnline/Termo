@@ -1,7 +1,8 @@
+
 #include "flashWork.h"
 #include "led7.h"
 
-static const int size_params = 7;
+static const int size_params = 8;
 static const int len = 10;
 
 
@@ -78,7 +79,7 @@ double updateSumWorkTime(int flag ){
 }
 
 
-void readParams(){
+int readParams(){
 	
 	int i;
 	FILE *readFile;
@@ -86,7 +87,7 @@ void readParams(){
 	int params[size_params];
 
 	
-	readFile = fopen("params.txt", "r");
+	readFile = fopen("param.txt", "r");
 	
 	if(!readFile){
 		led7.setNumLed7(63);
@@ -106,15 +107,17 @@ void readParams(){
 	pr_data->mode[0] = params[0];
 	pr_data->mode[1] = params[1];
 	pr_data->mode[2] = params[2];
-	pr_data->mode[3] = params[2];
+	pr_data->mode[3] = params[3];
 	pr_data->mode[4] = params[4];
 	pr_data->THdelay = params[5];
 	pr_data->UTH = params[6];
+	setMode(params[7]);
 	
+	return 0;
 }
 
 
-void saveParams(){
+int saveParams(){
 
 
 	int params[size_params];
@@ -130,9 +133,14 @@ void saveParams(){
 	params[4] = pr_data->mode[4];
 	params[5] = pr_data->THdelay;
 	params[6] = pr_data->UTH;
+	params[7] = pr_data->currentMode;
 	
+	saveFile = fopen("param.txt", "w");
 	
-	saveFile = fopen("params.txt", "w");
+	if(!saveFile){
+		led7.setNumLed7(63);
+		return;
+	}
 	
 	for(i = 0; i < size_params; i++){
 		fprintf(saveFile, "%d\n", params[i]);
@@ -141,5 +149,5 @@ void saveParams(){
 	
 	fclose(saveFile);	
 
-
+	return 0;
 }

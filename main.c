@@ -1,3 +1,4 @@
+
 #include <lpc23xx.h>
 
 #include "includes.h"
@@ -7,14 +8,79 @@
 #include <ctype.h>
 #include <math.h>
 
+#include "usb.h"
+#include "usbcfg.h"
+#include "usbhw.h"
+
+U8  InReport[64];                                /* HID Input Report    */
+                                            /*   Bit0   : Buttons  */
+                                            /*   Bit1..7: Reserved */
+U8 OutReport[63]; 
+
+
+void GetInReport (void) {
+	
+	
+   	U8* message = (U8*)&data;
+   	memcpy(&InReport, message, sizeof(data));
+	   
+}
+
+
+/*------------------------------------------------------------------------------
+  Set HID Output Report <- OutReport
+ *------------------------------------------------------------------------------*/
+void ChangeConstParam (void) {
+
+	int i;
+	struct typePCtoMCnumber datasend;
+	datasend = *((struct typePCtoMCnumber *)&OutReport[1]);
+	
+	data.mode[0] = datasend.threshold[0];
+	data.mode[1] = datasend.threshold[1];
+	data.mode[2] = datasend.threshold[2];
+	data.mode[3] = datasend.threshold[3];
+	data.mode[4] = datasend.threshold[4];
+	data.THdelay = datasend.THdelay;
+	data.UTH = datasend.UTH;
+	
+	setMode(datasend.currentMode);
+	
+	while(dataFlash.saveParams());
+	
+// 	for (i = 0; i < 3; i++){
+// 			if(datasend.alarm[i] == 0){
+// 					disableAlarm(i, 1);
+// 			}
+// 	}
+	
+	
+	
+	
+}
+
+void SetOutReport (void) {
+			
+
+	
+		switch(OutReport[0]){
+			
+			case 0x01 : ChangeConstParam (); break;
+			case 0xd0 : disableAlarm(0,1); break;
+			case 0xd1 : disableAlarm(1,1); break;
+			case 0xd2 : disableAlarm(2,1); break;
+		}
+	
+}
+
 
 
 
 int main(){
 	
 	int i,j, retv;
-
-	struct tm loc_time;
+  struct tm loc_time;
+	
 	/* Инициализация */
 	defaultData();
 	initGPIO();
@@ -27,10 +93,22 @@ int main(){
 	//timer.initWDTimer();
   //timer.startWDTimer();
 	
+	USB_Init();                               /* USB Initialization */
+  USB_Connect(__TRUE); 
+	while ((retv = finit (NULL)) != 0) ;
+	
 	led.setLed(PWR, LED_ON);
 	
-	RTC_init(0);
+  
 	
+
+
+  RTC_init(0);
+	
+  	//dataFlash.saveParams();
+  	dataFlash.readParams();
+// 	
+
 // 	
 // 	
 // 	loc_time.tm_sec		=	0;
@@ -42,33 +120,25 @@ int main(){
 //   
 // 	correct_time_struct(&loc_time);
 	RTC_int();
-	//data.threshold = 35;
 	
-	
-	
-while ((retv = finit (NULL)) != 0) ;
-
-
-	
-	//dataFlash.saveParams();
- 	//dataFlash.readParams();
-	
-		//updateSumWorkTime(0);
-	  updateSumWorkTime(1);
 	while(1){
 	
-	//led7.setNumLed7(data.temperature[0]);	//1
+	//led7.setNumLed7(data.threshold);	//1
 	//led7.setNumLed7(); 		//2
   //led7.setNumLed7(data.temperature[2]);					//3
 	//led7.setNumLed7(data.temperature[3]);        			 //4
-    
-		//updateSumWorkTime(1);
+  
+	//led7.setNumLed7(data.threshold);
 		
 	}
 	
 	
 
-}
 
+  
+
+ 	return 0;
+ }
+	
 
 

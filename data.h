@@ -20,21 +20,32 @@
 /// Структура данных для хранение измеренных параметров и параметров системы
 struct typeData {
 	
-	int threshold;   ///< Порог измерения 
-	int temperature[4];	///< Массив измеренных температур 
-	int chanelError[4]; ///< Массив наличия ошибок на каналах
-	int sumTemperature[5]; ///< Массив суммарных температура на канале, промежуточное значение
-	int mode[5]; ///< Массив режимов 
-	int currentMode; ///Номер тукущего режима
-	int THdelay; ///< Задержка перед подачей тревоги 
-	int UTH; ///< Дельта повышения температуры 
-	int alarm[3]; ///< Наличие тревоги 
-	int codeError; ///< Код ошибки 
-	int work;  ///< Разрешение работы 
+	unsigned short threshold;   ///< Порог измерения 
+	unsigned short temperature[4];	///< Массив измеренных температур 
+	unsigned char  chanelError[4]; ///< Массив наличия ошибок на каналах
+	//int sumTemperature[5]; ///< Массив суммарных температура на канале, промежуточное значение
+	unsigned short mode[5]; ///< Массив режимов 
+	unsigned char currentMode; ///Номер тукущего режима
+	unsigned char THdelay; ///< Задержка перед подачей тревоги 
+	unsigned short UTH; ///< Дельта повышения температуры 
+	unsigned char alarm[3]; ///< Наличие тревоги 
+	unsigned char codeError; ///< Код ошибки 
+	unsigned char work;  ///< Разрешение работы 
 	
 	char Thyst;
 	char Tos;
 };
+
+struct typePCtoMCnumber{
+    unsigned short threshold[5];
+    unsigned short THdelay;
+    unsigned short UTH;
+    unsigned char alarm[3];
+    unsigned char currentMode;
+};
+
+
+
 
 /** 
 	\brief Функция для настройки параметров по умолчанию.

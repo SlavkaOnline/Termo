@@ -62,14 +62,14 @@ void ChangeConstParam (void) {
 
 void getConstParam(){
 	
-		U8* message = (U8*)&data;
+		unsigned char* message = (unsigned char*)&data;
 		memcpy(&InReport, message, sizeof(data));
 	
 }
 
 void sendDateTime(void){
 
-	U8* message;
+	unsigned char* message;
 	struct typeInfo info;
 	struct typeDateTimeSend DateTime;
 	struct typeDateTimeSend alarm;
@@ -84,15 +84,15 @@ void sendDateTime(void){
 	
 	info.dt = DateTime;
 	info.alarm = alarm;
-	info.workTime = 1234;
+	info.workTime = updateSumWorkTime(1);
 	info.dd = 11;
 	info.mm = 12;
 	info.yyyy = 2015;
 	
-	message = (U8*)&info;
+	message = (unsigned char*)&info;
 	
   memcpy(&InReport, message, sizeof(info));
-	
+	led7.setNumLed7(DateTime.mm);
 	
 }
 
@@ -102,19 +102,18 @@ void setDateTime(void){
 	struct tm loc_time;
 	DateTime = *((struct typeDateTimeSend*)&OutReport[1]);
 	
-	loc_time.tm_sec		=	DateTime.hh;
+	led7.setNumLed7(DateTime.dm);
+	
+	loc_time.tm_sec		=	DateTime.ss;
 	loc_time.tm_min		=	DateTime.mm;
-	loc_time.tm_hour	=	DateTime.ss;
+	loc_time.tm_hour	=	DateTime.hh;
 	loc_time.tm_mday	=	DateTime.dm;
 	loc_time.tm_mon		=	DateTime.mh;
 	loc_time.tm_year	=	DateTime.yy;
-	
-	led7.setNumLed7(DateTime.hh);
-	
+
 	correct_time_struct(&loc_time);
 	correct_data_struct(&loc_time);
-	
-	
+
 }
 
 void SetOutReport (void) {

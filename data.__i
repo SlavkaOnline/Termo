@@ -1,1 +1,0 @@
--c --cpu ARM7TDMI -g -O0 --apcs=interwork -I.\usb -I..\Termo -I.\RTC -I.\usb -I.\flash -I C:\Keil\ARM\RV31\Inc -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\Philips -o "data.o" --omf_browse "data.crf" --depend "data.d" "data.c"

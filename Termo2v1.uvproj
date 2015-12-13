@@ -453,6 +453,11 @@
               <FileType>5</FileType>
               <FilePath>.\includes.h</FilePath>
             </File>
+            <File>
+              <FileName>USBfunction.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\USBfunction.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

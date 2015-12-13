@@ -63,7 +63,7 @@ if ( !(FIO3PIN & timer->pin ) ){	//
 	
 		if (timer->delay-- == 0)  // 100ms * 30 = 3000ms = 3s
 		{
-		  led7.setNumLed7(timer->mode); //удалиь 
+		  //led7.setNumLed7(timer->mode); //удалиь 
 			timer->delay = timer->_delay;
 			if( timer->mode < 5){  
 			    setMode(timer->mode);
@@ -82,10 +82,10 @@ if ( !(FIO3PIN & timer->pin ) ){	//
 	}
 	else{
 		timer->delay = timer->_delay;
-			if(timer->hold == 1){
-				if( 4 < timer->mode && timer->mode < 8  ){
+			if(timer->hold == 1  ){
+				if( ( 4 < timer->mode ) && ( timer->mode < 8 ) ){
 					timer->hold = 0;
-					forcedTestChanel(timer->mode - 5, timer->hold);
+					disableAlarm(timer->mode - 5, falseAlarm);
 				}
 		}
 	}

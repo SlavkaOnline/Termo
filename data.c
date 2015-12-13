@@ -116,10 +116,9 @@ void getAssayTemperature(){
 			if(THdTimer[i].start == 1) continue; //???
 		  startTHdTimer(i, data.THdelay);
 		  if(THdTimer[i].stop == 1){
-		   led.setLed(leds[i], LED_ON);
-			 
+		      //led.setLed(leds[i], LED_ON);
 				 sendAlarm(i);
-       THdTimer[i].stop = 0;
+				THdTimer[i].stop = 0;
 				dataFlash.setAlarmDateTime();
 			}				
 	}
@@ -285,12 +284,15 @@ void sendAlarm(int chanel){
 	switch(chanel){
 		case 0:
 			FIO1SET = (1<<26);
+		  led.setLed(FIRE1r, LED_ON);
 		break;
 		case 1:
 			FIO1SET = (1<<27);
+		  led.setLed(FIRE2r, LED_ON);
 		break;
 		case 2:
 			FIO1SET = (1<<28);
+		  led.setLed(FIRE3r, LED_ON);
 		break;
 		case 3:
 			FIO1SET = (1<<29);
@@ -355,7 +357,7 @@ void upThreshold(){
 
 void forcedTestChanel(int chanel, int flagFTC){
 	
-	if (flagFTC && (data.alarm[chanel] == 0) ){
+	if (flagFTC && (data.chanelError[chanel] == 0) ){
 		if ( chanel < 3 ){
 			sendAlarm(chanel);
 		}

@@ -120,6 +120,7 @@ void getAssayTemperature(){
 			 
 				 sendAlarm(i);
        THdTimer[i].stop = 0;
+				dataFlash.setAlarmDateTime();
 			}				
 	}
 
@@ -278,6 +279,7 @@ void initGPIO(){
 }
 
 void sendAlarm(int chanel){
+	
 	
 	data.alarm[chanel] = 1;
 	switch(chanel){

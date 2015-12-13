@@ -112,9 +112,9 @@ void correct_time_struct (struct tm* time)
 
 void correct_data_struct (struct tm* time)
 {
-// 	RTC_DOM		=time->tm_mday;
-// 	RTC_MONTH	=time->tm_mon;
-// 	RTC_YEAR	=time->tm_year;
+	RTC_DOM		=time->tm_mday;
+	RTC_MONTH	=time->tm_mon;
+	RTC_YEAR	=time->tm_year;
 }
 
 void set_allarm (struct tm* local_time)

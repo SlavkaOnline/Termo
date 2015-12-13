@@ -80,9 +80,8 @@ BOOL HID_SetReport (void) {
 // 							memcpy(&OutReport, &EP0Buf[1], sizeof(EP0Buf) - 8);
 // 							ChangeConstParam ();
 		
-        memcpy(&OutReport, &EP0Buf, sizeof(EP0Buf));
-			
-		SetOutReport();
+					memcpy(&OutReport, &EP0Buf, sizeof(EP0Buf));
+					SetOutReport();
       break;
     case HID_REPORT_FEATURE:
       return (__FALSE);        /* Not Supported */

@@ -14,6 +14,10 @@ int main(){
 	int i,j, retv;
   struct tm loc_time;
 	
+	while ((retv = finit (NULL)) != 0) ;
+	USB_Init();                               /* USB Initialization */
+  USB_Connect(__TRUE);
+	
 	/* Инициализация */
 	defaultData();
 	initGPIO();
@@ -26,9 +30,8 @@ int main(){
 	//timer.initWDTimer();
   //timer.startWDTimer();
 	
-	USB_Init();                               /* USB Initialization */
-  USB_Connect(__TRUE); 
-	while ((retv = finit (NULL)) != 0) ;
+	 
+	
 	
 	led.setLed(PWR, LED_ON);
 
@@ -49,6 +52,7 @@ int main(){
 	
 	while(1){
 	
+		//led7.setNumLed7(RTC_MIN);
 	//led7.setNumLed7(data.threshold);	//1
 	//led7.setNumLed7(); 		//2
   //led7.setNumLed7(data.temperature[2]);					//3

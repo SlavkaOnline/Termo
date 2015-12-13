@@ -17,3 +17,7 @@ i2c.o: C:\Keil\ARM\RV31\Inc\stdio.h
 i2c.o: C:\Keil\ARM\RV31\Inc\math.h
 i2c.o: .\RTC\RTC.h
 i2c.o: C:\Keil\ARM\RV31\Inc\time.h
+i2c.o: .\usb\usb.h
+i2c.o: C:\Keil\ARM\RV31\Inc\RTL.h
+i2c.o: .\usb\usbcfg.h
+i2c.o: .\usb\usbhw.h

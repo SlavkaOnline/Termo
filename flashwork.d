@@ -17,3 +17,7 @@ flashwork.o: C:\Keil\ARM\RV31\Inc\stdio.h
 flashwork.o: C:\Keil\ARM\RV31\Inc\math.h
 flashwork.o: .\RTC\RTC.h
 flashwork.o: C:\Keil\ARM\RV31\Inc\time.h
+flashwork.o: .\usb\usb.h
+flashwork.o: C:\Keil\ARM\RV31\Inc\RTL.h
+flashwork.o: .\usb\usbcfg.h
+flashwork.o: .\usb\usbhw.h

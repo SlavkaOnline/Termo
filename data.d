@@ -17,3 +17,7 @@ data.o: C:\Keil\ARM\RV31\Inc\stdio.h
 data.o: C:\Keil\ARM\RV31\Inc\math.h
 data.o: .\RTC\RTC.h
 data.o: C:\Keil\ARM\RV31\Inc\time.h
+data.o: .\usb\usb.h
+data.o: C:\Keil\ARM\RV31\Inc\RTL.h
+data.o: .\usb\usbcfg.h
+data.o: .\usb\usbhw.h

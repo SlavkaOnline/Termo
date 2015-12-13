@@ -17,3 +17,7 @@ timer.o: C:\Keil\ARM\RV31\Inc\stdio.h
 timer.o: C:\Keil\ARM\RV31\Inc\math.h
 timer.o: .\RTC\RTC.h
 timer.o: C:\Keil\ARM\RV31\Inc\time.h
+timer.o: .\usb\usb.h
+timer.o: C:\Keil\ARM\RV31\Inc\RTL.h
+timer.o: .\usb\usbcfg.h
+timer.o: .\usb\usbhw.h

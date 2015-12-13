@@ -17,3 +17,7 @@ irc.o: C:\Keil\ARM\RV31\Inc\stdio.h
 irc.o: C:\Keil\ARM\RV31\Inc\math.h
 irc.o: .\RTC\RTC.h
 irc.o: C:\Keil\ARM\RV31\Inc\time.h
+irc.o: .\usb\usb.h
+irc.o: C:\Keil\ARM\RV31\Inc\RTL.h
+irc.o: .\usb\usbcfg.h
+irc.o: .\usb\usbhw.h

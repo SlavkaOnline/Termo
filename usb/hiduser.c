@@ -27,7 +27,7 @@
 #include "usbcore.h"
 #include "hiduser.h"
 
-#include "main.h"
+#include "USBfunction.h"
 
 
 U8 HID_Protocol;

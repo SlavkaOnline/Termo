@@ -17,3 +17,7 @@ rtc.o: ..\Termo\default.h
 rtc.o: C:\Keil\ARM\RV31\Inc\stdio.h
 rtc.o: C:\Keil\ARM\RV31\Inc\math.h
 rtc.o: .\RTC\RTC.h
+rtc.o: .\usb\usb.h
+rtc.o: C:\Keil\ARM\RV31\Inc\RTL.h
+rtc.o: .\usb\usbcfg.h
+rtc.o: .\usb\usbhw.h

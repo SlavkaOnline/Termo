@@ -23,4 +23,8 @@
 // #include "mb.h"
 // #include "mbport.h"
 
+#include "usb.h"
+#include "usbcfg.h"
+#include "usbhw.h"
+
 #endif

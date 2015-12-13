@@ -17,3 +17,7 @@ led.o: C:\Keil\ARM\RV31\Inc\stdio.h
 led.o: C:\Keil\ARM\RV31\Inc\math.h
 led.o: .\RTC\RTC.h
 led.o: C:\Keil\ARM\RV31\Inc\time.h
+led.o: .\usb\usb.h
+led.o: C:\Keil\ARM\RV31\Inc\RTL.h
+led.o: .\usb\usbcfg.h
+led.o: .\usb\usbhw.h

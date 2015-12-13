@@ -17,3 +17,7 @@ softtimer.o: C:\Keil\ARM\RV31\Inc\stdio.h
 softtimer.o: C:\Keil\ARM\RV31\Inc\math.h
 softtimer.o: .\RTC\RTC.h
 softtimer.o: C:\Keil\ARM\RV31\Inc\time.h
+softtimer.o: .\usb\usb.h
+softtimer.o: C:\Keil\ARM\RV31\Inc\RTL.h
+softtimer.o: .\usb\usbcfg.h
+softtimer.o: .\usb\usbhw.h

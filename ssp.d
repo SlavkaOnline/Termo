@@ -17,3 +17,7 @@ ssp.o: C:\Keil\ARM\RV31\Inc\stdio.h
 ssp.o: C:\Keil\ARM\RV31\Inc\math.h
 ssp.o: .\RTC\RTC.h
 ssp.o: C:\Keil\ARM\RV31\Inc\time.h
+ssp.o: .\usb\usb.h
+ssp.o: C:\Keil\ARM\RV31\Inc\RTL.h
+ssp.o: .\usb\usbcfg.h
+ssp.o: .\usb\usbhw.h

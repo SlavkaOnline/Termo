@@ -44,6 +44,16 @@ struct typePCtoMCnumber{
     unsigned char currentMode;
 };
 
+struct typeDateTimeSend{
+	
+	int hh;
+	int mm;
+	int ss;
+	int dm;
+	int mh;
+	int yy;
+	
+};
 
 
 

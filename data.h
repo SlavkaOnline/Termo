@@ -11,7 +11,7 @@
 #define notFalseAlarm 0
 #define MAXtmzTemperature 50
 
-extern int sumTemperature[5];
+extern int sumTemperature[3];
 
 /**
 	\file
@@ -22,8 +22,8 @@ extern int sumTemperature[5];
 /// Структура данных для хранение измеренных параметров и параметров системы
 struct typeData {
 	
-	unsigned short threshold;   ///< Порог измерения 
-	unsigned short temperature[4];	///< Массив измеренных температур 
+	 short threshold;   ///< Порог измерения 
+	 short temperature[4];	///< Массив измеренных температур 
 	unsigned char  chanelError[4]; ///< Массив наличия ошибок на каналах
 	//int sumTemperature[5]; ///< Массив суммарных температура на канале, промежуточное значение
 	unsigned short mode[5]; ///< Массив режимов 
@@ -161,7 +161,7 @@ void upThreshold();
 */
 void forcedTestChanel(int chanel, int flagFTC);
 
-int testSC(int chanel, int temperature, int cold);
+int testSC(int chanel, int temperature);
 
 int getDecTMZ(int buf);
 

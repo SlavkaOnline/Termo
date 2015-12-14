@@ -1,4 +1,4 @@
---cpu ARM7TDMI "lpc2300.o" "main.o" "led.o" "led7.o" "ssp.o" "timer.o" "irc.o" "softtimer.o" "data.o" "i2c.o" "usbfunction.o" "hiduser.o" "usbcore.o" "usbdesc.o" "usbhw.o" "usbuser.o" "flashwork.o" "file_config.o" "fs_spi_flashprg.o" "retarget.o" "spi_lpc23xx.o" C:\Users\Slava\Desktop\Диплом\Termo\flash\FS_ARM_L.lib "rtc.o" --ropi --rwpi --strict --scatter "Termo2v1.sct" 
+--cpu ARM7TDMI "lpc2300.o" "main.o" "led.o" "led7.o" "ssp.o" "timer.o" "irc.o" "softtimer.o" "data.o" "i2c.o" "usbfunction.o" "hiduser.o" "usbcore.o" "usbdesc.o" "usbhw.o" "usbuser.o" "flashwork.o" "file_config.o" "fs_spi_flashprg.o" "retarget.o" "spi_lpc23xx.o" C:\Users\Slava\Desktop\Diplom\Termo\flash\FS_ARM_L.lib "rtc.o" --ropi --rwpi --strict --scatter "Termo2v1.sct" 
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
  --list ".\Termo2v1.map" -o "Termo2v1.axf"

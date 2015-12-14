@@ -1,6 +1,6 @@
 #include "data.h"
 
-int sumTemperature[5];
+int sumTemperature[3];
 
 /**
 	\file
@@ -16,7 +16,7 @@ void defaultData(){
 	for(i = 0; i < 4; i++){
 		data.temperature[i] = -100;
 		data.chanelError[i] = 0;
-		//data.sumTemperature[i] = 0;
+		//sumTemperature[i] = 0;
 		if(i < 3) data.alarm[i] = 0;
 	}
 	initMode();
@@ -269,10 +269,10 @@ int testChanel(int chanel, int buf){
 	}
 	
  	
-//  		if( testSC( chanel,  getDec(buf), getCold(buf) ) ){
-//  		data.chanelError[chanel] = 2;
-//  		return 1;
-//  	}	
+ 		if( testSC( chanel,  getDec(buf) ) ){
+ 		data.chanelError[chanel] = 2;
+ 		return 1;
+ 	}	
 	
 	//нет ошибок, но раньше она была
 	if( data.chanelError[chanel] != 0 ){
@@ -443,30 +443,22 @@ int testTMZChanel(int buf){
 }
 
 
-int testSC(int chanel, int temperature, int cold){
-	
-	float tmp;
+int testSC(int chanel, int temperature){
 	
 	if (data.temperature[chanel] == -100){
        return 0;
 	}
+	else{
+	float tmp = ((data.temperature[chanel]) - (temperature) )/ (float)(data.temperature[chanel]);
 	
-	 tmp = ((data.temperature[chanel]) - (temperature) )/ (float)(data.temperature[chanel]);
-	
-	if (tmp >= 0.5 ){
+	if (tmp >= 0.2 ){
 		
 		return 1;
 		
 	}
-
-	return 0;
-
-// 	if ( temperature == cold )
-// 				return 1;
-// 	return 0;
-// 	
 }
-
+	return 0;
+}
 
 int testBreakTMZ(int temperature){
 	

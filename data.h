@@ -11,6 +11,8 @@
 #define notFalseAlarm 0
 #define MAXtmzTemperature 50
 
+extern int sumTemperature[5];
+
 /**
 	\file
 	\brief Заголовочный файл с основными параметрами сисетмы и функциями для работы с ними   
@@ -80,6 +82,8 @@ void defaultData();
 	\return Температура на канале
 */
 int getDec(int buf);
+
+int getCold(int buf);
 
 /**
 	\brief Функция записи температуры на канале в структуру данных.
@@ -157,7 +161,7 @@ void upThreshold();
 */
 void forcedTestChanel(int chanel, int flagFTC);
 
-int testSC(int chanel, int temperature);
+int testSC(int chanel, int temperature, int cold);
 
 int getDecTMZ(int buf);
 

@@ -140,11 +140,11 @@ void recSSP1OnTimer(struct t_SSP1Timer* timer){
 					case 0:
 							setTemperature(i, getDec(num));
 					    
-					//data.sumTemperature[i] +=  getDec( num );
+					 //sumTemperature[i] +=  getDec( num );
 					break;
 					
 					default: 
-						//data.sumTemperature[i] = 0;
+						sumTemperature[i] = 0;
 					break;				
 	 }		 
 		}
@@ -154,12 +154,12 @@ void recSSP1OnTimer(struct t_SSP1Timer* timer){
 	 
 	 else{
 		 
-     /* Термопары */
+//      /* Термопары */
 // 		 for(i = 0; i < 3; i++){
-// 		 num = data.sumTemperature[i] / timer->_time;
+// 		 num = sumTemperature[i] / timer->_time;
 //      setTemperature(i, num);
-// 		 getAssayTemperature();
-// 		 data.sumTemperature[i] = 0;	 
+// 		 //getAssayTemperature();
+// 		 sumTemperature[i] = 0;	 
 // 		 } 
      	timer->time = timer->_time;		 
 	 }

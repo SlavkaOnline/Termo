@@ -1,5 +1,7 @@
 #include "data.h"
 
+int sumTemperature[5];
+
 /**
 	\file
 	\brief Файл с описанием функций из data.h   
@@ -33,12 +35,51 @@ void defaultData(){
 
 int getDec(int buf){
 
+	
 int temperature = 0;
 int i;
 int mask32 = 0x80000000;
 int sign  = 1;
+
 	
 for ( i = 0; i < 11; i++){
+
+   	if ( buf & mask32){
+            if ( i == 0)
+            {
+                sign*= -1;
+                buf <<= 1;
+                continue;
+            }
+			temperature |= 0x01;
+			temperature <<= 1;
+		}
+		else{
+           if ( i == 0)
+                {
+                    buf <<= 1;
+                    continue;
+                }
+			temperature <<= 1;
+		}
+       buf <<= 1;
+
+}
+
+temperature *= sign;
+
+return temperature;
+
+}
+
+int getCold(int buf){
+
+int temperature = 0;
+int i;
+int mask32 = 0x8000;
+int sign  = 1;
+	
+for ( i = 0; i < 7; i++){
 
    	if ( buf & mask32){
             if ( i == 0)
@@ -172,14 +213,14 @@ for(i = 0; i < 4; i++){
 	 } 
  }
 	/* проверка выхода из строя более чем двух каналов */	
-   /* 
+   
 	 if( sumError > 1){ 
 		 data.work = 1;
 		 ledsBlink[1] = 1;
 		 
 	 }
 	 /* Блок восстановления устройства после решения всех аппаратных проблем */
-	 /*
+	 
 	 else{ 
 		 data.work = 0;
 		 ledsBlink[1] = 0;
@@ -203,7 +244,7 @@ for(i = 0; i < 4; i++){
 		 //disableAlarm();
 		 
 	 }		 
-	 */
+	 
 }
 
 
@@ -228,7 +269,7 @@ int testChanel(int chanel, int buf){
 	}
 	
  	
-//  		if( testSC( chanel,  getDec(buf) ) ){
+//  		if( testSC( chanel,  getDec(buf), getCold(buf) ) ){
 //  		data.chanelError[chanel] = 2;
 //  		return 1;
 //  	}	
@@ -402,22 +443,28 @@ int testTMZChanel(int buf){
 }
 
 
-int testSC(int chanel, int temperature){
+int testSC(int chanel, int temperature, int cold){
+	
+	float tmp;
 	
 	if (data.temperature[chanel] == -100){
        return 0;
 	}
-	else{
-	float tmp = ((data.temperature[chanel]) - (temperature) )/ (float)(data.temperature[chanel]);
 	
-	if (tmp >= 0.2 ){
+	 tmp = ((data.temperature[chanel]) - (temperature) )/ (float)(data.temperature[chanel]);
+	
+	if (tmp >= 0.5 ){
 		
 		return 1;
 		
 	}
-}
+
 	return 0;
-	
+
+// 	if ( temperature == cold )
+// 				return 1;
+// 	return 0;
+// 	
 }
 
 

@@ -25,14 +25,14 @@
 ### List of Objects: adding '".\flash\FS_ARM_L.lib"'
 ### List of Objects: adding '"rtc.o"'
 ### ADS-LD Command completed:
---cpu ARM7TDMI "lpc2300.o" "main.o" "led.o" "led7.o" "ssp.o" "timer.o" "irc.o" "softtimer.o" "data.o" "i2c.o" "usbfunction.o" "hiduser.o" "usbcore.o" "usbdesc.o" "usbhw.o" "usbuser.o" "flashwork.o" "file_config.o" "fs_spi_flashprg.o" "retarget.o" "spi_lpc23xx.o" C:\Users\Slava\Desktop\Diplom\Termo\flash\FS_ARM_L.lib "rtc.o" --ropi --rwpi --strict --scatter "Termo2v1.sct" 
+--cpu ARM7TDMI "lpc2300.o" "main.o" "led.o" "led7.o" "ssp.o" "timer.o" "irc.o" "softtimer.o" "data.o" "i2c.o" "usbfunction.o" "hiduser.o" "usbcore.o" "usbdesc.o" "usbhw.o" "usbuser.o" "flashwork.o" "file_config.o" "fs_spi_flashprg.o" "retarget.o" "spi_lpc23xx.o" C:\Users\Slava\Desktop\Diplom\termo3\Termo\flash\FS_ARM_L.lib "rtc.o" --ropi --rwpi --strict --scatter "Termo2v1.sct" 
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
  --list ".\Termo2v1.map" -o "Termo2v1.axf"### Preparing Environment (PrepEnvAds)
 ### ADS-LD Output File: 'Termo2v1.axf'
 ### ADS-LD Command File: 'Termo2v1.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'Termo2v1.lnp', Handle=0x00000520
+### Creating CmdFile 'Termo2v1.lnp', Handle=0x000011A0
 ### Writing '.lnp' file
 ### ADS-LD Command file 'Termo2v1.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

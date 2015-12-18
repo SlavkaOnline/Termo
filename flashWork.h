@@ -4,16 +4,20 @@
 
 #include "includes.h"
 
+#define SETNULLHOUR
+#define UPDATEHOUR
+#define READHOUR
+
 int saveParams();
 int readParams();
-double updateSumWorkTime();
+double SumWorkTime();
 void setAlarmDateTime();
 struct typeDateTimeSend getAlarmDateTime();
 
 struct typeFlash{
 int (*saveParams)();
 int (*readParams)();
-double (*updateSumWorkTime)();
+double (*SumWorkTime)();
 void (*setAlarmDateTime)();
 struct typeDateTimeSend (*getAlarmDateTime)();	
 };

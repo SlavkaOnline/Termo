@@ -84,7 +84,7 @@ void sendDateTime(void){
 	
 	info.dt = DateTime;
 	info.alarm = alarm;
-	info.workTime = updateSumWorkTime(1);
+	info.workTime = dataFlash.SumWorkTime(READHOUR);
 	info.dd = 11;
 	info.mm = 12;
 	info.yyyy = 2015;

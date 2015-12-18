@@ -169,6 +169,7 @@ void RTC_Handler (void)	__irq
 	if (RTC_ILR &0x01)
 	{
 		//led7.setNumLed7(RTC_MIN);
+		dataFlash.SumWorkTime(UPDATEHOUR);
 		RTC_status |=0x01;
 		RTC_ILR	= 0x01;						//Очищаем флаг прерывания
 	}

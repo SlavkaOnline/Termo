@@ -4,9 +4,9 @@
 
 #include "includes.h"
 
-#define SETNULLHOUR
-#define UPDATEHOUR
-#define READHOUR
+#define SETNULLHOUR 0
+#define UPDATEHOUR  1
+#define READHOUR    2
 
 int saveParams();
 int readParams();

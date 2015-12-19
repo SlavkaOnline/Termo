@@ -50,7 +50,7 @@ int main(){
 //  correct_time_struct(&loc_time);
 //  correct_data_struct(&loc_time);
 
-  //dataFlash.SumWorkTime(SETNULLHOUR);
+  dataFlash.SumWorkTime(SETNULLHOUR);
  	//SumWorkTime(READHOUR);
 	
 	

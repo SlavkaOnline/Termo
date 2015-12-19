@@ -92,7 +92,7 @@ void sendDateTime(void){
 	message = (unsigned char*)&info;
 	
   memcpy(&InReport, message, sizeof(info));
-	led7.setNumLed7(DateTime.mm);
+
 	
 }
 
@@ -102,7 +102,7 @@ void setDateTime(void){
 	struct tm loc_time;
 	DateTime = *((struct typeDateTimeSend*)&OutReport[1]);
 	
-	led7.setNumLed7(DateTime.dm);
+	led7.setNumLed7(55);
 	
 	loc_time.tm_sec		=	DateTime.ss;
 	loc_time.tm_min		=	DateTime.mm;

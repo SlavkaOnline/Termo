@@ -110,7 +110,7 @@ double SumWorkTime(int flag ){
 			fclose(saveFile);
 }
 
-	if(flag){
+	if(flag == 1){
 		FILE *readFile;
 		FILE *saveFile;
 		char read_datetime[10];
@@ -131,7 +131,7 @@ double SumWorkTime(int flag ){
 				}
 				fclose(readFile);
 		
-	      if(flag = 1){
+	      if(flag == 2){
 					hour++;
 					saveFile = fopen("timework", "w");
 					saveFile = fopen("timework", "w");

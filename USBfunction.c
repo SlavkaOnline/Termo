@@ -84,7 +84,7 @@ void sendDateTime(void){
 	
 	info.dt = DateTime;
 	info.alarm = alarm;
-	info.workTime = dataFlash.SumWorkTime(READHOUR);
+	info.workTime = 0;// dataFlash.SumWorkTime(READHOUR);
 	info.dd = 11;
 	info.mm = 12;
 	info.yyyy = 2015;
@@ -102,7 +102,7 @@ void setDateTime(void){
 	struct tm loc_time;
 	DateTime = *((struct typeDateTimeSend*)&OutReport[1]);
 	
-	led7.setNumLed7(55);
+	led7.setNumLed7(OutReport[1]);
 	
 	loc_time.tm_sec		=	DateTime.ss;
 	loc_time.tm_min		=	DateTime.mm;

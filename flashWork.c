@@ -91,7 +91,7 @@ struct typeDateTimeSend getAlarmDateTime(){
 
 
 
-double SumWorkTime(int flag ){
+int SumWorkTime(int flag ){
 	
 	int i;
 	if(!flag){
@@ -105,18 +105,18 @@ double SumWorkTime(int flag ){
 // 			}
 		 
 			
-			saveFile = fopen("timework", "w");
+			saveFile = fopen("sumtimework", "w");
 			fprintf(saveFile, "%d", 0);
 			fclose(saveFile);
 }
 
-	if(flag == 1){
+	if(flag == 2){
 		FILE *readFile;
-		FILE *saveFile;
+	
 		char read_datetime[10];
 	
 	  int hour;
-		readFile = fopen("timework", "r");
+		readFile = fopen("sumtimework", "r");
 		   	if(!readFile){
 						led7.setNumLed7(63);
 						return;
@@ -130,20 +130,22 @@ double SumWorkTime(int flag ){
 				 
 				}
 				fclose(readFile);
-		
-	      if(flag == 2){
+					
+		    return hour;
+				
+}	
+
+
+ if(flag == 1){
+	 	FILE *saveFile;
+		int hour;
+	  hour = SumWorkTime(1);
 					hour++;
-					saveFile = fopen("timework", "w");
-					saveFile = fopen("timework", "w");
+					saveFile = fopen("sumtimework", "w");
 					fprintf(saveFile, "%d", hour);
 					fclose(saveFile);
 					return hour;
 				}
-				else{
-					
-		    return hour;
-				}
-}	
 	return 0;
 }
 

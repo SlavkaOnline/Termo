@@ -60,14 +60,14 @@ void getConstParam(){
 void sendDateTime(void){
 
 	struct typeInfo info;
-	struct typeDateTimeSend alarm;
+	//struct typeDateTimeSend alarm;
 	unsigned char* message = (unsigned char*)&info;
-		info.dt.hh = RTC_HOUR;
-		info.dt.mm = RTC_MIN;
-		info.dt.ss = RTC_SEC;
-		info.dt.dm = RTC_DOM;
-		info.dt.mh = RTC_MONTH;
-		info.dt.yy = RTC_YEAR;
+		info.dt.hh = 0;//RTC_HOUR;
+		info.dt.mm = 0;//RTC_MIN;
+		info.dt.ss = 0;//RTC_SEC;
+		info.dt.dm = 0;//RTC_DOM;
+		info.dt.mh = 0;//RTC_MONTH;
+		info.dt.yy = 0;//RTC_YEAR;
 	
 	info.alarm = dataFlash.getAlarmDateTime();
 	info.workTime = 0; //dataFlash.SumWorkTime(READHOUR);
@@ -86,8 +86,6 @@ void setDateTime(void){
 	struct tm loc_time;
 	DateTime = *((struct typeDateTimeSend*)&OutReport[1]);
 	
-	led7.setNumLed7(DateTime.dm);
-	
 	loc_time.tm_sec		=	DateTime.ss;
 	loc_time.tm_min		=	DateTime.mm;
 	loc_time.tm_hour	=	DateTime.hh;
@@ -98,6 +96,9 @@ void setDateTime(void){
 	correct_time_struct(&loc_time);
 	correct_data_struct(&loc_time);
 
+	 
+RTC_init(0);
+RTC_int();
 }
 
 void SetOutReport (void) {

@@ -61,10 +61,10 @@ struct typeInfo{
    
     struct typeDateTimeSend dt;
     struct typeDateTimeSend alarm;
-    unsigned int workTime;
-    unsigned char dd;
-    unsigned char mm;
-    unsigned short yyyy;
+    int workTime;
+    char dd;
+    char mm;
+    short yyyy;
 
 };
 

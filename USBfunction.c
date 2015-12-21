@@ -76,7 +76,7 @@ void sendDateTime(void){
 	info.yyyy = 2015;
 
   memcpy(&InReport, message, sizeof(info));
-	led7.setNumLed7(InReport[2]);
+	
 	
 }
 

@@ -30,13 +30,15 @@ int main(){
 	//timer.initWDTimer();
   //timer.startWDTimer();
 	
+	//fformat ("S:");
 	 
+RTC_init(0);
+RTC_int();	
 	
 	
-	led.setLed(PWR, LED_ON);
   
 	//dataFlash.saveParams();
- //	dataFlash.readParams();
+ 	dataFlash.readParams();
 
 // loc_time.tm_sec		=	0;
 // loc_time.tm_min		=	35;
@@ -48,8 +50,6 @@ int main(){
 // correct_time_struct(&loc_time);
 // correct_data_struct(&loc_time);
 
-RTC_init(0);
-RTC_int();
 
   //dataFlash.SumWorkTime(SETNULLHOUR);
  	//SumWorkTime(READHOUR);
@@ -57,6 +57,8 @@ RTC_int();
 	
 	while(1){
 	
+		led.setLed(PWR, LED_ON);
+		
 		//led7.setNumLed7(RTC_MIN);
 	//led7.setNumLed7(data.threshold);	//1
 	//led7.setNumLed7(); 		//2

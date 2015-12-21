@@ -47,17 +47,7 @@ void ChangeConstParam (void) {
 	
 	setMode(datasend.currentMode);
 	
-	while(dataFlash.saveParams());
-	
-// 	for (i = 0; i < 3; i++){
-// 			if(datasend.alarm[i] == 0){
-// 					disableAlarm(i, 1);
-// 			}
-// 	}
-	
-	
-	
-	
+	while(dataFlash.saveParams());	
 }
 
 void getConstParam(){
@@ -69,30 +59,24 @@ void getConstParam(){
 
 void sendDateTime(void){
 
-	unsigned char* message;
 	struct typeInfo info;
-	struct typeDateTimeSend DateTime;
 	struct typeDateTimeSend alarm;
-		DateTime.hh = RTC_HOUR;
-		DateTime.mm = RTC_MIN;
-		DateTime.ss = RTC_SEC;
-		DateTime.dm = RTC_DOM;
-		DateTime.mh = RTC_MONTH;
-		DateTime.yy = RTC_YEAR;
+	unsigned char* message = (unsigned char*)&info;
+		info.dt.hh = RTC_HOUR;
+		info.dt.mm = RTC_MIN;
+		info.dt.ss = RTC_SEC;
+		info.dt.dm = RTC_DOM;
+		info.dt.mh = RTC_MONTH;
+		info.dt.yy = RTC_YEAR;
 	
-	alarm = dataFlash.getAlarmDateTime();
-	
-	info.dt = DateTime;
-	info.alarm = alarm;
-	info.workTime = 0;// dataFlash.SumWorkTime(READHOUR);
+	info.alarm = dataFlash.getAlarmDateTime();
+	info.workTime = 0; //dataFlash.SumWorkTime(READHOUR);
 	info.dd = 11;
 	info.mm = 12;
 	info.yyyy = 2015;
-	
-	message = (unsigned char*)&info;
-	
-  memcpy(&InReport, message, sizeof(info));
 
+  memcpy(&InReport, message, sizeof(info));
+	led7.setNumLed7(InReport[2]);
 	
 }
 
@@ -102,7 +86,7 @@ void setDateTime(void){
 	struct tm loc_time;
 	DateTime = *((struct typeDateTimeSend*)&OutReport[1]);
 	
-	led7.setNumLed7(OutReport[1]);
+	led7.setNumLed7(DateTime.dm);
 	
 	loc_time.tm_sec		=	DateTime.ss;
 	loc_time.tm_min		=	DateTime.mm;

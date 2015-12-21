@@ -183,8 +183,8 @@ void recSPIOnTimer(struct t_SPITimer* timer){
 	
 		
 		/* Платиновый датчик */
-// 		configureMAX31865(0xD3);
-// 		
+		configureMAX31865(0xD3);
+		
 		
 		
 		SSP.setSPI(SSP_ON);

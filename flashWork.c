@@ -63,8 +63,16 @@ struct typeDateTimeSend getAlarmDateTime(){
 	readFile = fopen("alarm.txt", "r");
 	
 	if(!readFile){
-		led7.setNumLed7(63);
-		return;
+		//led7.setNumLed7(63);
+		dt.hh = 0;
+		dt.mm = 0;
+		dt.ss = 0;
+		dt.dm = 0;
+		dt.mh = 0;
+		dt.yy = 0;
+	
+	return dt;
+		
 	}
 	
 	i = 0;
@@ -96,27 +104,19 @@ int SumWorkTime(int flag ){
 	int i;
 	if(!flag){
 			FILE *saveFile;
-		
 			
-// 		  saveFile = fopen("timework", "r");
-// 			if (saveFile){
-// 				fclose(saveFile);
-// 				return 0;
-// 			}
-		 
-			
-			saveFile = fopen("sumtimework", "w");
+			saveFile = fopen("timework", "w");
 			fprintf(saveFile, "%d", 0);
 			fclose(saveFile);
 }
 
-	if(flag == 2){
+	if(flag){
 		FILE *readFile;
-	
+		FILE *saveFile;
 		char read_datetime[10];
 	
 	  int hour;
-		readFile = fopen("sumtimework", "r");
+		readFile = fopen("timework", "r");
 		   	if(!readFile){
 						led7.setNumLed7(63);
 						return;
@@ -130,22 +130,19 @@ int SumWorkTime(int flag ){
 				 
 				}
 				fclose(readFile);
-					
-		    return hour;
-				
-}	
-
-
- if(flag == 1){
-	 	FILE *saveFile;
-		int hour;
-	  hour = SumWorkTime(1);
+		
+	      if(flag = 1){
 					hour++;
-					saveFile = fopen("sumtimework", "w");
+					saveFile = fopen("timework", "w");
 					fprintf(saveFile, "%d", hour);
 					fclose(saveFile);
 					return hour;
 				}
+				else{
+					
+		    return hour;
+				}
+}	
 	return 0;
 }
 

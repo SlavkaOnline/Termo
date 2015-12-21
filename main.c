@@ -34,10 +34,8 @@ int main(){
 	
 	
 	led.setLed(PWR, LED_ON);
-
-  RTC_init(0);
-	RTC_int();
-  	//dataFlash.saveParams();
+  
+	//dataFlash.saveParams();
  	dataFlash.readParams();
 
 	loc_time.tm_sec		=	0;
@@ -49,6 +47,9 @@ int main(){
    
  correct_time_struct(&loc_time);
  correct_data_struct(&loc_time);
+
+RTC_init(0);
+RTC_int();
 
   //dataFlash.SumWorkTime(SETNULLHOUR);
  	//SumWorkTime(READHOUR);

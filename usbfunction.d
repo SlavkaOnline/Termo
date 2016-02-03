@@ -3,6 +3,7 @@ usbfunction.o: .\usb\usb.h
 usbfunction.o: C:\Keil\ARM\RV31\Inc\RTL.h
 usbfunction.o: .\usb\usbcfg.h
 usbfunction.o: .\usb\usbhw.h
+usbfunction.o: C:\Keil\ARM\RV31\Inc\stdio.h
 usbfunction.o: USBfunction.h
 usbfunction.o: includes.h
 usbfunction.o: C:\Keil\ARM\Inc\Philips\lpc23xx.h
@@ -17,7 +18,6 @@ usbfunction.o: irc.h
 usbfunction.o: data.h
 usbfunction.o: flashWork.h
 usbfunction.o: default.h
-usbfunction.o: C:\Keil\ARM\RV31\Inc\stdio.h
 usbfunction.o: C:\Keil\ARM\RV31\Inc\math.h
 usbfunction.o: .\RTC\RTC.h
 usbfunction.o: C:\Keil\ARM\RV31\Inc\time.h

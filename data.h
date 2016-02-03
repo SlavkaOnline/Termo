@@ -48,12 +48,12 @@ struct typePCtoMCnumber{
 
 struct typeDateTimeSend{
 	
-	int hh;
-	int mm;
-	int ss;
-	int dm;
-	int mh;
-	int yy;
+	unsigned char hh;
+	unsigned char mm;
+	unsigned char ss;
+	unsigned char dm;
+	unsigned char mh;
+	unsigned char yy;
 	
 };
 
@@ -61,10 +61,11 @@ struct typeInfo{
    
     struct typeDateTimeSend dt;
     struct typeDateTimeSend alarm;
-    int workTime;
-    char dd;
+		char dd;
     char mm;
-    short yyyy;
+    char yyyy;
+		short workTime;
+    
 
 };
 

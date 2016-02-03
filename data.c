@@ -152,14 +152,15 @@ void getAssayTemperature(){
    
  for(i = 0; i < 3; i++){ 
 	 
-	if ( data.chanelError[i] == 0 && (data.temperature[i] > data.threshold) ){
+	if ( (data.chanelError[i] == 0) && (data.temperature[i] > data.threshold) && (data.alarm[i] == 0) ){
 		   
 			if(THdTimer[i].start == 1) continue; //???
 		  startTHdTimer(i, data.THdelay);
 		  if(THdTimer[i].stop == 1){
 		      //led.setLed(leds[i], LED_ON);
-				 sendAlarm(i);
+				sendAlarm(i);
 				THdTimer[i].stop = 0;
+				THdTimer[i].start = 0;
 				dataFlash.setAlarmDateTime();
 			}				
 	}

@@ -33,19 +33,19 @@ void setAlarmDateTime(){
 	params[2] = RTC_SEC;
 	params[3] = RTC_DOM;
 	params[4] = RTC_MONTH;
-	params[5] = RTC_YEAR;
+	params[5] = RTC_YEAR %100;
 	
 	
 	saveFile = fopen("alarm.txt", "w");
 	
-	if(!saveFile){
-		led7.setNumLed7(63);
-		return;
-	}
+// 	if(!saveFile){
+// 		led7.setNumLed7(63);
+// 		return;
+// 	}
 	
 	for(i = 0; i < size_params; i++){
 		fprintf(saveFile, "%d\n", params[i]);
-		//fputs("1\n", saveFile);
+		//fputs("\n", saveFile);
 	}
 	
 	fclose(saveFile);	
@@ -63,7 +63,7 @@ struct typeDateTimeSend getAlarmDateTime(){
 	readFile = fopen("alarm.txt", "r");
 	
 	if(!readFile){
-		//led7.setNumLed7(63);
+		led7.setNumLed7(63);
 		dt.hh = 0;
 		dt.mm = 0;
 		dt.ss = 0;

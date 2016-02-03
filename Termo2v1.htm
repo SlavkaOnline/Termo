@@ -3,9 +3,9 @@
 <title>Static Call Graph - [C:\Users\Slava\Desktop\Diplom\termo3\Termo\Termo2v1.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image C:\Users\Slava\Desktop\Diplom\termo3\Termo\Termo2v1.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 894]: Last Updated: Mon Dec 21 22:43:03 2015
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 894]: Last Updated: Wed Feb 03 13:04:56 2016
 <BR><P>
-<H3>Maximum Stack Usage =        376 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        360 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 getAlarmDateTime &rArr; fopen &rArr; freopen &rArr; _fclose_internal &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; __sys_write &rArr; efs_write &rArr; efs_AllocBlock &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
 <P>
@@ -45,7 +45,7 @@ Function Pointers
  <LI><a href="#[1c]">Init</a> from fs_spi_flashprg.o(.text) referenced 2 times from fs_spi_flashprg.o(.constdata)
  <LI><a href="#[10]">PAbt_Handler</a> from lpc2300.o(RESET) referenced from lpc2300.o(RESET)
  <LI><a href="#[1f]">ProgramPage</a> from fs_spi_flashprg.o(.text) referenced from fs_spi_flashprg.o(.constdata)
- <LI><a href="#[d6]">RTC_Handler</a> from rtc.o(.text) referenced from rtc.o(.text)
+ <LI><a href="#[d5]">RTC_Handler</a> from rtc.o(.text) referenced from rtc.o(.text)
  <LI><a href="#[1e]">ReadData</a> from fs_spi_flashprg.o(.text) referenced from fs_spi_flashprg.o(.constdata)
  <LI><a href="#[25]">RecBuf</a> from spi_lpc23xx.o(.text) referenced from spi_lpc23xx.o(.constdata)
  <LI><a href="#[d]">Reset_Handler</a> from lpc2300.o(RESET) referenced from lpc2300.o(RESET)
@@ -55,7 +55,6 @@ Function Pointers
  <LI><a href="#[27]">SetSS</a> from spi_lpc23xx.o(.text) referenced from spi_lpc23xx.o(.constdata)
  <LI><a href="#[40]">SumWorkTime</a> from flashwork.o(.text) referenced from flashwork.o(.data)
  <LI><a href="#[16]">Timer0_Int</a> from irc.o(.text) referenced from irc.o(.text)
- <LI><a href="#[b5]">USB_EnableEP</a> from usbhw.o(.text) referenced from flashwork.o(.text)
  <LI><a href="#[1a]">USB_EndPoint0</a> from usbcore.o(.text) referenced from usbuser.o(.constdata)
  <LI><a href="#[1b]">USB_EndPoint1</a> from usbuser.o(.text) referenced from usbuser.o(.constdata)
  <LI><a href="#[1d]">UnInit</a> from fs_spi_flashprg.o(.text) referenced 2 times from fs_spi_flashprg.o(.constdata)
@@ -63,7 +62,6 @@ Function Pointers
  <LI><a href="#[43]">__main</a> from __main.o(!!!main) referenced from lpc2300.o(RESET)
  <LI><a href="#[18]">_get_lc_ctype</a> from lc_ctype_c.o(locale$$code) referenced from rt_ctype_table.o(.text)
  <LI><a href="#[19]">_printf_input_char</a> from _printf_char_common.o(.text) referenced from _printf_char_common.o(.text)
- <LI><a href="#[bd]">_sys_flen</a> from retarget.o(.text) referenced from flashwork.o(.text)
  <LI><a href="#[17]">fputc</a> from fputc.o(i.fputc) referenced from _printf_char_file.o(.text)
  <LI><a href="#[42]">getAlarmDateTime</a> from flashwork.o(.text) referenced from flashwork.o(.data)
  <LI><a href="#[2a]">initLed</a> from led.o(.text) referenced from led.o(.data)
@@ -374,7 +372,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAssayTemperature
 </UL>
 
-<P><STRONG><a name="[3c]"></a>recSSP1OnTimer</STRONG> (ARM, 256 bytes, Stack size 24 bytes, softtimer.o(.text))
+<P><STRONG><a name="[3c]"></a>recSSP1OnTimer</STRONG> (ARM, 268 bytes, Stack size 24 bytes, softtimer.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = recSSP1OnTimer &rArr; testChanel &rArr; testSC &rArr; __aeabi_fdiv
 </UL>
 <BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testChanel
@@ -436,7 +434,7 @@ Global Symbols
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WDTimer_Int
 </UL>
 
-<P><STRONG><a name="[74]"></a>getAssayTemperature</STRONG> (ARM, 192 bytes, Stack size 8 bytes, data.o(.text))
+<P><STRONG><a name="[74]"></a>getAssayTemperature</STRONG> (ARM, 220 bytes, Stack size 8 bytes, data.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = getAssayTemperature &rArr; sendAlarm
 </UL>
 <BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;startTHdTimer
@@ -552,17 +550,19 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetInReport
 </UL>
 
-<P><STRONG><a name="[89]"></a>sendDateTime</STRONG> (ARM, 136 bytes, Stack size 88 bytes, usbfunction.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = sendDateTime &rArr; __aeabi_memcpy4
+<P><STRONG><a name="[89]"></a>sendDateTime</STRONG> (ARM, 184 bytes, Stack size 32 bytes, usbfunction.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
+<LI>Call Chain = sendDateTime
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetInReport
 </UL>
 
-<P><STRONG><a name="[8b]"></a>GetInReport</STRONG> (ARM, 64 bytes, Stack size 8 bytes, usbfunction.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = GetInReport &rArr; sendDateTime &rArr; __aeabi_memcpy4
+<P><STRONG><a name="[8b]"></a>GetInReport</STRONG> (ARM, 84 bytes, Stack size 8 bytes, usbfunction.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
+<LI>Call Chain = GetInReport &rArr; sendDateTime
 </UL>
 <BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendDateTime
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getConstParam
@@ -571,6 +571,8 @@ Global Symbols
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_Configure_Event
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HID_GetReport
 </UL>
+
+<P><STRONG><a name="[17d]"></a>swap_byte</STRONG> (ARM, 52 bytes, Stack size 4 bytes, usbfunction.o(.text), UNUSED)
 
 <P><STRONG><a name="[8c]"></a>ChangeConstParam</STRONG> (ARM, 132 bytes, Stack size 24 bytes, usbfunction.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = ChangeConstParam
@@ -581,20 +583,20 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetOutReport
 </UL>
 
-<P><STRONG><a name="[8d]"></a>setDateTime</STRONG> (ARM, 112 bytes, Stack size 72 bytes, usbfunction.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = setDateTime &rArr; __aeabi_memcpy4
+<P><STRONG><a name="[8d]"></a>setDateTime</STRONG> (ARM, 140 bytes, Stack size 64 bytes, usbfunction.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = setDateTime
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;correct_time_struct
 <LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;correct_data_struct
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_int
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RTC_init
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetOutReport
 </UL>
 
-<P><STRONG><a name="[90]"></a>SetOutReport</STRONG> (ARM, 188 bytes, Stack size 8 bytes, usbfunction.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = SetOutReport &rArr; setDateTime &rArr; __aeabi_memcpy4
+<P><STRONG><a name="[90]"></a>SetOutReport</STRONG> (ARM, 216 bytes, Stack size 8 bytes, usbfunction.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = SetOutReport &rArr; setDateTime
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setDateTime
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChangeConstParam
@@ -604,7 +606,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[91]"></a>HID_GetReport</STRONG> (ARM, 92 bytes, Stack size 8 bytes, hiduser.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = HID_GetReport &rArr; GetInReport &rArr; sendDateTime &rArr; __aeabi_memcpy4
+<BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
+<LI>Call Chain = HID_GetReport &rArr; GetInReport &rArr; sendDateTime
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetInReport
 </UL>
@@ -612,7 +615,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[92]"></a>HID_SetReport</STRONG> (ARM, 108 bytes, Stack size 8 bytes, hiduser.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = HID_SetReport &rArr; SetOutReport &rArr; setDateTime &rArr; __aeabi_memcpy4
+<BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = HID_SetReport &rArr; SetOutReport &rArr; setDateTime
 </UL>
 <BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetOutReport
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
@@ -681,7 +684,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1a]"></a>USB_EndPoint0</STRONG> (ARM, 1524 bytes, Stack size 8 bytes, usbcore.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = USB_EndPoint0 &rArr; USB_Configure_Event &rArr; GetInReport &rArr; sendDateTime &rArr; __aeabi_memcpy4
+<BR><BR>[Stack]<UL><LI>Max Depth = 88 + Unknown Stack Size
+<LI>Call Chain = USB_EndPoint0 &rArr; HID_SetReport &rArr; SetOutReport &rArr; setDateTime
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_SetStallEP
 <LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_SetAddress
@@ -835,8 +839,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_ReqSetInterface
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_ReqSetConfiguration
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> flashwork.o(.text)
-</UL>
+
 <P><STRONG><a name="[b6]"></a>USB_DisableEP</STRONG> (ARM, 44 bytes, Stack size 12 bytes, usbhw.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = USB_DisableEP
 </UL>
@@ -916,7 +919,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[a0]"></a>USB_Configure_Event</STRONG> (ARM, 48 bytes, Stack size 8 bytes, usbuser.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = USB_Configure_Event &rArr; GetInReport &rArr; sendDateTime &rArr; __aeabi_memcpy4
+<BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
+<LI>Call Chain = USB_Configure_Event &rArr; GetInReport &rArr; sendDateTime
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_WriteEP
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetInReport
@@ -925,61 +929,63 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[1b]"></a>USB_EndPoint1</STRONG> (ARM, 52 bytes, Stack size 8 bytes, usbuser.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = USB_EndPoint1 &rArr; GetInReport &rArr; sendDateTime &rArr; __aeabi_memcpy4
+<BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
+<LI>Call Chain = USB_EndPoint1 &rArr; GetInReport &rArr; sendDateTime
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_WriteEP
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetInReport
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> usbuser.o(.constdata)
 </UL>
-<P><STRONG><a name="[17d]"></a>USB_EndPoint2</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
+<P><STRONG><a name="[17e]"></a>USB_EndPoint2</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
 
-<P><STRONG><a name="[17e]"></a>USB_EndPoint3</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
+<P><STRONG><a name="[17f]"></a>USB_EndPoint3</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
 
-<P><STRONG><a name="[17f]"></a>USB_EndPoint4</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
+<P><STRONG><a name="[180]"></a>USB_EndPoint4</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
 
-<P><STRONG><a name="[180]"></a>USB_EndPoint5</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
+<P><STRONG><a name="[181]"></a>USB_EndPoint5</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
 
-<P><STRONG><a name="[181]"></a>USB_EndPoint6</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
+<P><STRONG><a name="[182]"></a>USB_EndPoint6</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
 
-<P><STRONG><a name="[182]"></a>USB_EndPoint7</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
+<P><STRONG><a name="[183]"></a>USB_EndPoint7</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
 
-<P><STRONG><a name="[183]"></a>USB_EndPoint8</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
+<P><STRONG><a name="[184]"></a>USB_EndPoint8</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
 
-<P><STRONG><a name="[184]"></a>USB_EndPoint9</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
+<P><STRONG><a name="[185]"></a>USB_EndPoint9</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
 
-<P><STRONG><a name="[185]"></a>USB_EndPoint10</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
+<P><STRONG><a name="[186]"></a>USB_EndPoint10</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
 
-<P><STRONG><a name="[186]"></a>USB_EndPoint11</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
+<P><STRONG><a name="[187]"></a>USB_EndPoint11</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
 
-<P><STRONG><a name="[187]"></a>USB_EndPoint12</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
+<P><STRONG><a name="[188]"></a>USB_EndPoint12</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
 
-<P><STRONG><a name="[188]"></a>USB_EndPoint13</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
+<P><STRONG><a name="[189]"></a>USB_EndPoint13</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
 
-<P><STRONG><a name="[189]"></a>USB_EndPoint14</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
+<P><STRONG><a name="[18a]"></a>USB_EndPoint14</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
 
-<P><STRONG><a name="[18a]"></a>USB_EndPoint15</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
+<P><STRONG><a name="[18b]"></a>USB_EndPoint15</STRONG> (ARM, 4 bytes, Stack size 0 bytes, usbuser.o(.text), UNUSED)
 
-<P><STRONG><a name="[41]"></a>setAlarmDateTime</STRONG> (ARM, 192 bytes, Stack size 40 bytes, flashwork.o(.text))
+<P><STRONG><a name="[41]"></a>setAlarmDateTime</STRONG> (ARM, 164 bytes, Stack size 40 bytes, flashwork.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 328 + Unknown Stack Size
 <LI>Call Chain = setAlarmDateTime &rArr; fopen &rArr; freopen &rArr; _fclose_internal &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; __sys_write &rArr; efs_write &rArr; efs_AllocBlock &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fclose (via Veneer)
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen (via Veneer)
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf (via Veneer)
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fclose (via Veneer)
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen (via Veneer)
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf (via Veneer)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> flashwork.o(.data)
 </UL>
-<P><STRONG><a name="[42]"></a>getAlarmDateTime</STRONG> (ARM, 244 bytes, Stack size 88 bytes, flashwork.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 376<LI>Call Chain = getAlarmDateTime &rArr; fopen &rArr; freopen &rArr; _fclose_internal &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; __sys_write &rArr; efs_write &rArr; efs_AllocBlock &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
+<P><STRONG><a name="[42]"></a>getAlarmDateTime</STRONG> (ARM, 264 bytes, Stack size 72 bytes, flashwork.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 360<LI>Call Chain = getAlarmDateTime &rArr; fopen &rArr; freopen &rArr; _fclose_internal &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; __sys_write &rArr; efs_write &rArr; efs_AllocBlock &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtok (via Veneer)
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fclose (via Veneer)
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen (via Veneer)
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgets (via Veneer)
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;feof (via Veneer)
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi (via Veneer)
+<BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtok (via Veneer)
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fclose (via Veneer)
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen (via Veneer)
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgets (via Veneer)
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;feof (via Veneer)
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi (via Veneer)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> flashwork.o(.data)
 </UL>
@@ -987,13 +993,13 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 328 + Unknown Stack Size
 <LI>Call Chain = SumWorkTime &rArr; fopen &rArr; freopen &rArr; _fclose_internal &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; __sys_write &rArr; efs_write &rArr; efs_AllocBlock &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtok (via Veneer)
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fclose (via Veneer)
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen (via Veneer)
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgets (via Veneer)
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;feof (via Veneer)
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi (via Veneer)
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf (via Veneer)
+<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtok (via Veneer)
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fclose (via Veneer)
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen (via Veneer)
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgets (via Veneer)
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;feof (via Veneer)
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi (via Veneer)
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf (via Veneer)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> flashwork.o(.data)
 </UL>
@@ -1001,12 +1007,12 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 352<LI>Call Chain = readParams &rArr; fopen &rArr; freopen &rArr; _fclose_internal &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; __sys_write &rArr; efs_write &rArr; efs_AllocBlock &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
 </UL>
 <BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMode
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtok (via Veneer)
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fclose (via Veneer)
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen (via Veneer)
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgets (via Veneer)
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;feof (via Veneer)
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi (via Veneer)
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtok (via Veneer)
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fclose (via Veneer)
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen (via Veneer)
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgets (via Veneer)
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;feof (via Veneer)
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi (via Veneer)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> flashwork.o(.data)
 </UL>
@@ -1014,9 +1020,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 336 + Unknown Stack Size
 <LI>Call Chain = saveParams &rArr; fopen &rArr; freopen &rArr; _fclose_internal &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; __sys_write &rArr; efs_write &rArr; efs_AllocBlock &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fclose (via Veneer)
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen (via Veneer)
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf (via Veneer)
+<BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fclose (via Veneer)
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen (via Veneer)
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf (via Veneer)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> flashwork.o(.data)
 </UL>
@@ -1029,40 +1035,40 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[126]"></a>fat_find</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, file_config.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
+<BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
 </UL>
 
 <P><STRONG><a name="[12e]"></a>fat_seek</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, file_config.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_seek
+<BR><BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_seek
 </UL>
 
 <P><STRONG><a name="[12c]"></a>fat_read</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, file_config.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_read
+<BR><BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_read
 </UL>
 
 <P><STRONG><a name="[130]"></a>fat_write</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, file_config.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_write
+<BR><BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_write
 </UL>
 
-<P><STRONG><a name="[18b]"></a>fat_free</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, file_config.o(.text), UNUSED)
+<P><STRONG><a name="[18c]"></a>fat_free</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, file_config.o(.text), UNUSED)
 
 <P><STRONG><a name="[127]"></a>fat_delete</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, file_config.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
+<BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
 </UL>
 
 <P><STRONG><a name="[11e]"></a>fat_wclose</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, file_config.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_close
+<BR><BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_close
 </UL>
 
-<P><STRONG><a name="[18c]"></a>fat_rename</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, file_config.o(.text), UNUSED)
+<P><STRONG><a name="[18d]"></a>fat_rename</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, file_config.o(.text), UNUSED)
 
 <P><STRONG><a name="[128]"></a>fat_create</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, file_config.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
+<BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
 </UL>
 
-<P><STRONG><a name="[18d]"></a>fat_format</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, file_config.o(.text), UNUSED)
+<P><STRONG><a name="[18e]"></a>fat_format</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, file_config.o(.text), UNUSED)
 
-<P><STRONG><a name="[18e]"></a>fat_ffind</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, file_config.o(.text), UNUSED)
+<P><STRONG><a name="[18f]"></a>fat_ffind</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, file_config.o(.text), UNUSED)
 
 <P><STRONG><a name="[147]"></a>fat_jour_init</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, file_config.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_drv
@@ -1072,33 +1078,33 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__default_signal_display (via Veneer)
 </UL>
 
-<P><STRONG><a name="[c8]"></a>_sys_open</STRONG> (ARM, 116 bytes, Stack size 16 bytes, retarget.o(.text))
+<P><STRONG><a name="[c6]"></a>_sys_open</STRONG> (ARM, 116 bytes, Stack size 16 bytes, retarget.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = _sys_open &rArr; __sys_open &rArr; efs_create &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open (via Veneer)
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open (via Veneer)
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;freopen (via Veneer)
 </UL>
 
-<P><STRONG><a name="[cb]"></a>_sys_close</STRONG> (ARM, 40 bytes, Stack size 8 bytes, retarget.o(.text))
+<P><STRONG><a name="[c9]"></a>_sys_close</STRONG> (ARM, 40 bytes, Stack size 8 bytes, retarget.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = _sys_close &rArr; __sys_close &rArr; efs_wclose &rArr; efs_WriteBlock
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_close (via Veneer)
+<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_close (via Veneer)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fclose_internal (via Veneer)
 </UL>
 
-<P><STRONG><a name="[cd]"></a>_sys_write</STRONG> (ARM, 60 bytes, Stack size 24 bytes, retarget.o(.text))
+<P><STRONG><a name="[cb]"></a>_sys_write</STRONG> (ARM, 60 bytes, Stack size 24 bytes, retarget.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = _sys_write &rArr; __sys_write &rArr; efs_write &rArr; efs_AllocBlock &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_write (via Veneer)
+<BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_write (via Veneer)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_writebuf (via Veneer)
 </UL>
 
-<P><STRONG><a name="[cf]"></a>_sys_read</STRONG> (ARM, 60 bytes, Stack size 24 bytes, retarget.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_read (via Veneer)
+<P><STRONG><a name="[cd]"></a>_sys_read</STRONG> (ARM, 60 bytes, Stack size 24 bytes, retarget.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_read (via Veneer)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_readbuf (via Veneer)
 </UL>
@@ -1108,32 +1114,31 @@ Global Symbols
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__flsbuf (via Veneer)
 </UL>
 
-<P><STRONG><a name="[d1]"></a>_sys_seek</STRONG> (ARM, 48 bytes, Stack size 16 bytes, retarget.o(.text))
+<P><STRONG><a name="[cf]"></a>_sys_seek</STRONG> (ARM, 48 bytes, Stack size 16 bytes, retarget.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = _sys_seek &rArr; __sys_seek &rArr; efs_seek &rArr; efs_AllocBlock &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_seek (via Veneer)
+<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_seek (via Veneer)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_writebuf (via Veneer)
 <LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__filbuf (via Veneer)
 </UL>
 
-<P><STRONG><a name="[d3]"></a>_sys_ensure</STRONG> (ARM, 40 bytes, Stack size 8 bytes, retarget.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_ensure (via Veneer)
+<P><STRONG><a name="[d1]"></a>_sys_ensure</STRONG> (ARM, 40 bytes, Stack size 8 bytes, retarget.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_ensure (via Veneer)
 </UL>
 
-<P><STRONG><a name="[bd]"></a>_sys_flen</STRONG> (ARM, 40 bytes, Stack size 8 bytes, retarget.o(.text))
+<P><STRONG><a name="[d3]"></a>_sys_flen</STRONG> (ARM, 40 bytes, Stack size 8 bytes, retarget.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = _sys_flen &rArr; __sys_flen &rArr; efs_fsize &rArr; efs_rd_sig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_flen (via Veneer)
+<BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_flen (via Veneer)
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fseek (via Veneer)
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__flsbuf (via Veneer)
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> flashwork.o(.text)
-</UL>
-<P><STRONG><a name="[18f]"></a>_sys_tmpnam</STRONG> (ARM, 12 bytes, Stack size 0 bytes, retarget.o(.text), UNUSED)
 
-<P><STRONG><a name="[190]"></a>_sys_command_string</STRONG> (ARM, 4 bytes, Stack size 0 bytes, retarget.o(.text), UNUSED)
+<P><STRONG><a name="[190]"></a>_sys_tmpnam</STRONG> (ARM, 12 bytes, Stack size 0 bytes, retarget.o(.text), UNUSED)
+
+<P><STRONG><a name="[191]"></a>_sys_command_string</STRONG> (ARM, 4 bytes, Stack size 0 bytes, retarget.o(.text), UNUSED)
 
 <P><STRONG><a name="[5d]"></a>_sys_exit</STRONG> (ARM, 8 bytes, Stack size 0 bytes, retarget.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_exit_exit
@@ -1145,7 +1150,7 @@ Global Symbols
 <LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d6]"></a>RTC_Handler</STRONG> (ARM, 132 bytes, Stack size 8 bytes, rtc.o(.text))
+<P><STRONG><a name="[d5]"></a>RTC_Handler</STRONG> (ARM, 132 bytes, Stack size 8 bytes, rtc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = RTC_Handler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rtc.o(.text)
@@ -1155,18 +1160,18 @@ Global Symbols
 <LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[d7]"></a>get_time</STRONG> (ARM, 108 bytes, Stack size 48 bytes, rtc.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mktime (via Veneer)
+<P><STRONG><a name="[d6]"></a>get_time</STRONG> (ARM, 108 bytes, Stack size 48 bytes, rtc.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mktime (via Veneer)
 </UL>
 
-<P><STRONG><a name="[d9]"></a>correct_time</STRONG> (ARM, 116 bytes, Stack size 56 bytes, rtc.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;localtime (via Veneer)
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<P><STRONG><a name="[d8]"></a>correct_time</STRONG> (ARM, 116 bytes, Stack size 56 bytes, rtc.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;localtime (via Veneer)
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 
-<P><STRONG><a name="[191]"></a>RTC_get_status</STRONG> (ARM, 24 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
+<P><STRONG><a name="[192]"></a>RTC_get_status</STRONG> (ARM, 24 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
 
-<P><STRONG><a name="[192]"></a>get_time_struct</STRONG> (ARM, 4 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
+<P><STRONG><a name="[193]"></a>get_time_struct</STRONG> (ARM, 4 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
 
 <P><STRONG><a name="[8e]"></a>correct_time_struct</STRONG> (ARM, 32 bytes, Stack size 0 bytes, rtc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setDateTime
@@ -1176,23 +1181,23 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setDateTime
 </UL>
 
-<P><STRONG><a name="[193]"></a>set_allarm</STRONG> (ARM, 4 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
+<P><STRONG><a name="[194]"></a>set_allarm</STRONG> (ARM, 4 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
 
-<P><STRONG><a name="[194]"></a>inc_allarm</STRONG> (ARM, 56 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
+<P><STRONG><a name="[195]"></a>inc_allarm</STRONG> (ARM, 56 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
 
-<P><STRONG><a name="[195]"></a>dec_allarm</STRONG> (ARM, 56 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
+<P><STRONG><a name="[196]"></a>dec_allarm</STRONG> (ARM, 56 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
 
-<P><STRONG><a name="[196]"></a>set_delay</STRONG> (ARM, 12 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
+<P><STRONG><a name="[197]"></a>set_delay</STRONG> (ARM, 12 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
 
-<P><STRONG><a name="[197]"></a>check_delay</STRONG> (ARM, 12 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
+<P><STRONG><a name="[198]"></a>check_delay</STRONG> (ARM, 12 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
 
-<P><STRONG><a name="[198]"></a>delay_clear</STRONG> (ARM, 16 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
+<P><STRONG><a name="[199]"></a>delay_clear</STRONG> (ARM, 16 bytes, Stack size 0 bytes, rtc.o(.text), UNUSED)
 
-<P><STRONG><a name="[199]"></a>__semihosting$guard</STRONG> (ARM, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[19a]"></a>__semihosting$guard</STRONG> (ARM, 0 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[19a]"></a>__use_no_semihosting_swi</STRONG> (ARM, 4 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
+<P><STRONG><a name="[19b]"></a>__use_no_semihosting_swi</STRONG> (ARM, 4 bytes, Stack size 0 bytes, use_no_semi.o(.text), UNUSED)
 
-<P><STRONG><a name="[bf]"></a>__2fprintf</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, noretval__2fprintf.o(.text))
+<P><STRONG><a name="[be]"></a>__2fprintf</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, noretval__2fprintf.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128 + Unknown Stack Size
 <LI>Call Chain = __2fprintf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
@@ -1225,7 +1230,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_d (via Veneer)
 </UL>
 
-<P><STRONG><a name="[c3]"></a>atoi</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, atoi.o(.text))
+<P><STRONG><a name="[c2]"></a>atoi</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, atoi.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = atoi &rArr; strtol &rArr; _strtoul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtol
@@ -1236,13 +1241,13 @@ Global Symbols
 <LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAlarmDateTime (via Veneer)
 </UL>
 
-<P><STRONG><a name="[c4]"></a>feof</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, feof.o(.text))
+<P><STRONG><a name="[c3]"></a>feof</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, feof.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readParams (via Veneer)
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SumWorkTime (via Veneer)
 <LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAlarmDateTime (via Veneer)
 </UL>
 
-<P><STRONG><a name="[c1]"></a>fgets</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, fgets.o(.text))
+<P><STRONG><a name="[c0]"></a>fgets</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, fgets.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = fgets &rArr; fgetc &rArr; __filbuf_byte
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgetc
@@ -1256,15 +1261,15 @@ Global Symbols
 <P><STRONG><a name="[e8]"></a>freopen</STRONG> (Thumb, 152 bytes, Stack size 32 bytes, fopen.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 264<LI>Call Chain = freopen &rArr; _fclose_internal &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; __sys_write &rArr; efs_write &rArr; efs_AllocBlock &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open (via Veneer)
+<BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open (via Veneer)
 <LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fseek
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fclose_internal
 </UL>
-<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_initio
 </UL>
 
-<P><STRONG><a name="[be]"></a>fopen</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, fopen.o(.text))
+<P><STRONG><a name="[bd]"></a>fopen</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, fopen.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = fopen &rArr; freopen &rArr; _fclose_internal &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; __sys_write &rArr; efs_write &rArr; efs_AllocBlock &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
 </UL>
 <BR>[Calls]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
@@ -1281,7 +1286,7 @@ Global Symbols
 <P><STRONG><a name="[e9]"></a>_fclose_internal</STRONG> (Thumb, 76 bytes, Stack size 32 bytes, fclose.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = _fclose_internal &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; __sys_write &rArr; efs_write &rArr; efs_AllocBlock &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_close (via Veneer)
+<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_close (via Veneer)
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fflush
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4 (via Veneer)
@@ -1290,7 +1295,7 @@ Global Symbols
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_terminateio
 </UL>
 
-<P><STRONG><a name="[c0]"></a>fclose</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, fclose.o(.text))
+<P><STRONG><a name="[bf]"></a>fclose</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, fclose.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = fclose
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;saveParams (via Veneer)
@@ -1300,7 +1305,7 @@ Global Symbols
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setAlarmDateTime (via Veneer)
 </UL>
 
-<P><STRONG><a name="[c2]"></a>strtok</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, strtok.o(.text))
+<P><STRONG><a name="[c1]"></a>strtok</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, strtok.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = strtok &rArr; __strtok_internal &rArr; strspn
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__strtok_internal
@@ -1311,7 +1316,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[88]"></a>__aeabi_memcpy</STRONG> (ARM, 0 bytes, Stack size 0 bytes, rt_memcpy.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HID_SetReport
+<BR><BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAlarmDateTime
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HID_SetReport
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setDateTime
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChangeConstParam
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendDateTime
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getConstParam
@@ -1320,47 +1327,42 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[f0]"></a>__rt_memcpy</STRONG> (ARM, 212 bytes, Stack size 0 bytes, rt_memcpy.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
+<BR><BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 </UL>
 
-<P><STRONG><a name="[19b]"></a>_memcpy_lastbytes</STRONG> (ARM, 0 bytes, Stack size unknown bytes, rt_memcpy.o(.text), UNUSED)
+<P><STRONG><a name="[19c]"></a>_memcpy_lastbytes</STRONG> (ARM, 0 bytes, Stack size unknown bytes, rt_memcpy.o(.text), UNUSED)
 
-<P><STRONG><a name="[8a]"></a>__aeabi_memcpy4</STRONG> (ARM, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_memcpy4
-</UL>
-<BR>[Called By]<UL><LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAlarmDateTime
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setDateTime
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendDateTime
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_memcpy
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;correct_time
+<P><STRONG><a name="[da]"></a>__aeabi_memcpy4</STRONG> (ARM, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_memcpy
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;correct_time
 </UL>
 
-<P><STRONG><a name="[19c]"></a>__aeabi_memcpy8</STRONG> (ARM, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+<P><STRONG><a name="[19d]"></a>__aeabi_memcpy8</STRONG> (ARM, 0 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[19d]"></a>__rt_memcpy_w</STRONG> (ARM, 100 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
+<P><STRONG><a name="[19e]"></a>__rt_memcpy_w</STRONG> (ARM, 100 bytes, Stack size 8 bytes, rt_memcpy_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[19e]"></a>_memcpy_lastbytes_aligned</STRONG> (ARM, 0 bytes, Stack size unknown bytes, rt_memcpy_w.o(.text), UNUSED)
+<P><STRONG><a name="[19f]"></a>_memcpy_lastbytes_aligned</STRONG> (ARM, 0 bytes, Stack size unknown bytes, rt_memcpy_w.o(.text), UNUSED)
 
 <P><STRONG><a name="[ec]"></a>__aeabi_memclr4</STRONG> (ARM, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = __aeabi_memclr4
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_localtime_r (via Veneer)
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fclose_internal (via Veneer)
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen (via Veneer)
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen (via Veneer)
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fs_find_iob (via Veneer)
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_initio (via Veneer)
 </UL>
 
-<P><STRONG><a name="[19f]"></a>__aeabi_memclr8</STRONG> (ARM, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
+<P><STRONG><a name="[1a0]"></a>__aeabi_memclr8</STRONG> (ARM, 0 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[1a0]"></a>__rt_memclr_w</STRONG> (ARM, 84 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
+<P><STRONG><a name="[1a1]"></a>__rt_memclr_w</STRONG> (ARM, 84 bytes, Stack size 4 bytes, rt_memclr_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[1a1]"></a>_memset_w</STRONG> (ARM, 0 bytes, Stack size unknown bytes, rt_memclr_w.o(.text), UNUSED)
+<P><STRONG><a name="[1a2]"></a>_memset_w</STRONG> (ARM, 0 bytes, Stack size unknown bytes, rt_memclr_w.o(.text), UNUSED)
 
-<P><STRONG><a name="[c9]"></a>strcmp</STRONG> (ARM, 156 bytes, Stack size 4 bytes, strcmp.o(.text))
+<P><STRONG><a name="[c7]"></a>strcmp</STRONG> (ARM, 156 bytes, Stack size 4 bytes, strcmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = strcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open
+<BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open
 <LI><a href="#[18]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_get_lc_ctype
 </UL>
 
@@ -1368,38 +1370,38 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_WriteEP
 </UL>
 
-<P><STRONG><a name="[1a2]"></a>__rt_uread4</STRONG> (ARM, 32 bytes, Stack size 0 bytes, uread4.o(.text), UNUSED)
+<P><STRONG><a name="[1a3]"></a>__rt_uread4</STRONG> (ARM, 32 bytes, Stack size 0 bytes, uread4.o(.text), UNUSED)
 
 <P><STRONG><a name="[b9]"></a>__aeabi_uwrite4</STRONG> (ARM, 0 bytes, Stack size 0 bytes, uwrite4.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USB_ReadEP
 </UL>
 
-<P><STRONG><a name="[1a3]"></a>__rt_uwrite4</STRONG> (ARM, 32 bytes, Stack size 0 bytes, uwrite4.o(.text), UNUSED)
+<P><STRONG><a name="[1a4]"></a>__rt_uwrite4</STRONG> (ARM, 32 bytes, Stack size 0 bytes, uwrite4.o(.text), UNUSED)
 
-<P><STRONG><a name="[da]"></a>localtime</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, localtime.o(.text), UNUSED)
+<P><STRONG><a name="[d9]"></a>localtime</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, localtime.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_localtime_r
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;correct_time (via Veneer)
+<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;correct_time (via Veneer)
 </UL>
 
-<P><STRONG><a name="[d8]"></a>mktime</STRONG> (Thumb, 358 bytes, Stack size 48 bytes, mktime.o(.text), UNUSED)
+<P><STRONG><a name="[d7]"></a>mktime</STRONG> (Thumb, 358 bytes, Stack size 48 bytes, mktime.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod (via Veneer)
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tm_carry
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_time (via Veneer)
+<BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_time (via Veneer)
 </UL>
 
-<P><STRONG><a name="[1a4]"></a>__aeabi_idiv</STRONG> (ARM, 0 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text), UNUSED)
+<P><STRONG><a name="[1a5]"></a>__aeabi_idiv</STRONG> (ARM, 0 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text), UNUSED)
 
 <P><STRONG><a name="[68]"></a>__aeabi_idivmod</STRONG> (ARM, 384 bytes, Stack size 8 bytes, aeabi_sdiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_idivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setNumLed7
-<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mktime (via Veneer)
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mktime (via Veneer)
 <LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_tm_carry (via Veneer)
 </UL>
 
-<P><STRONG><a name="[1a5]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
+<P><STRONG><a name="[1a6]"></a>__use_two_region_memory</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
 <P><STRONG><a name="[6]"></a>__rt_heap_escrow</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, heapauxi.o(.text), UNUSED)
 
@@ -1407,14 +1409,14 @@ Global Symbols
 
 <P><STRONG><a name="[e4]"></a>__aeabi_errno_addr</STRONG> (ARM, 12 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtol (via Veneer)
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi (via Veneer)
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi (via Veneer)
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ftell_internal (via Veneer)
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_strtoul (via Veneer)
 </UL>
 
-<P><STRONG><a name="[1a6]"></a>__errno$intlibspace</STRONG> (ARM, 0 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text), UNUSED)
+<P><STRONG><a name="[1a7]"></a>__errno$intlibspace</STRONG> (ARM, 0 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text), UNUSED)
 
-<P><STRONG><a name="[1a7]"></a>__rt_errno_addr$intlibspace</STRONG> (ARM, 0 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text), UNUSED)
+<P><STRONG><a name="[1a8]"></a>__rt_errno_addr$intlibspace</STRONG> (ARM, 0 bytes, Stack size 0 bytes, rt_errno_addr_intlibspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[eb]"></a>malloc</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, h1_alloc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = malloc &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free
@@ -1422,7 +1424,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Full
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_heap_descriptor (via Veneer)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__flsbuf
 <LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__filbuf
 </UL>
@@ -1454,7 +1456,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ferror
 <LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf
+<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf
 </UL>
 
 <P><STRONG><a name="[e5]"></a>strtol</STRONG> (Thumb, 112 bytes, Stack size 32 bytes, strtol.o(.text))
@@ -1464,18 +1466,18 @@ Global Symbols
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr (via Veneer)
 <LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_strtoul
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
+<BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
 </UL>
 
 <P><STRONG><a name="[e7]"></a>ferror</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, ferror.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_file
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgets
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgets
 </UL>
 
 <P><STRONG><a name="[ea]"></a>_fseek</STRONG> (Thumb, 244 bytes, Stack size 24 bytes, fseek.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = _fseek &rArr; _sys_flen &rArr; __sys_flen &rArr; efs_fsize &rArr; efs_rd_sig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_flen (via Veneer)
+<BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_flen (via Veneer)
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_istty (via Veneer)
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_seterr
 <LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_ftell_internal
@@ -1484,7 +1486,7 @@ Global Symbols
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_do_fflush
 </UL>
 
-<P><STRONG><a name="[1a8]"></a>fseek</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, fseek.o(.text), UNUSED)
+<P><STRONG><a name="[1a9]"></a>fseek</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, fseek.o(.text), UNUSED)
 
 <P><STRONG><a name="[fc]"></a>_seterr</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stdio.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_writebuf
@@ -1497,8 +1499,8 @@ Global Symbols
 <P><STRONG><a name="[fd]"></a>_writebuf</STRONG> (Thumb, 80 bytes, Stack size 32 bytes, stdio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = _writebuf &rArr; _sys_write &rArr; __sys_write &rArr; efs_write &rArr; efs_AllocBlock &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_seek (via Veneer)
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_write (via Veneer)
+<BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_seek (via Veneer)
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_write (via Veneer)
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_seterr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fflush
@@ -1529,29 +1531,29 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strspn
 <LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcspn
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtok
+<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strtok
 </UL>
 
 <P><STRONG><a name="[f1]"></a>_localtime_r</STRONG> (Thumb, 146 bytes, Stack size 16 bytes, localtime_internal.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod (via Veneer)
+<BR><BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod (via Veneer)
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4 (via Veneer)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;localtime
+<BR>[Called By]<UL><LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;localtime
 </UL>
 
-<P><STRONG><a name="[1a9]"></a>_n$localtime_r</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, localtime_internal.o(.text), UNUSED)
+<P><STRONG><a name="[1aa]"></a>_n$localtime_r</STRONG> (Thumb, 0 bytes, Stack size 16 bytes, localtime_internal.o(.text), UNUSED)
 
 <P><STRONG><a name="[e2]"></a>__rt_udiv10</STRONG> (ARM, 44 bytes, Stack size 0 bytes, rtudiv10.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_int_dec (via Veneer)
 </UL>
 
-<P><STRONG><a name="[1aa]"></a>__user_libspace</STRONG> (ARM, 12 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[1ab]"></a>__user_libspace</STRONG> (ARM, 12 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[10c]"></a>__user_perproc_libspace</STRONG> (ARM, 0 bytes, Stack size 0 bytes, libspace.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__user_setup_stackheap
 </UL>
 
-<P><STRONG><a name="[1ab]"></a>__user_perthread_libspace</STRONG> (ARM, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
+<P><STRONG><a name="[1ac]"></a>__user_perthread_libspace</STRONG> (ARM, 0 bytes, Stack size 0 bytes, libspace.o(.text), UNUSED)
 
 <P><STRONG><a name="[f8]"></a>__rt_ctype_table</STRONG> (ARM, 24 bytes, Stack size 8 bytes, rt_ctype_table.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __rt_ctype_table
@@ -1567,9 +1569,9 @@ Global Symbols
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc (via Veneer)
 </UL>
 
-<P><STRONG><a name="[1ac]"></a>__use_no_heap</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hguard.o(.text), UNUSED)
+<P><STRONG><a name="[1ad]"></a>__use_no_heap</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hguard.o(.text), UNUSED)
 
-<P><STRONG><a name="[1ad]"></a>__heap$guard</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hguard.o(.text), UNUSED)
+<P><STRONG><a name="[1ae]"></a>__heap$guard</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hguard.o(.text), UNUSED)
 
 <P><STRONG><a name="[a]"></a>_terminate_user_alloc</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, init_alloc.o(.text), UNUSED)
 
@@ -1590,10 +1592,10 @@ Global Symbols
 <P><STRONG><a name="[4d]"></a>_init_alloc</STRONG> (Thumb, 94 bytes, Stack size 24 bytes, init_alloc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = _init_alloc &rArr; __rt_SIGRTMEM &rArr; __rt_SIGRTMEM_inner &rArr; __default_signal_display
 </UL>
-<BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Initialize
-<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_heap_descriptor (via Veneer)
+<BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_heap_descriptor (via Veneer)
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGRTMEM
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_ProvideMemory
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Initialize
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_heap_2
 </UL>
@@ -1623,7 +1625,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[106]"></a>_readbuf</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, filbuf.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_read (via Veneer)
+<BR><BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_read (via Veneer)
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_seterr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__filbuf
@@ -1634,7 +1636,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[107]"></a>__filbuf</STRONG> (Thumb, 490 bytes, Stack size 32 bytes, filbuf.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_seek (via Veneer)
+<BR><BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_seek (via Veneer)
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_deferredlazyseek
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fflush
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_seterr
@@ -1650,7 +1652,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgetc
 </UL>
 
-<P><STRONG><a name="[1ae]"></a>__filbuf_wide</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, filbuf.o(.text), UNUSED)
+<P><STRONG><a name="[1af]"></a>__filbuf_wide</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, filbuf.o(.text), UNUSED)
 
 <P><STRONG><a name="[fb]"></a>_ftell_internal</STRONG> (Thumb, 70 bytes, Stack size 8 bytes, ftell.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _ftell_internal
@@ -1660,7 +1662,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fseek
 </UL>
 
-<P><STRONG><a name="[1af]"></a>ftell</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, ftell.o(.text), UNUSED)
+<P><STRONG><a name="[1b0]"></a>ftell</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, ftell.o(.text), UNUSED)
 
 <P><STRONG><a name="[52]"></a>_initio</STRONG> (Thumb, 220 bytes, Stack size 8 bytes, initio.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = _initio &rArr; freopen &rArr; _fclose_internal &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; __sys_write &rArr; efs_write &rArr; efs_AllocBlock &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
@@ -1723,7 +1725,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[10e]"></a>__flsbuf</STRONG> (Thumb, 496 bytes, Stack size 24 bytes, flsbuf.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_flen (via Veneer)
+<BR><BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_flen (via Veneer)
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_istty (via Veneer)
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_deferredlazyseek
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_writebuf
@@ -1737,7 +1739,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 </UL>
 
-<P><STRONG><a name="[1b0]"></a>__flsbuf_wide</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, flsbuf.o(.text), UNUSED)
+<P><STRONG><a name="[1b1]"></a>__flsbuf_wide</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, flsbuf.o(.text), UNUSED)
 
 <P><STRONG><a name="[10b]"></a>setvbuf</STRONG> (Thumb, 74 bytes, Stack size 12 bytes, setvbuf.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = setvbuf
@@ -1827,16 +1829,18 @@ Global Symbols
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGRTRED_inner
 </UL>
 
-<P><STRONG><a name="[1b1]"></a>__aeabi_uidiv</STRONG> (ARM, 0 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text_udiv), UNUSED)
+<P><STRONG><a name="[1b2]"></a>__aeabi_uidiv</STRONG> (ARM, 0 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text_udiv), UNUSED)
 
-<P><STRONG><a name="[c6]"></a>__aeabi_uidivmod</STRONG> (ARM, 36 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text_udiv))
+<P><STRONG><a name="[8a]"></a>__aeabi_uidivmod</STRONG> (ARM, 36 bytes, Stack size 0 bytes, aeabi_sdiv.o(.text_udiv))
 <BR><BR>[Calls]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__arm_div_large
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__arm_div2
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__arm_div5
 <LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__arm_div8
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProgramPage
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_adr
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_adr
+<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setAlarmDateTime
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendDateTime
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_localtime_r (via Veneer)
 <LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BusSpeed
 </UL>
@@ -1901,7 +1905,7 @@ Global Symbols
 <LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_ReadBlock
 </UL>
 
-<P><STRONG><a name="[cc]"></a>__sys_close</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, fs_sys.o(i.__sys_close))
+<P><STRONG><a name="[ca]"></a>__sys_close</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, fs_sys.o(i.__sys_close))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = __sys_close &rArr; efs_wclose &rArr; efs_WriteBlock
 </UL>
 <BR>[Calls]<UL><LI><a href="#[11e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fat_wclose
@@ -1909,28 +1913,28 @@ Global Symbols
 <LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire (Weak Reference)
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_wclose
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_close (via Veneer)
+<BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_close (via Veneer)
 </UL>
 
-<P><STRONG><a name="[d4]"></a>__sys_ensure</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, fs_sys.o(i.__sys_ensure), UNUSED)
+<P><STRONG><a name="[d2]"></a>__sys_ensure</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, fs_sys.o(i.__sys_ensure), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release (Weak Reference)
 <LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire (Weak Reference)
 <LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_ensure
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_ensure (via Veneer)
+<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_ensure (via Veneer)
 </UL>
 
-<P><STRONG><a name="[d5]"></a>__sys_flen</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, fs_sys.o(i.__sys_flen))
+<P><STRONG><a name="[d4]"></a>__sys_flen</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, fs_sys.o(i.__sys_flen))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = __sys_flen &rArr; efs_fsize &rArr; efs_rd_sig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release (Weak Reference)
 <LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire (Weak Reference)
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_fsize
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_flen (via Veneer)
+<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_flen (via Veneer)
 </UL>
 
-<P><STRONG><a name="[ca]"></a>__sys_open</STRONG> (Thumb, 404 bytes, Stack size 32 bytes, fs_sys.o(i.__sys_open))
+<P><STRONG><a name="[c8]"></a>__sys_open</STRONG> (Thumb, 404 bytes, Stack size 32 bytes, fs_sys.o(i.__sys_open))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = __sys_open &rArr; efs_create &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
 </UL>
 <BR>[Calls]<UL><LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fat_create
@@ -1946,19 +1950,19 @@ Global Symbols
 <LI><a href="#[12a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_delete
 <LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_create
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open (via Veneer)
+<BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open (via Veneer)
 </UL>
 
-<P><STRONG><a name="[d0]"></a>__sys_read</STRONG> (Thumb, 96 bytes, Stack size 24 bytes, fs_sys.o(i.__sys_read), UNUSED)
+<P><STRONG><a name="[ce]"></a>__sys_read</STRONG> (Thumb, 96 bytes, Stack size 24 bytes, fs_sys.o(i.__sys_read), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fat_read
 <LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release (Weak Reference)
 <LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire (Weak Reference)
 <LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_read (via Veneer)
+<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_read (via Veneer)
 </UL>
 
-<P><STRONG><a name="[d2]"></a>__sys_seek</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, fs_sys.o(i.__sys_seek))
+<P><STRONG><a name="[d0]"></a>__sys_seek</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, fs_sys.o(i.__sys_seek))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = __sys_seek &rArr; efs_seek &rArr; efs_AllocBlock &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
 </UL>
 <BR>[Calls]<UL><LI><a href="#[12e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fat_seek
@@ -1966,10 +1970,10 @@ Global Symbols
 <LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire (Weak Reference)
 <LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_seek
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_seek (via Veneer)
+<BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_seek (via Veneer)
 </UL>
 
-<P><STRONG><a name="[ce]"></a>__sys_write</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, fs_sys.o(i.__sys_write))
+<P><STRONG><a name="[cc]"></a>__sys_write</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, fs_sys.o(i.__sys_write))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = __sys_write &rArr; efs_write &rArr; efs_AllocBlock &rArr; efs_mark_freeMem &rArr; efs_rd_alloc
 </UL>
 <BR>[Calls]<UL><LI><a href="#[130]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fat_write
@@ -1977,7 +1981,7 @@ Global Symbols
 <LI><a href="#[11d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire (Weak Reference)
 <LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_write
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_write (via Veneer)
+<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_write (via Veneer)
 </UL>
 
 <P><STRONG><a name="[12b]"></a>efs_create</STRONG> (Thumb, 406 bytes, Stack size 96 bytes, fs_efs.o(i.efs_create))
@@ -1991,7 +1995,7 @@ Global Symbols
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_get_freeMem
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_WriteBlock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
+<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
 </UL>
 
 <P><STRONG><a name="[12a]"></a>efs_delete</STRONG> (Thumb, 162 bytes, Stack size 32 bytes, fs_efs.o(i.efs_delete))
@@ -2003,13 +2007,13 @@ Global Symbols
 <LI><a href="#[13b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_InitBlock
 <LI><a href="#[139]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_BlockInvalid
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
+<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
 </UL>
 
 <P><STRONG><a name="[121]"></a>efs_ensure</STRONG> (Thumb, 96 bytes, Stack size 16 bytes, fs_efs.o(i.efs_ensure), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_WriteBlock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_ensure
+<BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_ensure
 </UL>
 
 <P><STRONG><a name="[129]"></a>efs_find</STRONG> (Thumb, 170 bytes, Stack size 96 bytes, fs_efs.o(i.efs_find))
@@ -2021,7 +2025,7 @@ Global Symbols
 <LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_rd_alloc
 <LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_ReadBlock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
+<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
 </UL>
 
 <P><STRONG><a name="[122]"></a>efs_fsize</STRONG> (Thumb, 168 bytes, Stack size 40 bytes, fs_efs.o(i.efs_fsize))
@@ -2030,15 +2034,15 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[133]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_rd_sig
 <LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_rd_alloc
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_flen
+<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_flen
 </UL>
 
 <P><STRONG><a name="[12d]"></a>efs_read</STRONG> (Thumb, 102 bytes, Stack size 32 bytes, fs_efs.o(i.efs_read), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_mark_fileMem
 <LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_ReadBlock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_read
+<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_read
 </UL>
 
 <P><STRONG><a name="[12f]"></a>efs_seek</STRONG> (Thumb, 212 bytes, Stack size 48 bytes, fs_efs.o(i.efs_seek))
@@ -2048,7 +2052,7 @@ Global Symbols
 <LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_rd_alloc
 <LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_AllocBlock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_seek
+<BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_seek
 </UL>
 
 <P><STRONG><a name="[11f]"></a>efs_wclose</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, fs_efs.o(i.efs_wclose))
@@ -2056,7 +2060,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_WriteBlock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_close
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_close
 </UL>
 
 <P><STRONG><a name="[131]"></a>efs_write</STRONG> (Thumb, 224 bytes, Stack size 48 bytes, fs_efs.o(i.efs_write))
@@ -2066,7 +2070,7 @@ Global Symbols
 <LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_BlockFull
 <LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;efs_AllocBlock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_write
+<BR>[Called By]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_write
 </UL>
 
 <P><STRONG><a name="[e6]"></a>fgetc</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, fgetc.o(i.fgetc))
@@ -2074,7 +2078,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[141]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__filbuf_byte
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgets
+<BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgets
 </UL>
 
 <P><STRONG><a name="[5e]"></a>finit</STRONG> (Thumb, 118 bytes, Stack size 56 bytes, fs_mapi.o(i.finit))
@@ -2109,7 +2113,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[125]"></a>fs_dir</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, fs_lib.o(i.fs_dir))
-<BR><BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
+<BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
 </UL>
 
 <P><STRONG><a name="[123]"></a>fs_find_iob</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, fs_lib.o(i.fs_find_iob))
@@ -2117,13 +2121,13 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4 (via Veneer)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
+<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
 </UL>
 
 <P><STRONG><a name="[124]"></a>fs_map_drive</STRONG> (Thumb, 118 bytes, Stack size 16 bytes, fs_lib.o(i.fs_map_drive))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = fs_map_drive
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
+<BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finit
 </UL>
 
@@ -2135,13 +2139,13 @@ Global Symbols
 <P><STRONG><a name="[18]"></a>_get_lc_ctype</STRONG> (ARM, 80 bytes, Stack size 8 bytes, lc_ctype_c.o(locale$$code))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = _get_lc_ctype &rArr; strcmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_lc_ctype_2 (via Veneer)
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rt_ctype_table.o(.text)
 </UL>
-<P><STRONG><a name="[1b2]"></a>__aeabi_dadd</STRONG> (ARM, 0 bytes, Stack size 16 bytes, daddsub_noclz.o(x$fpl$dadd), UNUSED)
+<P><STRONG><a name="[1b3]"></a>__aeabi_dadd</STRONG> (ARM, 0 bytes, Stack size 16 bytes, daddsub_noclz.o(x$fpl$dadd), UNUSED)
 
 <P><STRONG><a name="[148]"></a>_dadd</STRONG> (ARM, 336 bytes, Stack size 16 bytes, daddsub_noclz.o(x$fpl$dadd), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[14a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dretinf
@@ -2178,11 +2182,11 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getDecTMZ
 </UL>
 
-<P><STRONG><a name="[1b3]"></a>_dflt</STRONG> (ARM, 88 bytes, Stack size 0 bytes, dflt_noclz.o(x$fpl$dflt), UNUSED)
+<P><STRONG><a name="[1b4]"></a>_dflt</STRONG> (ARM, 88 bytes, Stack size 0 bytes, dflt_noclz.o(x$fpl$dflt), UNUSED)
 
-<P><STRONG><a name="[1b4]"></a>__dflt_normalise</STRONG> (ARM, 0 bytes, Stack size unknown bytes, dflt_noclz.o(x$fpl$dflt), UNUSED)
+<P><STRONG><a name="[1b5]"></a>__dflt_normalise</STRONG> (ARM, 0 bytes, Stack size unknown bytes, dflt_noclz.o(x$fpl$dflt), UNUSED)
 
-<P><STRONG><a name="[1b5]"></a>__aeabi_cdcmple</STRONG> (ARM, 0 bytes, Stack size 32 bytes, dleqf.o(x$fpl$dleqf), UNUSED)
+<P><STRONG><a name="[1b6]"></a>__aeabi_cdcmple</STRONG> (ARM, 0 bytes, Stack size 32 bytes, dleqf.o(x$fpl$dleqf), UNUSED)
 
 <P><STRONG><a name="[14e]"></a>_dcmple</STRONG> (ARM, 148 bytes, Stack size 32 bytes, dleqf.o(x$fpl$dleqf), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__fpl_dnaninf
@@ -2254,9 +2258,9 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testSC
 </UL>
 
-<P><STRONG><a name="[1b6]"></a>_fflt</STRONG> (ARM, 92 bytes, Stack size 0 bytes, fflt_noclz.o(x$fpl$fflt), UNUSED)
+<P><STRONG><a name="[1b7]"></a>_fflt</STRONG> (ARM, 92 bytes, Stack size 0 bytes, fflt_noclz.o(x$fpl$fflt), UNUSED)
 
-<P><STRONG><a name="[1b7]"></a>__fflt_normalise</STRONG> (ARM, 0 bytes, Stack size unknown bytes, fflt_noclz.o(x$fpl$fflt), UNUSED)
+<P><STRONG><a name="[1b8]"></a>__fflt_normalise</STRONG> (ARM, 0 bytes, Stack size unknown bytes, fflt_noclz.o(x$fpl$fflt), UNUSED)
 
 <P><STRONG><a name="[155]"></a>__fpl_fnaninf</STRONG> (ARM, 168 bytes, Stack size 8 bytes, fnaninf.o(x$fpl$fnaninf), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdiv
@@ -2271,13 +2275,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init (via Veneer)
 </UL>
 
-<P><STRONG><a name="[1b8]"></a>__fplib_config_pureend_doubles</STRONG> (ARM, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
+<P><STRONG><a name="[1b9]"></a>__fplib_config_pureend_doubles</STRONG> (ARM, 0 bytes, Stack size unknown bytes, fpinit.o(x$fpl$fpinit), UNUSED)
 
 <P><STRONG><a name="[157]"></a>__fpl_fretinf</STRONG> (ARM, 16 bytes, Stack size 0 bytes, fretinf.o(x$fpl$fretinf), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[156]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fdiv
 </UL>
 
-<P><STRONG><a name="[1b9]"></a>__I$use$fp</STRONG> (ARM, 0 bytes, Stack size unknown bytes, usenofp.o(x$fpl$usenofp), UNUSED)
+<P><STRONG><a name="[1ba]"></a>__I$use$fp</STRONG> (ARM, 0 bytes, Stack size unknown bytes, usenofp.o(x$fpl$usenofp), UNUSED)
 <P>
 <H3>
 Local Symbols
@@ -2367,13 +2371,13 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> fs_spi_flashprg.o(.constdata)
 </UL>
-<P><STRONG><a name="[c5]"></a>set_adr</STRONG> (ARM, 84 bytes, Stack size 24 bytes, fs_spi_flashprg.o(.text))
+<P><STRONG><a name="[c4]"></a>set_adr</STRONG> (ARM, 84 bytes, Stack size 24 bytes, fs_spi_flashprg.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
 <LI>Call Chain = set_adr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_write
+<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_write
 <LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadData
 </UL>
 
@@ -2381,15 +2385,15 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
 <LI>Call Chain = ReadData &rArr; set_adr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_adr
+<BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_adr
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> fs_spi_flashprg.o(.constdata)
 </UL>
-<P><STRONG><a name="[c7]"></a>spi_write</STRONG> (ARM, 256 bytes, Stack size 32 bytes, fs_spi_flashprg.o(.text))
+<P><STRONG><a name="[c5]"></a>spi_write</STRONG> (ARM, 256 bytes, Stack size 32 bytes, fs_spi_flashprg.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56 + Unknown Stack Size
 <LI>Call Chain = spi_write &rArr; set_adr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_adr
+<BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_adr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EraseSector
 <LI><a href="#[1f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProgramPage
@@ -2399,8 +2403,8 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 80 + Unknown Stack Size
 <LI>Call Chain = ProgramPage &rArr; spi_write &rArr; set_adr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_write
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_write
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> fs_spi_flashprg.o(.constdata)
 </UL>
@@ -2408,7 +2412,7 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
 <LI>Call Chain = EraseSector &rArr; spi_write &rArr; set_adr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_write
+<BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;spi_write
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> fs_spi_flashprg.o(.constdata)
 </UL>
@@ -2431,7 +2435,7 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 16 + Unknown Stack Size
 <LI>Call Chain = BusSpeed
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> spi_lpc23xx.o(.constdata)
 </UL>
@@ -2579,23 +2583,23 @@ Local Symbols
 <P><STRONG><a name="[f2]"></a>_tm_carry</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, mktime.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod (via Veneer)
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mktime
+<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mktime
 </UL>
 
 <P><STRONG><a name="[11a]"></a>__arm_div8</STRONG> (ARM, 0 bytes, Stack size unknown bytes, aeabi_sdiv.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 
 <P><STRONG><a name="[119]"></a>__arm_div5</STRONG> (ARM, 0 bytes, Stack size unknown bytes, aeabi_sdiv.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 
 <P><STRONG><a name="[118]"></a>__arm_div2</STRONG> (ARM, 0 bytes, Stack size unknown bytes, aeabi_sdiv.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 
 <P><STRONG><a name="[11b]"></a>__arm_div_large</STRONG> (ARM, 0 bytes, Stack size unknown bytes, aeabi_sdiv.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 
 <P><STRONG><a name="[153]"></a>_dadd1</STRONG> (ARM, 0 bytes, Stack size unknown bytes, daddsub_noclz.o(x$fpl$dadd), UNUSED)
@@ -2617,25 +2621,25 @@ Undefined Global Symbols
 </UL>
 
 <P><STRONG><a name="[11d]"></a>_mutex_acquire</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
-<BR><BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_read
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_flen
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_ensure
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_close
+<BR><BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_read
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_flen
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_ensure
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_close
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finit
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_write
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_seek
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_write
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_seek
 </UL>
 
 <P><STRONG><a name="[120]"></a>_mutex_release</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)
-<BR><BR>[Called By]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_read
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_flen
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_ensure
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_close
+<BR><BR>[Called By]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_read
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_open
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_flen
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_ensure
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_close
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;finit
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_write
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_seek
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_write
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__sys_seek
 </UL>
 
 <P><STRONG><a name="[f6]"></a>_printf_post_padding</STRONG> (ARM, 0 bytes, Stack size 0 bytes, UNDEFINED)

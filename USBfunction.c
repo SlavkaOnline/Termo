@@ -2,6 +2,7 @@
 #include "usbcfg.h"
 #include "usbhw.h"
 
+#include <stdio.h>
 
 #include "USBfunction.h"
 
@@ -21,8 +22,9 @@ void GetInReport (void) {
 			flagReport = 0x00;
 		break;
 		
-		default:
+		case 0x01:
 			getConstParam();
+			flagReport = 0x00;
 		break;
 	}
 }
@@ -31,6 +33,18 @@ void GetInReport (void) {
 /*------------------------------------------------------------------------------
   Set HID Output Report <- OutReport
  *------------------------------------------------------------------------------*/
+
+
+void swap_byte(int *A, int *B, int n){
+
+    int i, j;
+    for(i = 0, j = n-1; i < n; i++, j--){
+        A[i] = B[j];
+    }
+}
+
+
+
 void ChangeConstParam (void) {
 
 	int i;
@@ -59,24 +73,25 @@ void getConstParam(){
 
 void sendDateTime(void){
 
+	
 	struct typeInfo info;
 	//struct typeDateTimeSend alarm;
-	unsigned char* message = (unsigned char*)&info;
-		info.dt.hh = 0;//RTC_HOUR;
-		info.dt.mm = 0;//RTC_MIN;
-		info.dt.ss = 0;//RTC_SEC;
-		info.dt.dm = 0;//RTC_DOM;
-		info.dt.mh = 0;//RTC_MONTH;
-		info.dt.yy = 0;//RTC_YEAR;
+		info.dt.hh = RTC_HOUR;
+		info.dt.mm = RTC_MIN;
+		info.dt.ss = RTC_SEC;
+		info.dt.dm = RTC_DOM;
+		info.dt.mh = RTC_MONTH;
+		info.dt.yy = RTC_YEAR % 100;
 	
-	info.alarm = dataFlash.getAlarmDateTime();
+	info.alarm =dataFlash.getAlarmDateTime();
 	info.workTime = 0; //dataFlash.SumWorkTime(READHOUR);
-	info.dd = 11;
+	info.dd = 13;
 	info.mm = 12;
-	info.yyyy = 2015;
+	info.yyyy = 15;
 
-  memcpy(&InReport, message, sizeof(info));
+  memcpy(&InReport, &info, sizeof(info));
 	
+
 	
 }
 
@@ -84,14 +99,20 @@ void setDateTime(void){
 	
 	struct typeDateTimeSend DateTime;
 	struct tm loc_time;
+	int *hh;
 	DateTime = *((struct typeDateTimeSend*)&OutReport[1]);
+	hh = (int*)&OutReport[1];
 	
-	loc_time.tm_sec		=	DateTime.ss;
-	loc_time.tm_min		=	DateTime.mm;
-	loc_time.tm_hour	=	DateTime.hh;
-	loc_time.tm_mday	=	DateTime.dm;
-	loc_time.tm_mon		=	DateTime.mh;
-	loc_time.tm_year	=	DateTime.yy;
+	
+	loc_time.tm_sec		=	(DateTime.ss);
+	loc_time.tm_min		=	(DateTime.mm);
+	loc_time.tm_hour	=	(DateTime.hh);
+	loc_time.tm_mday	=	(DateTime.dm);
+	loc_time.tm_mon		=	(DateTime.mh);
+	loc_time.tm_year	=	2000 + (DateTime.yy);
+	
+
+	led7.setNumLed7(loc_time.tm_hour);
 
 	correct_time_struct(&loc_time);
 	correct_data_struct(&loc_time);
@@ -110,6 +131,7 @@ void SetOutReport (void) {
 			case 0x01 : ChangeConstParam (); break;
 			case 0x02 : flagReport = 0x02; break;
 			case 0x03 : setDateTime(); break;
+			case 0x04 : flagReport = 0x01; break;
 			case 0xd0 : disableAlarm(0,1); break;
 			case 0xd1 : disableAlarm(1,1); break;
 			case 0xd2 : disableAlarm(2,1); break;

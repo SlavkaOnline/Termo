@@ -143,7 +143,8 @@ void recSSP1OnTimer(struct t_SSP1Timer* timer){
 					 //sumTemperature[i] +=  getDec( num );
 					break;
 					
-					default: 
+					default:
+					setTemperature(i, 0);						
 						sumTemperature[i] = 0;
 					break;				
 	 }		 

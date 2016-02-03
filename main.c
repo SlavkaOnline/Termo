@@ -40,20 +40,9 @@ RTC_int();
 	//dataFlash.saveParams();
  	dataFlash.readParams();
 
-// loc_time.tm_sec		=	0;
-// loc_time.tm_min		=	35;
-// loc_time.tm_hour	=	22;
-// loc_time.tm_mday	=	18;
-// loc_time.tm_mon		=	12;
-// loc_time.tm_year	=	2015;
-//  
-// correct_time_struct(&loc_time);
-// correct_data_struct(&loc_time);
-
-
   //dataFlash.SumWorkTime(SETNULLHOUR);
  	//SumWorkTime(READHOUR);
-	
+	//data.threshold = 30;
 	
 	while(1){
 	
@@ -63,10 +52,10 @@ RTC_int();
 	//led7.setNumLed7(data.threshold);	//1
 	//led7.setNumLed7(); 		//2
   //led7.setNumLed7(data.chanelError[3]);					//3
-	led7.setNumLed7(data.temperature[3]);        			 //4
+	//led7.setNumLed7(data.temperature[3]);        			 //4
   
 	//led7.setNumLed7(data.threshold);
-		
+		led7.setNumLed7(RTC_MIN);
 	}
 	
 	

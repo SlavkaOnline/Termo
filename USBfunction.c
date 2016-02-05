@@ -84,7 +84,7 @@ void sendDateTime(void){
 		info.dt.yy = RTC_YEAR % 100;
 	
 	info.alarm =dataFlash.getAlarmDateTime();
-	info.workTime = 0; //dataFlash.SumWorkTime(READHOUR);
+	info.workTime = dataFlash.SumWorkTime(READHOUR);
 	info.dd = 13;
 	info.mm = 12;
 	info.yyyy = 15;

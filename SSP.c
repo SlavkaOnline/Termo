@@ -148,25 +148,25 @@ static int recSPI(){
 		
  
  
-	S0SPDR = 0x00;
-  while ( !(S0SPSR & 0x80));
-	regFault = S0SPDR;
-	
-	S0SPDR = 0x00;
-  while ( !(S0SPSR & 0x80));
-	regFault = S0SPDR;
-	
-	S0SPDR = 0x00;
-  while ( !(S0SPSR & 0x80));
-	regFault = S0SPDR;
-	
-	S0SPDR = 0x00;
-  while ( !(S0SPSR & 0x80));
-	regFault = S0SPDR;
-	
-	S0SPDR = 0x00;
-  while ( !(S0SPSR & 0x80));
-	regFault = S0SPDR;
+// 	S0SPDR = 0x00;
+//   while ( !(S0SPSR & 0x80));
+// 	regFault = S0SPDR;
+// 	
+// 	S0SPDR = 0x00;
+//   while ( !(S0SPSR & 0x80));
+// 	regFault = S0SPDR;
+// 	
+// 	S0SPDR = 0x00;
+//   while ( !(S0SPSR & 0x80));
+// 	regFault = S0SPDR;
+// 	
+// 	S0SPDR = 0x00;
+//   while ( !(S0SPSR & 0x80));
+// 	regFault = S0SPDR;
+// 	
+// 	S0SPDR = 0x00;
+//   while ( !(S0SPSR & 0x80));
+// 	regFault = S0SPDR;
 	
 	return RTD ;
 }

@@ -45,7 +45,7 @@ void RTC_init (unsigned long Pclk)
 void RTC_int (void)
 {
  	//Подпрограмма настройки прерывания от часов рального времени
-	RTC_CIIR =0x04;								//Разрешить генерацию прерываний через 1hour
+	RTC_CIIR = 0x04;								//Разрешить генерацию прерываний через 1hour (0x02; min)
 	RTC_CCR  |=0x01;								//Разрешить работу часов
 	RTC_CISS =0;
 	VICVectAddr13=(unsigned long) RTC_Handler;	//Прерывание от часов - вектор 13
@@ -168,8 +168,8 @@ void RTC_Handler (void)	__irq
 {
 	if (RTC_ILR &0x01)
 	{
-		//led7.setNumLed7(RTC_MIN);
-		//dataFlash.SumWorkTime(UPDATEHOUR);
+		
+		dataFlash.SumWorkTime(UPDATEHOUR);
 		RTC_status |=0x01;
 		RTC_ILR	= 0x01;						//Очищаем флаг прерывания
 	}

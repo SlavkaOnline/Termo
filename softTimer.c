@@ -184,7 +184,7 @@ void recSPIOnTimer(struct t_SPITimer* timer){
 	
 		
 		/* Платиновый датчик */
-		configureMAX31865(0xD3);
+		//configureMAX31865(0xD3);
 		
 		
 		
@@ -198,6 +198,7 @@ void recSPIOnTimer(struct t_SPITimer* timer){
 		}
 		else{
 				//data.sumTemperature[3] = 0;
+				data.temperature[3] = 0;
 			}
 	
   }	 

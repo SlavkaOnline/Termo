@@ -37,25 +37,18 @@ RTC_int();
 	
 	
   
-	//dataFlash.saveParams();
+	
  	dataFlash.readParams();
 
   //dataFlash.SumWorkTime(SETNULLHOUR);
- 	//SumWorkTime(READHOUR);
-	//data.threshold = 30;
+ 
 	
 	while(1){
 	
 		led.setLed(PWR, LED_ON);
 		
-		//led7.setNumLed7(RTC_MIN);
-	//led7.setNumLed7(data.threshold);	//1
-	//led7.setNumLed7(); 		//2
-  //led7.setNumLed7(data.chanelError[3]);					//3
-	//led7.setNumLed7(data.temperature[3]);        			 //4
-  
-	//led7.setNumLed7(data.threshold);
-//		led7.setNumLed7(RTC_MIN);
+  //led7.setNumLed7(data.chanelError[0]);					
+
 	}
 	
 	

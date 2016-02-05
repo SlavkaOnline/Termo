@@ -183,13 +183,13 @@ for(i = 0; i < 4; i++){
 	switch (data.chanelError[i]){
 		    
 				case 0:
-					 data.codeError = 0;
+					// data.codeError = 0;
 				   led.setLed(leds[i], LED_OFF);
 				   ledsBlink[ blink[i] ] = 0;
 				 break;		 
 		    case 1:
 					 data.codeError = noConnect7[i];
-					 //led7.setNumLed7( noConnect7[i] );
+					 led7.setNumLed7( noConnect7[i] );
 				   led.setLed(leds[i], LED_ON);
 				   ledsBlink[ blink[i] ] = 0;
 				   sendAlarm(alarm_FA);
@@ -197,7 +197,7 @@ for(i = 0; i < 4; i++){
 				 break;
 				 case 2:
 					 data.codeError = blink7[i];
-					 //led7.setNumLed7( blink7[i] );
+					 led7.setNumLed7( blink7[i] );
 				   ledsBlink[ blink[i] ] = 1;
 				   sendAlarm(alarm_FA);
 				   if ( i != 3) sumError++;
@@ -205,7 +205,7 @@ for(i = 0; i < 4; i++){
 				 
 				 case 3:
 					 data.codeError = 51;
-				   //led7.setNumLed7( 51 );
+				   led7.setNumLed7( 51 );
 				   ledsBlink[ blink[i] ] = 0;
 				   sendAlarm(alarm_FA);
 				   if ( i != 3) sumError++;
@@ -223,6 +223,7 @@ for(i = 0; i < 4; i++){
 	 // Блок восстановления устройства после решения всех аппаратных проблем 
 	 
 	 else{ 
+		 
 		 data.work = 0;
 		 ledsBlink[1] = 0;
 		 led.setLed(RUN, LED_ON);
@@ -234,6 +235,7 @@ for(i = 0; i < 4; i++){
 		 ledsBlink[1] = 0;
 		 led7.resetLed7();
 		 FIO1CLR |= (0x20000000); //сброс FA
+		 data.codeError = 0;
 	 }
 	 
 	 
@@ -321,8 +323,8 @@ void initGPIO(){
 
 void sendAlarm(int chanel){
 	
-	
-	data.alarm[chanel] = 1;
+	if (chanel != alarm_FA)
+		data.alarm[chanel] = 1;
 	switch(chanel){
 		case 0:
 			FIO1SET = (1<<26);
@@ -423,7 +425,7 @@ int getDecTMZ(int buf){
 int testTMZChanel(int buf){
 	
 	
-	if( ( ( buf & 0xFFFF )== 0xFFFF ) || ( (buf | 0x00000001 ) == 0x00000001) ){
+	if( ( ( buf & 0xFFFF )== 0xFFFF ) || ( (buf & 0x00000001 ) == 0x00000001) ){
 		data.chanelError[3] = 1;
 		return 1;
 	}

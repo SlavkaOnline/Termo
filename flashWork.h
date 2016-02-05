@@ -10,14 +10,14 @@
 
 int saveParams();
 int readParams();
-int SumWorkTime();
+short SumWorkTime();
 void setAlarmDateTime();
 struct typeDateTimeSend getAlarmDateTime();
 
 struct typeFlash{
 int (*saveParams)();
 int (*readParams)();
-int (*SumWorkTime)();
+short (*SumWorkTime)();
 void (*setAlarmDateTime)();
 struct typeDateTimeSend (*getAlarmDateTime)();	
 };

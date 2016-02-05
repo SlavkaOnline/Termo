@@ -47,7 +47,7 @@ RTC_int();
 	
 		led.setLed(PWR, LED_ON);
 		
-  //led7.setNumLed7(data.chanelError[0]);					
+  led7.setNumLed7(data.temperature[0]);					
 
 	}
 	

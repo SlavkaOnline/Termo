@@ -21,6 +21,8 @@ Section Cross References
     main.o(.text) refers to timer.o(.data) for timer
     main.o(.text) refers to flashwork.o(.data) for dataFlash
     main.o(.text) refers to led.o(.data) for led
+    main.o(.text) refers to data.o(.bss) for data
+    main.o(.text) refers to led7.o(.data) for led7
     led.o(.data) refers to led.o(.text) for resetLed
     led7.o(.text) refers to aeabi_sdiv.o(.text) for __aeabi_idivmod
     led7.o(.data) refers to led7.o(.text) for initLed7
@@ -34,12 +36,13 @@ Section Cross References
     irc.o(.text) refers to led.o(.data) for led
     irc.o(.text) refers to i2c.o(.bss) for dataDS1631
     softtimer.o(.text) refers to data.o(.text) for setMode
+    softtimer.o(.text) refers to flashwork.o(.text) for saveParams
     softtimer.o(.text) refers to led.o(.bss) for ledsBlink
     softtimer.o(.text) refers to led.o(.data) for led
     softtimer.o(.text) refers to softtimer.o(.bss) for THdTimer
     softtimer.o(.text) refers to softtimer.o(.constdata) for DI
     softtimer.o(.text) refers to ssp.o(.data) for SSP
-    softtimer.o(.text) refers to data.o(.bss) for sumTemperature
+    softtimer.o(.text) refers to data.o(.bss) for data
     softtimer.o(.data) refers to softtimer.o(.text) for recSSP1OnTimer
     data.o(.text) refers to softtimer.o(.text) for startTHdTimer
     data.o(.text) refers to fflt_noclz.o(x$fpl$fflt) for __aeabi_i2f
@@ -1170,22 +1173,22 @@ Image Symbol Table
     .emb_text                                0x000002bc   Section        0  maybetermalloc1.o(.emb_text)
     .text                                    0x000002bc   Section       36  lpc2300.o(.text)
     .text                                    0x000002e0   Section        0  main.o(.text)
-    .text                                    0x00000384   Section        0  led.o(.text)
-    .text                                    0x00000708   Section        0  led7.o(.text)
-    .text                                    0x00000990   Section        0  ssp.o(.text)
-    initSSP1                                 0x00000990   ARM Code     196  ssp.o(.text)
-    recSSP1                                  0x00000a54   ARM Code     184  ssp.o(.text)
-    setSS1                                   0x00000b0c   ARM Code     216  ssp.o(.text)
-    setSPI                                   0x00000be4   ARM Code      56  ssp.o(.text)
-    initSPI                                  0x00000c98   ARM Code     200  ssp.o(.text)
-    recSPI                                   0x00000d60   ARM Code     140  ssp.o(.text)
-    initSSP0                                 0x00000dec   ARM Code     128  ssp.o(.text)
-    sendSSP0                                 0x00000e6c   ARM Code      48  ssp.o(.text)
-    setSS0                                   0x00000e9c   ARM Code      56  ssp.o(.text)
-    .text                                    0x00000ef0   Section        0  timer.o(.text)
-    .text                                    0x00000fb0   Section        0  irc.o(.text)
-    .text                                    0x00001438   Section        0  softtimer.o(.text)
-    .text                                    0x000018c8   Section        0  data.o(.text)
+    .text                                    0x000003a4   Section        0  led.o(.text)
+    .text                                    0x00000728   Section        0  led7.o(.text)
+    .text                                    0x000009b0   Section        0  ssp.o(.text)
+    initSSP1                                 0x000009b0   ARM Code     196  ssp.o(.text)
+    recSSP1                                  0x00000a74   ARM Code     184  ssp.o(.text)
+    setSS1                                   0x00000b2c   ARM Code     216  ssp.o(.text)
+    setSPI                                   0x00000c04   ARM Code      56  ssp.o(.text)
+    initSPI                                  0x00000cb8   ARM Code     200  ssp.o(.text)
+    recSPI                                   0x00000d80   ARM Code     140  ssp.o(.text)
+    initSSP0                                 0x00000e0c   ARM Code     128  ssp.o(.text)
+    sendSSP0                                 0x00000e8c   ARM Code      48  ssp.o(.text)
+    setSS0                                   0x00000ebc   ARM Code      56  ssp.o(.text)
+    .text                                    0x00000f10   Section        0  timer.o(.text)
+    .text                                    0x00000fd0   Section        0  irc.o(.text)
+    .text                                    0x00001458   Section        0  softtimer.o(.text)
+    .text                                    0x000018c0   Section        0  data.o(.text)
     .text                                    0x00002944   Section        0  i2c.o(.text)
     .text                                    0x000029bc   Section        0  usbfunction.o(.text)
     .text                                    0x00002d34   Section        0  hiduser.o(.text)
@@ -1515,48 +1518,48 @@ Image Symbol Table
     __rt_exit_exit                           0x000002b4   ARM Code       0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
     __user_initial_stackheap                 0x000002bc   ARM Code       0  lpc2300.o(.text)
     _maybe_terminate_alloc                   0x000002bd   Thumb Code     0  maybetermalloc1.o(.emb_text)
-    main                                     0x000002e0   ARM Code     152  main.o(.text)
-    resetLed                                 0x00000384   ARM Code      44  led.o(.text)
-    initLed                                  0x000003b0   ARM Code     124  led.o(.text)
-    setLed                                   0x0000042c   ARM Code     724  led.o(.text)
+    main                                     0x000002e0   ARM Code     176  main.o(.text)
+    resetLed                                 0x000003a4   ARM Code      44  led.o(.text)
+    initLed                                  0x000003d0   ARM Code     124  led.o(.text)
+    setLed                                   0x0000044c   ARM Code     724  led.o(.text)
     __RL_FS_VER                              0x00000450   Number         0  fs_sys.o ABSOLUTE
-    initLed7                                 0x00000708   ARM Code     112  led7.o(.text)
-    resetLed7                                0x00000778   ARM Code      28  led7.o(.text)
-    setNumLed7                               0x00000794   ARM Code     496  led7.o(.text)
-    configureMAX31865                        0x00000c1c   ARM Code     124  ssp.o(.text)
-    initTimer0                               0x00000ef0   ARM Code      60  timer.o(.text)
-    startTimer0                              0x00000f2c   ARM Code      48  timer.o(.text)
-    initWDTimer                              0x00000f5c   ARM Code      48  timer.o(.text)
-    startWDTimer                             0x00000f8c   ARM Code      24  timer.o(.text)
-    Timer0_Int                               0x00000fb0   ARM Code     480  irc.o(.text)
-    WDTimer_Int                              0x00001190   ARM Code      52  irc.o(.text)
-    I2C_Int                                  0x000011c4   ARM Code     532  irc.o(.text)
-    initVIC                                  0x000013d8   ARM Code      52  irc.o(.text)
-    BlinkLed                                 0x00001438   ARM Code     144  softtimer.o(.text)
-    portCommand                              0x000014c8   ARM Code     256  softtimer.o(.text)
-    initSoftTimers                           0x000015c8   ARM Code     244  softtimer.o(.text)
-    startTHdTimer                            0x000016bc   ARM Code      40  softtimer.o(.text)
-    recSSP1OnTimer                           0x000016e4   ARM Code     268  softtimer.o(.text)
-    recSPIOnTimer                            0x000017f0   ARM Code     168  softtimer.o(.text)
-    initMode                                 0x000018c8   ARM Code      44  data.o(.text)
-    defaultData                              0x000018f4   ARM Code     176  data.o(.text)
-    getDec                                   0x000019a4   ARM Code     120  data.o(.text)
-    getCold                                  0x00001a1c   ARM Code     120  data.o(.text)
-    setTemperature                           0x00001a94   ARM Code      52  data.o(.text)
-    setMode                                  0x00001ac8   ARM Code      80  data.o(.text)
-    sendAlarm                                0x00001b18   ARM Code     228  data.o(.text)
-    getAssayTemperature                      0x00001bfc   ARM Code     220  data.o(.text)
-    getAssayChanel                           0x00001cd8   ARM Code     668  data.o(.text)
-    testSC                                   0x00001f74   ARM Code     148  data.o(.text)
-    testChanel                               0x00002008   ARM Code     208  data.o(.text)
-    initGPIO                                 0x000020d8   ARM Code     360  data.o(.text)
-    disableAlarm                             0x00002240   ARM Code     524  data.o(.text)
-    upThreshold                              0x0000244c   ARM Code      96  data.o(.text)
-    forcedTestChanel                         0x000024ac   ARM Code      76  data.o(.text)
-    getDecTMZ                                0x000024f8   ARM Code      76  data.o(.text)
-    testBreakTMZ                             0x00002544   ARM Code      28  data.o(.text)
-    testTMZChanel                            0x00002560   ARM Code     164  data.o(.text)
-    setConfigureDS1631                       0x00002604   ARM Code     380  data.o(.text)
+    initLed7                                 0x00000728   ARM Code     112  led7.o(.text)
+    resetLed7                                0x00000798   ARM Code      28  led7.o(.text)
+    setNumLed7                               0x000007b4   ARM Code     496  led7.o(.text)
+    configureMAX31865                        0x00000c3c   ARM Code     124  ssp.o(.text)
+    initTimer0                               0x00000f10   ARM Code      60  timer.o(.text)
+    startTimer0                              0x00000f4c   ARM Code      48  timer.o(.text)
+    initWDTimer                              0x00000f7c   ARM Code      48  timer.o(.text)
+    startWDTimer                             0x00000fac   ARM Code      24  timer.o(.text)
+    Timer0_Int                               0x00000fd0   ARM Code     480  irc.o(.text)
+    WDTimer_Int                              0x000011b0   ARM Code      52  irc.o(.text)
+    I2C_Int                                  0x000011e4   ARM Code     532  irc.o(.text)
+    initVIC                                  0x000013f8   ARM Code      52  irc.o(.text)
+    BlinkLed                                 0x00001458   ARM Code     144  softtimer.o(.text)
+    portCommand                              0x000014e8   ARM Code     260  softtimer.o(.text)
+    initSoftTimers                           0x000015ec   ARM Code     244  softtimer.o(.text)
+    startTHdTimer                            0x000016e0   ARM Code      40  softtimer.o(.text)
+    recSSP1OnTimer                           0x00001708   ARM Code     244  softtimer.o(.text)
+    recSPIOnTimer                            0x000017fc   ARM Code     152  softtimer.o(.text)
+    initMode                                 0x000018c0   ARM Code      44  data.o(.text)
+    defaultData                              0x000018ec   ARM Code     176  data.o(.text)
+    getDec                                   0x0000199c   ARM Code     120  data.o(.text)
+    getCold                                  0x00001a14   ARM Code     120  data.o(.text)
+    setTemperature                           0x00001a8c   ARM Code      52  data.o(.text)
+    setMode                                  0x00001ac0   ARM Code      80  data.o(.text)
+    sendAlarm                                0x00001b10   ARM Code     228  data.o(.text)
+    getAssayTemperature                      0x00001bf4   ARM Code     220  data.o(.text)
+    getAssayChanel                           0x00001cd0   ARM Code     668  data.o(.text)
+    testSC                                   0x00001f6c   ARM Code     152  data.o(.text)
+    testChanel                               0x00002004   ARM Code     208  data.o(.text)
+    initGPIO                                 0x000020d4   ARM Code     360  data.o(.text)
+    disableAlarm                             0x0000223c   ARM Code     532  data.o(.text)
+    upThreshold                              0x00002450   ARM Code      96  data.o(.text)
+    forcedTestChanel                         0x000024b0   ARM Code      76  data.o(.text)
+    getDecTMZ                                0x000024fc   ARM Code      76  data.o(.text)
+    testBreakTMZ                             0x00002548   ARM Code      28  data.o(.text)
+    testTMZChanel                            0x00002564   ARM Code     164  data.o(.text)
+    setConfigureDS1631                       0x00002608   ARM Code     376  data.o(.text)
     getConfigureDS1631                       0x00002780   ARM Code     452  data.o(.text)
     initI2C                                  0x00002944   ARM Code      92  i2c.o(.text)
     startI2C                                 0x000029a0   ARM Code      20  i2c.o(.text)
@@ -2008,14 +2011,14 @@ Memory Map of the image
     0x000002b4   0x00000008   Code   RO         1281    .ARM.Collect$$rtexit$$00000004  c_t.l(rtexit2.o)
     0x000002bc   0x00000000   Code   RO         1169    .emb_text           c_t.l(maybetermalloc1.o)
     0x000002bc   0x00000024   Code   RO            4    .text               lpc2300.o
-    0x000002e0   0x000000a4   Code   RO           11    .text               main.o
-    0x00000384   0x00000384   Code   RO          101    .text               led.o
-    0x00000708   0x00000288   Code   RO          121    .text               led7.o
-    0x00000990   0x00000560   Code   RO          140    .text               ssp.o
-    0x00000ef0   0x000000c0   Code   RO          159    .text               timer.o
-    0x00000fb0   0x00000488   Code   RO          178    .text               irc.o
-    0x00001438   0x00000490   Code   RO          192    .text               softtimer.o
-    0x000018c8   0x0000107c   Code   RO          212    .text               data.o
+    0x000002e0   0x000000c4   Code   RO           11    .text               main.o
+    0x000003a4   0x00000384   Code   RO          101    .text               led.o
+    0x00000728   0x00000288   Code   RO          121    .text               led7.o
+    0x000009b0   0x00000560   Code   RO          140    .text               ssp.o
+    0x00000f10   0x000000c0   Code   RO          159    .text               timer.o
+    0x00000fd0   0x00000488   Code   RO          178    .text               irc.o
+    0x00001458   0x00000468   Code   RO          192    .text               softtimer.o
+    0x000018c0   0x00001084   Code   RO          212    .text               data.o
     0x00002944   0x00000078   Code   RO          236    .text               i2c.o
     0x000029bc   0x00000378   Code   RO          255    .text               usbfunction.o
     0x00002d34   0x0000014c   Code   RO          291    .text               hiduser.o
@@ -2264,7 +2267,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      4220        100         20         80         48       6968   data.o
+      4228         96         20         80         48       6972   data.o
        104         16        524          0        324      10687   file_config.o
        856         40          0         20          0       2834   flashwork.o
        788          8         24          0          0       2953   fs_spi_flashprg.o
@@ -2274,10 +2277,10 @@ Image component sizes
        900          8          0         12         44       1694   led.o
        648         12          0         12          0       1583   led7.o
        412         68          0          0       3456        488   lpc2300.o
-       164         12          0          0          0      14169   main.o
+       196         20          0          0          0      14173   main.o
        496         36         20          0          0       4333   retarget.o
        820         20          0          4          0       4104   rtc.o
-      1168         48         60         40        424       3111   softtimer.o
+      1128         44         60         40        424       3095   softtimer.o
        612         16         32          0          0       2163   spi_lpc23xx.o
       1376         28          0         36          0       2578   ssp.o
        192         12          0         16          0       1290   timer.o
@@ -2288,7 +2291,7 @@ Image component sizes
        180          8         64          0          0       3141   usbuser.o
 
     ----------------------------------------------------------------------
-     22088        816        968        260       4508      98963   Object Totals
+     22088        816        968        260       4508      98955   Object Totals
         68          0         32          0          0          0   (incl. Generated)
          0          0          3          1          1          0   (incl. Padding)
 
@@ -2422,8 +2425,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     36444       1556       1252        280       4888     102103   Grand Totals
-     36444       1556       1252        280       4888     102103   ELF Image Totals
+     36444       1556       1252        280       4888     102095   Grand Totals
+     36444       1556       1252        280       4888     102095   ELF Image Totals
      36444       1556       1252        280          0          0   ROM Totals
 
 ==============================================================================

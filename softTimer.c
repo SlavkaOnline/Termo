@@ -74,7 +74,7 @@ if ( !(FIO3PIN & timer->pin ) ){	//
 				forcedTestChanel(timer->mode - 5, timer->hold); 
 			} 
 			else if (timer->mode == 8) disableAlarm(alarm_All, notFalseAlarm);
-			  else if (timer->mode == 9) {upThreshold(); disableAlarm(alarm_All, notFalseAlarm ); }
+			  else if (timer->mode == 9) {upThreshold(); disableAlarm(alarm_All, notFalseAlarm ); saveParams();}
 		}
 		
 		
@@ -144,8 +144,8 @@ void recSSP1OnTimer(struct t_SSP1Timer* timer){
 					break;
 					
 					default:
-					setTemperature(i, 0);						
-						sumTemperature[i] = 0;
+										
+				//		sumTemperature[i] = 0;
 					break;				
 	 }		 
 		}
@@ -198,7 +198,7 @@ void recSPIOnTimer(struct t_SPITimer* timer){
 		}
 		else{
 				//data.sumTemperature[3] = 0;
-				data.temperature[3] = 0;
+				//data.temperature[3] = 0;
 			}
 	
   }	 

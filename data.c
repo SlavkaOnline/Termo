@@ -353,7 +353,9 @@ void disableAlarm(int chanel, int mode){
 		
 			case 4:
 				if( data.temperature[0] < data.threshold && data.temperature[1] < data.threshold  && data.temperature[2] < data.threshold ){
-				data.alarm[chanel] = 0;
+				data.alarm[0] = 0;
+				data.alarm[1] = 0;
+				data.alarm[2] = 0;
 				FIO1CLR |= (0x1C000000);
 				led.setLed(FIRE1r, LED_OFF);
 				led.setLed(FIRE2r, LED_OFF);
@@ -452,9 +454,9 @@ int testSC(int chanel, int temperature){
        return 0;
 	}
 	else{
-	float tmp = ((data.temperature[chanel]) - (temperature) )/ (float)(data.temperature[chanel]);
+	float tmp = ((data.temperature[chanel]) - (short)(temperature) )/ (float)(data.temperature[chanel]);
 	
-	if (tmp >= 0.2 ){
+	if (tmp >= 0.3 ){
 		
 		return 1;
 		

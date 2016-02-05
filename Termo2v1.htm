@@ -3,7 +3,7 @@
 <title>Static Call Graph - [C:\Users\Slava\Desktop\Diplom\termo3\Termo\Termo2v1.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image C:\Users\Slava\Desktop\Diplom\termo3\Termo\Termo2v1.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 894]: Last Updated: Fri Feb 05 14:28:24 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 4.1 [Build 894]: Last Updated: Fri Feb 05 15:15:47 2016
 <BR><P>
 <H3>Maximum Stack Usage =        352 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -277,7 +277,7 @@ Global Symbols
 
 <P><STRONG><a name="[179]"></a>_maybe_terminate_alloc</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, maybetermalloc1.o(.emb_text), UNUSED)
 
-<P><STRONG><a name="[15]"></a>main</STRONG> (ARM, 152 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[15]"></a>main</STRONG> (ARM, 176 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = main &rArr; finit &rArr; init_drv
 </UL>
 <BR>[Calls]<UL><LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMode
@@ -356,8 +356,9 @@ Global Symbols
 
 <P><STRONG><a name="[17b]"></a>BlinkLed</STRONG> (ARM, 144 bytes, Stack size 16 bytes, softtimer.o(.text), UNUSED)
 
-<P><STRONG><a name="[6c]"></a>portCommand</STRONG> (ARM, 256 bytes, Stack size 8 bytes, softtimer.o(.text), UNUSED)
+<P><STRONG><a name="[6c]"></a>portCommand</STRONG> (ARM, 260 bytes, Stack size 8 bytes, softtimer.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;upThreshold
+<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;saveParams
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;forcedTestChanel
 <LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disableAlarm
 <LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setMode
@@ -371,7 +372,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getAssayTemperature
 </UL>
 
-<P><STRONG><a name="[3c]"></a>recSSP1OnTimer</STRONG> (ARM, 268 bytes, Stack size 24 bytes, softtimer.o(.text))
+<P><STRONG><a name="[3c]"></a>recSSP1OnTimer</STRONG> (ARM, 244 bytes, Stack size 24 bytes, softtimer.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = recSSP1OnTimer &rArr; testChanel &rArr; testSC &rArr; __aeabi_fdiv
 </UL>
 <BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testChanel
@@ -382,7 +383,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> softtimer.o(.data)
 </UL>
-<P><STRONG><a name="[3d]"></a>recSPIOnTimer</STRONG> (ARM, 168 bytes, Stack size 16 bytes, softtimer.o(.text))
+<P><STRONG><a name="[3d]"></a>recSPIOnTimer</STRONG> (ARM, 152 bytes, Stack size 16 bytes, softtimer.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = recSPIOnTimer &rArr; testTMZChanel &rArr; getDecTMZ &rArr; __aeabi_d2iz
 </UL>
 <BR>[Calls]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;testTMZChanel
@@ -450,7 +451,7 @@ Global Symbols
 <LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recSSP1OnTimer
 </UL>
 
-<P><STRONG><a name="[79]"></a>testSC</STRONG> (ARM, 148 bytes, Stack size 24 bytes, data.o(.text))
+<P><STRONG><a name="[79]"></a>testSC</STRONG> (ARM, 152 bytes, Stack size 24 bytes, data.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = testSC &rArr; __aeabi_fdiv
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
@@ -478,7 +479,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[6e]"></a>disableAlarm</STRONG> (ARM, 524 bytes, Stack size 16 bytes, data.o(.text))
+<P><STRONG><a name="[6e]"></a>disableAlarm</STRONG> (ARM, 532 bytes, Stack size 16 bytes, data.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = disableAlarm
 </UL>
 <BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetOutReport
@@ -523,7 +524,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recSPIOnTimer
 </UL>
 
-<P><STRONG><a name="[84]"></a>setConfigureDS1631</STRONG> (ARM, 380 bytes, Stack size 8 bytes, data.o(.text), UNUSED)
+<P><STRONG><a name="[84]"></a>setConfigureDS1631</STRONG> (ARM, 376 bytes, Stack size 8 bytes, data.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;startI2C
 </UL>
 
@@ -1002,6 +1003,8 @@ Global Symbols
 <LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen (via Veneer)
 <LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2fprintf (via Veneer)
 </UL>
+<BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;portCommand
+</UL>
 <BR>[Address Reference Count : 1]<UL><LI> flashwork.o(.data)
 </UL>
 <P><STRONG><a name="[145]"></a>fs_config</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, file_config.o(.text))
@@ -1246,8 +1249,8 @@ Global Symbols
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4 (via Veneer)
 <LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;freopen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;saveParams (via Veneer)
-<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readParams (via Veneer)
+<BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readParams (via Veneer)
+<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;saveParams (via Veneer)
 </UL>
 
 <P><STRONG><a name="[e9]"></a>_fclose_internal</STRONG> (Thumb, 76 bytes, Stack size 32 bytes, fclose.o(.text))
@@ -1265,8 +1268,8 @@ Global Symbols
 <P><STRONG><a name="[c2]"></a>fclose</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, fclose.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = fclose
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;saveParams (via Veneer)
-<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readParams (via Veneer)
+<BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;readParams (via Veneer)
+<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;saveParams (via Veneer)
 </UL>
 
 <P><STRONG><a name="[bf]"></a>strtok</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, strtok.o(.text))

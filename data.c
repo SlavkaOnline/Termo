@@ -183,7 +183,7 @@ for(i = 0; i < 4; i++){
 	switch (data.chanelError[i]){
 		    
 				case 0:
-					// data.codeError = 0;
+					
 				   led.setLed(leds[i], LED_OFF);
 				   ledsBlink[ blink[i] ] = 0;
 				 break;		 
@@ -427,7 +427,7 @@ int getDecTMZ(int buf){
 int testTMZChanel(int buf){
 	
 	
-	if( ( ( buf & 0xFFFF )== 0xFFFF ) || ( (buf & 0x00000001 ) == 0x00000001) ){
+	if(  ( buf & 0xFFFF )== 0xFFFF ){ // || ( (buf & 0x00000001 ) == 0x00000001) ){
 		data.chanelError[3] = 1;
 		return 1;
 	}

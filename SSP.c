@@ -113,7 +113,7 @@ static void initSPI(){
 	   
   	SSP.setSPI(SSP_OFF);
  	
- 	 configureMAX31865(0xD3);
+ 	 configureMAX31865(0xC3);
 }
 
 
@@ -148,25 +148,31 @@ static int recSPI(){
 		
  
  
-// 	S0SPDR = 0x00;
-//   while ( !(S0SPSR & 0x80));
-// 	regFault = S0SPDR;
-// 	
-// 	S0SPDR = 0x00;
-//   while ( !(S0SPSR & 0x80));
-// 	regFault = S0SPDR;
-// 	
-// 	S0SPDR = 0x00;
-//   while ( !(S0SPSR & 0x80));
-// 	regFault = S0SPDR;
-// 	
-// 	S0SPDR = 0x00;
-//   while ( !(S0SPSR & 0x80));
-// 	regFault = S0SPDR;
-// 	
-// 	S0SPDR = 0x00;
-//   while ( !(S0SPSR & 0x80));
-// 	regFault = S0SPDR;
+	S0SPDR = 0x00;
+  while ( !(S0SPSR & 0x80));
+	regFault = S0SPDR;
+	
+	S0SPDR = 0x00;
+  while ( !(S0SPSR & 0x80));
+	regFault = S0SPDR;
+	
+	S0SPDR = 0x00;
+  while ( !(S0SPSR & 0x80));
+	regFault = S0SPDR;
+	
+	S0SPDR = 0x00;
+  while ( !(S0SPSR & 0x80));
+	regFault = S0SPDR;
+	
+	S0SPDR = 0x00;
+  while ( !(S0SPSR & 0x80));
+	regFault = S0SPDR;
+	
+	
+	
+	if (regFault != 0){
+		RTD = 0xFFFF;
+	}
 	
 	return RTD ;
 }

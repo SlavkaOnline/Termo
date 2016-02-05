@@ -26,11 +26,12 @@ for(i = 0; i < 10; i++){
 				ssp1Timer.TimerFunc(&ssp1Timer);
 			}
 			
+		}
 			if( spiTimer.multiplier-- ==0){ 
 				spiTimer.multiplier = spiTimer._multiplier;
 				spiTimer.TimerFunc(&spiTimer);
 			}
-			
+					
 			for(i = 0; i < 3; i++){
 				if(THdTimer[i].start == 1){
 					if(THdTimer[i].multiplier-- == 0)
@@ -41,7 +42,7 @@ for(i = 0; i < 10; i++){
 				}
 				
 			}
-}
+
 
 
 	

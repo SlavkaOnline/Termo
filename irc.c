@@ -20,7 +20,7 @@ for(i = 0; i < 10; i++){
 	}
 	
 	/*Отключаем считывание с каналов если вышло из строя более 2х каналов */
-	//if ( !data.work ){
+	if ( !data.work ){
 			if( ssp1Timer.multiplier-- ==0){ 
 				ssp1Timer.multiplier = ssp1Timer._multiplier;
 				ssp1Timer.TimerFunc(&ssp1Timer);
@@ -41,7 +41,7 @@ for(i = 0; i < 10; i++){
 				}
 				
 			}
-//}
+}
 
 
 	

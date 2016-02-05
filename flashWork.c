@@ -90,7 +90,8 @@ int readParams(){
 	readFile = fopen("param.txt", "r");
 	
 	if(!readFile){
-		led7.setNumLed7(63);
+		data.codeError = 50;
+		led7.setNumLed7(50);
 		return;
 	}
 	
@@ -138,7 +139,8 @@ int saveParams(){
 	saveFile = fopen("param.txt", "w");
 	
 	if(!saveFile){
-		led7.setNumLed7(63);
+		data.codeError = 50;
+		led7.setNumLed7(50);
 		return;
 	}
 	

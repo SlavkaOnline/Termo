@@ -30,7 +30,7 @@ int main(){
 	//timer.initWDTimer();
   //timer.startWDTimer();
 	
-	//fformat ("S:");
+
 	 
 RTC_init(0);
 RTC_int();	
@@ -47,7 +47,7 @@ RTC_int();
 	
 		led.setLed(PWR, LED_ON);
 		
-  led7.setNumLed7(data.temperature[0]);					
+//  led7.setNumLed7(data.temperature[0]);					
 
 	}
 	

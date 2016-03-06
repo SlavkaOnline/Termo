@@ -2,7 +2,7 @@
 
 struct t_readPortTimer readPortTimer[10];
 struct t_blinkLedTimer blinkLedTimer; // = {10,10,0,&BlinkLed};
-struct t_SSP1Timer ssp1Timer = {4,4,5,5,&recSSP1OnTimer};
+struct t_SSP1Timer ssp1Timer = {4,4,10,10,&recSSP1OnTimer};
 struct t_SPITimer spiTimer = {4,4,5,5,&recSPIOnTimer};
 struct t_THdTimer THdTimer[4];
 
@@ -135,7 +135,7 @@ void recSSP1OnTimer(struct t_SSP1Timer* timer){
        		case 2:
 						while(delay--);
 						delay = 3000000;
-					 // data.sumTemperature[i] = 0;
+					  //sumTemperature[i] = 0;
 					break;
 					case 0:
 							setTemperature(i, getDec(num));
@@ -145,7 +145,7 @@ void recSSP1OnTimer(struct t_SSP1Timer* timer){
 					
 					default:
 										
-				//		sumTemperature[i] = 0;
+						//sumTemperature[i] = 0;
 					break;				
 	 }		 
 		}
@@ -155,7 +155,7 @@ void recSSP1OnTimer(struct t_SSP1Timer* timer){
 	 
 	 else{
 		 
-//      /* Термопары */
+     /* Термопары */
 // 		 for(i = 0; i < 3; i++){
 // 		 num = sumTemperature[i] / timer->_time;
 //      setTemperature(i, num);

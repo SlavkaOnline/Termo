@@ -16,7 +16,7 @@ void defaultData(){
 	for(i = 0; i < 4; i++){
 		data.temperature[i] = -100;
 		data.chanelError[i] = 0;
-		//sumTemperature[i] = 0;
+		sumTemperature[i] = 0;
 		if(i < 3) data.alarm[i] = 0;
 	}
 	initMode();

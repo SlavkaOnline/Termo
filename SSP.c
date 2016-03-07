@@ -3,7 +3,7 @@
 
 
 
-struct typeSSP SSP = {&initSPI, &recSPI, &setSPI,&initSSP1, &recSSP1, &setSS1, &initSSP0, &sendSSP0, &setSS0};
+struct typeSSP SSP = {&initSPI, &recSPI, &setSPI,&initSSP1, &recSSP1, &setSS1};
 
 
 static void initSSP1(){
@@ -176,71 +176,7 @@ static int recSPI(){
 	
 	return RTD ;
 }
-static  void initSSP0(){
-	
-	int div;
-	
-	PCLKSEL1 |= (1<<10);
-	
-	PINSEL3	&= ~(0x3C300);
-	PINSEL3	|=  (0x3C300);
-	
-	FIO1DIR |= 1<<21;
-	FIO1SET	|= 1<<21;
-	
-	SSP0CR0 = (0x0007); // 8bits CPOL = 0; CPHA = 0 "87"
-	SSP0CPSR = (0x02);  //24mhz
-	SSP0CR1 =(0x0002);  // SSE = 1, MS = 0, SOD = 0, LBM = 0;
-	
-	
-// 	div = (__PCLK/1000 + 33000 - 1) / 33000 ;
-//   if (div == 0)   div = 0x02;
-//   if (div & 1)    div++;
-//   if (div > 0xFE) div = 0xFE;
-//   S0SPCCR = div;
-	
-	
-	//S0SPCR = (0x0838);
-	
-	
-	
-	
-}
-// static  unsigned char  recSSP0(){
-// 	
-// 	unsigned char inByte;
-// 	
-// 	S0SPDR = (0xFF);
-// 	while (!(S0SPSR & 0x80));
-//   inByte = S0SPDR;
-// 	return inByte;
-// 	
-// }
-static unsigned char  sendSSP0(unsigned char outByte){
-	
-  
 
-		SSP0DR = outByte;
-	
-	while ( (SSP0SR & BSY) );
-	
-	return SSP0DR ;
-	
-	
-}
-static void setSS0(int ss){
-	
-	if (ss)
-	{
-		FIO1CLR	|=1<<21;
-	}
-	else
-	{
-		FIO1SET	|=1<<21;
-	}
-	
-	
-}
 
 void configureMAX31865(short conf){
 	

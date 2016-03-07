@@ -52,11 +52,7 @@ for(i = 0; i < 10; i++){
 
 void WDTimer_Int (void) __irq{
 	
-// 	int i;
-// 	for(i = 0; i < 100000; i++)
-// 	led.setLed(RUN, LED_ON);
-// 	for(i = 0; i < 100000; i++)
-// 	led.setLed(RUN, LED_OFF);
+
 	
 	led.setLed(HFAULT, LED_ON);
 	

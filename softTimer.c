@@ -1,10 +1,10 @@
 #include "softTimer.h"
 
 struct t_readPortTimer readPortTimer[10];
-struct t_blinkLedTimer blinkLedTimer; // = {10,10,0,&BlinkLed};
-struct t_SSP1Timer ssp1Timer = {4,4,10,10,&recSSP1OnTimer};
-struct t_SPITimer spiTimer = {4,4,5,5,&recSPIOnTimer};
-struct t_THdTimer THdTimer[4];
+struct t_blinkLedTimer blinkLedTimer; 
+struct t_SSP1Timer ssp1Timer = {4,4,&recSSP1OnTimer};
+struct t_SPITimer spiTimer = {4,4,&recSPIOnTimer};
+struct t_THdTimer THdTimer[3];
 
 
 
@@ -39,17 +39,10 @@ void initSoftTimers(){
 	
 }
 
-void startTHdTimer(int n, int sec){
+void startTHdTimer(int chanel, int sec){
 	
-// 	int i;
-// 	for(i = 0; i < 3; i++){
-// 		if(i == n ){
-			THdTimer[n].multiplier = sec * 40 ;
-			THdTimer[n].start = 1;
-// 		}
-// 		
-// 	}
-	
+	THdTimer[chanel].multiplier = sec * 40 ;
+	THdTimer[chanel].start = 1;	
 }
 
 
@@ -122,7 +115,7 @@ void recSSP1OnTimer(struct t_SSP1Timer* timer){
 	
  	  
 	
-	if( timer->time-- !=0 ){
+
 	 
 		/* Термопары */
 		for(i = 0; i < 3; i++){
@@ -151,25 +144,9 @@ void recSSP1OnTimer(struct t_SSP1Timer* timer){
 		}
 		
 		 
-	}
-	 
-	 else{
-		 
-     /* Термопары */
-// 		 for(i = 0; i < 3; i++){
-// 		 num = sumTemperature[i] / timer->_time;
-//      setTemperature(i, num);
-// 		 //getAssayTemperature();
-// 		 sumTemperature[i] = 0;	 
-// 		 } 
-     	timer->time = timer->_time;		 
-	 }
-		
-	  getAssayChanel();
-	  
-// 	 if(data.work)
-//  				return;
-	 
+	
+	 getAssayChanel();
+	  	 
 	 getAssayTemperature();
 }
 
@@ -177,16 +154,9 @@ void recSSP1OnTimer(struct t_SSP1Timer* timer){
 void recSPIOnTimer(struct t_SPITimer* timer){
  
 	int num;	
- 	//  if(data.work)
- 		//		return;
-	
-	if( timer->time-- !=0 ){
-	
-		
+ 	
 		/* Платиновый датчик */
 		configureMAX31865(0xC3);
-		
-		
 		
 		SSP.setSPI(SSP_ON);
 		num = SSP.recSPI();
@@ -197,17 +167,10 @@ void recSPIOnTimer(struct t_SPITimer* timer){
       			
 		}
 		else{
-				//data.sumTemperature[3] = 0;
+				
 				data.temperature[3] = 0;
 			}
 	
-  }	 
-	else{
-		
- 		  //data.sumTemperature[3] /= timer->_time;
-     	 
-		 
-     timer->time = timer->_time;		 
-	 }
+   	
 	  getAssayChanel();
 }

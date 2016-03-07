@@ -1,6 +1,6 @@
 /**
 	\file
-	\brief Заголовочный файл с константами и функциями для работы с интерфейсом SSP   
+	\brief Заголовочный файл с константами и функциями для работы с интерфейсами SSP1 и SPI   
 */
 
 #ifndef SSP_H_
@@ -29,19 +29,10 @@ struct typeSSP{
 	int (*recSSP1)();
 	void (*setSS1)(int, int);
 	
-	/*SSP0*/
-	void (*initSSP0)();
-  //unsigned char  (*recSSP0)();
-  unsigned char (*sendSSP0)(unsigned char);
-  void (*setSS0)(int);
 	
-	
+
 };
 
-static  void initSSP0();
-//static  unsigned char  recSSP0();
-static  unsigned char sendSSP0(unsigned char);
-static  void setSS0(int);
 
 
 /**
@@ -85,6 +76,10 @@ static void setSPI(int n);
 
 static int recSPI();
 
+
+/** 
+	\brief Функция конфигурации микросхмы АЦП платиного датчика.
+*/
 void configureMAX31865();
 
 extern struct typeSSP SSP; ///< Структура с функциями управлением интерфейсом SSP

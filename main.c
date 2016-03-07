@@ -10,54 +10,40 @@
 
 
 int main(){
-	
-	int i,j, retv;
-  struct tm loc_time;
-	
-	while ((retv = finit (NULL)) != 0) ;
-	USB_Init();                               /* USB Initialization */
-  USB_Connect(__TRUE);
-	
-	/* РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ */
-	defaultData();
-	initGPIO();
-	setMode(0);
-	initVIC();
-	//testLM75();
+
+	int retv;
+
+    /* Инициализация */
+	while ((retv = finit (NULL)) != 0) ; //флеш карта
+	USB_Init();             //USB
+    USB_Connect(__TRUE);
+
+	defaultData(); // установка стандартных значений
+	initGPIO();     // инициализация портов
+	setMode(0);     //установка 1го режима
+	initVIC();      // инициализвция прерываний
+
+    /*включение таймеров */
 	initSoftTimers();
 	timer.initTimer0();
 	timer.startTimer0(1);
-	//timer.initWDTimer();
-  //timer.startWDTimer();
-	
+	timer.initWDTimer();
+    timer.startWDTimer();
 
-	 
-RTC_init(0);
-RTC_int();	
-	
-	
-  
-	
- 	dataFlash.readParams();
+    /*включение модуля часов реального времени*/
+    RTC_init(0);
+    RTC_int();
 
+    dataFlash.readParams();
   //dataFlash.SumWorkTime(SETNULLHOUR);
- 
-	
+
+
 	while(1){
-	
-		led.setLed(PWR, LED_ON);
-		
-  //led7.setNumLed7(data.currentMode);					
 
 	}
-	
-	
-
-
-  
 
  	return 0;
  }
-	
+
 
 

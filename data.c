@@ -297,7 +297,7 @@ void initGPIO(){
 	led7.initLed7();
 	led7.resetLed7();
 	SSP.initSSP1();
-  //SSP.initSSP0();	
+
 	SSP.initSPI();
 	initI2C();
 	

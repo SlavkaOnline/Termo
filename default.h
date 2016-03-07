@@ -1,7 +1,10 @@
 #ifndef default_H_
 #define default_H_
 
-
+/**
+	\file
+	\brief Заголовочный файл с константами значениями для порогов
+*/
 
 
 static const int MODE[] = {110, 150, 230, 430, 30};
